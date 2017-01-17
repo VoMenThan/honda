@@ -1,0 +1,890 @@
+#about-trangchu{
+	padding-top: 60px;
+	@include respond-to($break-1180){
+		padding: 60px 40px 0 40px;
+	}
+	@include respond-to($break-1140){
+		padding-top: 40px;
+	}
+	@include respond-to($break-767){
+		padding: 20px 20px 0 20px;
+	}
+	.block-wrp{
+		width: calc(100% + 40px);
+		margin-left: -20px;
+		margin-bottom: 40px;
+		@include respond-to($break-980){
+			margin-bottom: 0;
+		}
+		.block{
+			width: 50%;
+			float: left;
+			padding: 333px 20px 0px 20px;
+			position: relative;
+			// margin-top: 80px;
+			opacity: 0;
+			@include respond-to($break-1180){
+				padding-top: 283px;
+			}
+			@include respond-to($break-1065){
+				padding-top: 233px;
+			}
+            @include respond-to($break-1024){
+              padding-top: 250px;
+            }
+			@include respond-to($break-980){
+				padding-top: 226px;
+			}
+			@include respond-to($break-780){
+              padding-top: 330px;
+              width: 100%;
+              float: none;
+			}
+			@include respond-to($break-767){
+				padding-top: 460px;
+			}
+			@include respond-to($break-700){
+				padding-top: 415px;
+			}
+			@include respond-to($break-640){
+				padding-top: 375px;
+              margin-top: 0 !important;
+              opacity: 1!important;
+			}
+            @include respond-to(620px){
+              padding-top: 330px;
+            }
+			@include respond-to($break-550){
+				padding-top: 310px;
+			}
+			@include respond-to($break-480){
+				padding-top: 260px;
+			}
+			@include respond-to($break-414){
+				padding-top: 225px;
+			}
+			@include respond-to($break-375){
+				padding-top: 200px;
+			}
+			@include respond-to($break-374){
+				padding-top: 190px;
+			}
+			@include respond-to($break-320){
+              padding-top: 155px;
+			}
+			.image{
+				width: calc(100% - 40px);
+				max-height: 390px;
+				position: absolute;
+				top: 0;
+				left: 20px;
+				overflow: hidden;
+				img{
+					display: block;
+					width: 100%;
+					@include transition();
+				}
+			}
+			.desc{
+				width: calc(100% - 40px);
+				position: relative;
+				margin: 0 auto;
+                padding: 0 30px 16px 30px;
+				background: #fff;
+				@include respond-to($break-980){
+					padding-bottom: 46px;
+				}
+				@include respond-to($break-767){
+					padding: 0 5px 46px 20px;
+				}
+                @include respond-to($break-640){
+                  width: calc(100% - 20px);
+                  padding: 1px 14px 18px 18px;
+                }
+                @include respond-to(601px){
+                  padding-top: 8px;
+                }
+              @include respond-to($break-640){
+                margin-bottom: 28px;
+              }
+				h2{
+					@extend %gotham-ultra;
+					font-size: 30px;
+					color: $main-black;
+					padding-top: 22px;
+					@include transition();
+					@include respond-to($break-1065){
+						font-size: 25px;
+					}
+					@include respond-to($break-980){
+						font-size: 30px;
+                      padding-top: 16px;
+					}
+					@include respond-to($break-767){
+						font-size: 18px;
+						padding-top: 13px;
+					}
+                  @include respond-to($break-480){
+                    padding-top: 4px;
+                  }
+				}
+				p{
+					@extend %roboto-regular;
+					text-align: justify;
+					font-size: 15px;
+					color: $main-black;
+					line-height: 22px;
+					padding-top: 8px;
+					padding-bottom: 20px;
+					letter-spacing: -0.25px;
+                    @include respond-to($break-1024){
+                      min-height: 136px;
+                    }
+                    @include respond-to($break-780){
+                      min-height: 1px;
+                      color: $black-2;
+                    }
+					@include respond-to($break-767){
+						font-size: 13px;
+						line-height: 15px;
+						padding-top: 14px;
+						padding-bottom: 22px;
+					}
+                  @include respond-to($break-640){
+                    strong{
+                      margin-top: 4px;
+                      display: block;
+                    }
+                  }
+                  @include respond-to($break-480){
+                    padding-top: 10px;
+                  }
+
+				}
+				a.view-more-btn{
+					@extend %roboto-regular;
+					font-size: 15px;
+					color: $main-black;
+
+					@include respond-to($break-767){
+						font-size: 13px;
+					}
+					i{
+						color: $main-red;
+						font-size: 11px;
+						@include respond-to($break-767){
+							font-size: 11px;
+						}
+					}
+                    @include respond-to($break-480){
+                      position: relative;
+                      i{
+                        position: absolute;
+                        right: -1px;
+                        top: 5px;
+                      }
+                    }
+					&:hover{
+						color: $main-red;
+					}
+				}
+			}
+		}
+	}
+}
+
+.block{
+	&:hover{
+		.image{
+			> img{
+				@include transform(scale(1.05));
+				@include transition();
+			}
+		}
+		.desc{
+			h2{
+				color: $main-red !important;
+				@include transition();
+			}
+		}
+	}
+}
+
+#about-thungo{
+	padding: 53px 0 40px 0;
+	position: relative;
+	@include respond-to($break-1180){
+		padding: 53px 40px 40px 40px;
+	}
+	@include respond-to($break-767){
+		padding: 20px 20px 56px 20px;
+	}
+	.left-contentx{
+		width: 300px;
+        min-height: 1px;
+        float: left;
+		@include respond-to($break-1024){
+			display: none;
+		}
+		.fixed-mn-left{
+			width: 300px;
+			position: absolute;
+			top: 43px;
+			bottom: auto;
+			left: 50%;
+			margin-left: -590px;
+			list-style: none;
+			cursor: pointer;
+			@include transition();
+			@include respond-to($break-1180){
+				margin-left: calc(-50% + 40px);
+			}
+			&.fixed{
+				position: fixed;
+				left: 50%;
+				margin-left: -590px;
+				top: 160px;
+				bottom: auto;
+				@include respond-to($break-1180){
+					margin-left: calc(-50% + 40px);
+				}
+			}
+			&.anchor{
+				position: absolute;
+				top: auto;
+				left: 50%;
+				margin-left: -590px;
+				// bottom: -100%;
+                transition: all 0.3s ease !important;
+				@include respond-to($break-1180){
+					margin-left: calc(-50% + 40px);
+				}
+			}
+			li{
+				list-style: none;
+				a{
+					@extend %gotham-ultra;
+					font-size: 18px;
+					line-height: 30px;
+					color: #000;
+					&.ac, &:hover{
+						color: $main-red;
+					}
+				}
+			}
+          > li{
+            line-height: 36px;
+          }
+		}
+	}
+
+	.right-content{
+		width: calc(100% - 300px);
+		float: left;
+		// margin-left: 300px;
+		@include respond-to($break-1024){
+			width: 100%;
+			margin-left: 0;
+		}
+		.director-img-pc{
+			display: block;
+			float: right;
+			@include respond-to($break-1024){
+				display: none;
+			}
+		}
+		.director-img-tbl{
+			display: none;
+			float: right;
+			margin-left: 40px;
+			margin-bottom: 20px;
+			@include respond-to($break-1024){
+				display: block;
+			}
+			@include respond-to($break-767){
+				display: none;
+			}
+		}
+		.director-img-mb{
+			display: none;
+			margin: 0 auto 24px auto;
+			width: 100%;
+			@include respond-to($break-767){
+				display: block;
+			}
+		}
+		.text{
+			width: calc(100% - 300px);
+			float: left;
+			text-align: justify;
+			margin-top: -10px;
+			@include respond-to($break-1024){
+				width: 100%;
+				float: none;
+			}
+			.open-quote{
+              position: absolute;
+              left: 0;
+              top: 10px;
+				@include respond-to($break-767){
+					height: 14px;
+                  top: 3px;
+				}
+              @include respond-to($break-480){
+                top: 4px;
+              }
+			}
+			.close-quote{
+              position: absolute;
+              bottom: 0;
+              right: 0;
+				@include respond-to($break-1024){
+					margin-bottom: -10px;
+				}
+				@include respond-to($break-767){
+					height: 16px;
+					margin-bottom: -5px;
+				}
+              @include respond-to($break-374){
+                margin-bottom: 0;
+                bottom: -5px;
+              }
+			}
+			.quote-wrap{
+				@extend %gotham-book;
+				font-size: 26px;
+				line-height: 36px;
+				color: rgba(#000, .4);
+				text-align: justify;
+                position: relative;
+                padding: 0 40px;
+				@include respond-to($break-1024){
+					font-size: 21px;
+					line-height: 30px;
+                  max-width: 696px;
+                  padding: 0 0 0 40px;
+                  letter-spacing: -0.01em;
+                  .close-quote{
+                    right: 16px;
+                    bottom: 5px;
+                  }
+                  @include respond-to($break-767){
+                    .close-quote{
+                      height: 16px;
+                      margin-bottom: -5px;
+                    }
+                  }
+                  @include respond-to($break-374){
+                    .close-quote{
+                      margin-bottom: 0;
+                      bottom: -5px;
+                    }
+                  }
+				}
+              @include respond-to($break-980){
+                max-width: 463px;
+              }
+				@include respond-to($break-767){
+                  max-width: none;
+					font-size: 16px;
+					line-height: 19px;
+				}
+              @include respond-to($break-480){
+                padding: 0 0 0 20px;
+              }
+			}
+			p{
+				@extend %roboto-regular;
+				font-size: 15px;
+				line-height: 21px;
+				color: $main-black;
+				padding-bottom: 21px;
+				@include respond-to($break-767){
+					font-size: 13px;
+					line-height: 16px;
+				}
+				&:first-child{
+					padding-top: 20px;
+					@include respond-to($break-1024){
+						padding-top: 36px;
+                      letter-spacing: -0.020em;
+					}
+					@include respond-to($break-767){
+						padding-top: 15px;
+					}
+				}
+			}
+			.signature{
+			  float: right;
+			  margin-top: 24px;
+              // background: url("../images/img/signature.png") no-repeat top center;
+              // padding-top: 78px;
+              text-align: center;
+              img{
+              	display: block;
+              	width: 100%;
+              	margin-bottom: 20px;
+              }
+              strong{
+                @extend %gotham-ultra;
+                font-weight: normal;
+                font-size: 18px;
+                color: #333;
+                margin-bottom: 7px;
+                display: block;
+                @include respond-to($break-480){
+                  font-size: 16px;
+                  width: 187px;
+                }
+              }
+              p{
+                @extend %roboto-regular;
+                font-weight: 500;
+                font-size: 15px;
+                color: #666666;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                @include respond-to($break-480){
+                  font-size: 13px;
+                }
+              }
+				@include respond-to($break-767){
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+}
+
+#about-lichsu{
+	padding: 53px 0 0 0;
+	position: relative;
+	@include respond-to($break-1024){
+		padding: 0px 40px 0 40px;
+	}
+	@include respond-to($break-767){
+		padding: 0px 20px 0 20px;
+	}
+	.left-contentx{
+		width: 300px;
+		min-height: 1px;
+      	float: left;
+		@include respond-to($break-1024){
+			display: none;
+		}
+		.fixed-mn-left{
+			width: 300px;
+			position: absolute;
+			top: 43px;
+			bottom: auto;
+			left: 50%;
+			margin-left: -590px;
+			list-style: none;
+			cursor: pointer;
+			@include transition();
+			@include respond-to($break-1180){
+				margin-left: calc(-50% + 40px);
+			}
+			&.fixed{
+				position: fixed;
+				left: 50%;
+				margin-left: -590px;
+				top: 160px;
+				bottom: auto;
+				@include respond-to($break-1180){
+					margin-left: calc(-50% + 40px);
+				}
+			}
+			&.anchor{
+				position: absolute;
+				left: 50%;
+				margin-left: -590px;
+				top: auto;
+				// bottom: 868px;
+//				@include transition();
+				@include respond-to($break-1180){
+					margin-left: calc(-50% + 40px);
+				}
+			}
+			> li{
+				list-style: none;
+				> a{
+					@extend %gotham-ultra;
+					font-size: 18px;
+					line-height: 36px;
+					color: #000;
+					&.ac, &:hover{
+						color: $main-red;
+					}
+				}
+              .small{
+                    list-style-type: none;
+                    a{
+                      @extend %gotham-book;
+                      font-size: 15px;
+                      line-height: 24px;
+                      color: $main-black;
+                      &.ac, &:hover{
+                        color: $main-red;
+                      }
+                  }
+				}
+			}
+		}
+	}
+	.right-content{
+		width: calc(100% - 422px);
+		float: left;
+		// margin-left: 300px;
+		.note{
+			@extend %roboto-regular;
+			font-size: 13px;
+			color: $black-2;
+			margin: 20px 0;
+			text-align: right;
+			span{
+				@extend %roboto-bold;
+				font-size: 13px;
+				color: $main-black;
+				text-decoration: underline;
+				margin-right: 14px;
+			}
+			.star{
+				display: inline-block;
+				margin-right: 8px;
+				margin-bottom: -3px;
+			}
+			.space{
+				display: inline-block;
+				width: 40px;
+				@include respond-to(767px){
+					width: 65px;
+				}
+				@include respond-to(605px){
+					width: 73px;
+				}
+				@include respond-to(595px){
+					width: 65px;
+				}
+			}
+			br{
+				display: none;
+				@include respond-to(767px){
+					display: block;
+				}
+			}
+		}
+      .swiper-container, .swiper-wrapper, .swiper-slide{
+        width: 100%;
+        height: 0;
+        @include respond-to($break-1024){
+          height: 70px;
+        }
+        @include respond-to($break-767){
+          height: 60px;
+        }
+      }
+      .swiper-container .swiper-wrapper .swiper-slide i{
+      	color: $main-red;
+      }
+      .swiper-container .select-year{
+      	position: absolute;
+      	top: 0;
+      	right: 0;
+      	bottom: 0;
+      	left: 0;
+      	margin: auto;
+      	width: 110px;
+      	height: 100%;
+      	z-index: 1;
+      	background: none;
+      	border: none;
+      	display: none;
+      	-webkit-appearance: none;
+   		-moz-appearance:    none;
+   		appearance:         none;
+   		cursor: pointer;
+        background: #fff url("../images/icon/select_box2.png") no-repeat right center;
+      	@include respond-to($break-1024){
+          display: block;
+        }
+      }
+		@include respond-to($break-1024){
+			width: 100%;
+			margin-left: 0;
+          .swiper-slide{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+          }
+          .swiper-container{
+            height: 70px;
+          }
+          .swiper-wrapper{
+            display: flex;
+          }
+		}
+		@include respond-to($break-767){
+          .swiper-container{
+            height: 60px;
+          }
+        }
+		.title{
+			@extend %gotham-bold;
+			font-size: 30px;
+			color: $main-red;
+			margin-top: -12px;
+			padding-bottom: 23px;
+			border-bottom: 1px solid #cccccc;
+			@include respond-to($break-1024){
+				display: none;
+			}
+		}
+
+
+		.swiper-slide{
+			@extend %gotham-bold;
+			font-size: 29px;
+			color: #000;
+			line-height: 70px;
+			text-align: center;
+			@include respond-to($break-767){
+				line-height: 57px;
+			}
+			select{
+				border: none;
+			}
+		}
+		.swiper-button-next{
+			width: 20px;
+			height: 27px;
+			position: absolute;
+			top: 50%;
+			margin-top: -7px;
+			right: 10px;
+			background:  url(../images/icon/year-next.png) no-repeat center center ;
+          &.swiper-button-disabled{
+            display: none;
+          }
+		}
+		.swiper-button-prev{
+			width: 20px;
+			height: 27px;
+			position: absolute;
+			top: 50%;
+			margin-top: -7px;
+			left: 10px;
+			background: url(../images/icon/year-prev.png) no-repeat center center;
+          &.swiper-button-disabled{
+            display: none;
+          }
+		}
+		.year{
+			width: 100%;
+			border-top: 1px solid #cccccc;
+			margin-bottom: 8px;
+			&:first-child{
+				border-top: none;
+				@include respond-to($break-1024){
+					border-top: 1px solid #cccccc;
+				}
+			}
+			&:last-child{
+				margin-bottom: 60px;
+			}
+			@include respond-to($break-767){
+				margin-bottom: 12px;
+			}
+			h1{
+				@extend %iciel-gotham-medium;
+				font-size: 48px;
+				color: #cccccc;
+				padding: 18px 0 0 200px;
+				display: block;
+				@include respond-to($break-1024){
+					display: none;
+				}
+			}
+			.line{
+				&:nth-child(even){
+					background: #fff;
+				}
+				&:nth-child(odd){
+					background: #f5f5f5;
+				}
+				.left-side{
+					width: 200px;
+					float: left;
+					@extend %iciel-gotham-medium;
+					font-size: 18px;
+					color: #000;
+					padding: 15px 0 16px 20px;
+					@include respond-to($break-767){
+						width: 100%;
+						float: none;
+						font-size: 16px;
+						padding-bottom: 3px;
+					}
+
+				}
+				.right-side{
+					width: calc(100% - 201px);
+					float: left;
+					padding: 18px 20px 9px 0;
+                  @include respond-to($break-980){
+                    padding-right: 0;
+                  }
+					@include respond-to($break-767){
+						width: 100%;
+						padding: 0 0 11px 0;
+					}
+					p{
+						@extend %roboto-regular;
+						font-size: 15px;
+						color: #000;
+						line-height: 18px;
+						padding-bottom: 12px;
+						padding-left: 28px;
+						@include respond-to($break-767){
+							padding-left: 45px;
+							font-size: 13px;
+							line-height: 16px;
+							padding-bottom: 5px;
+						}
+					}
+					.star{
+						float: left;
+						margin-right: 10px;
+						@include respond-to($break-767){
+							margin-left: 18px;
+						}
+					}
+					.normal{
+						max-width: 100%;
+						margin: 5px 0 14px 0;
+						@include respond-to($break-767){
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.time-line{
+		position: absolute;
+		top: 160px;
+		right: 50%;
+		margin-right: -578px;
+		width: 70px;
+		list-style: none;
+		// background: url(../images/img/about/gray.png) repeat-y 3px 5px;
+		@include transition();
+		@include respond-to($break-1180){
+			margin-right: calc(-50% + 40px);
+		}
+		@include respond-to($break-1024){
+			display: none;
+		}
+		&.fixed-tl{
+			position: fixed;
+			right: 50%;
+			margin-right: -578px;
+			@include respond-to($break-1180){
+				margin-right: calc(-50% + 40px);
+			}
+		}
+		&.anchor{
+          top: auto !important;
+          transition: all 0s ease !important;
+          position: absolute !important;
+          right: 50%;
+		  margin-right: -578px;
+			@include respond-to($break-1180){
+				margin-right: calc(-50% + 40px);
+			}
+		}
+		span{
+			width: 10px;
+			position: absolute;
+			top: 5px;
+			left: 3px;
+		}
+		.gray-1{
+			background: url(../images/img/about/gray.png) repeat-y 0 0;
+		}
+		.red{
+			background: url(../images/img/about/red.png) repeat-y 0 0;
+			min-height: 10px;
+		}
+		.gray-2{
+			background: url(../images/img/about/gray.jpg) repeat-y 0 0;
+		}
+		
+		li{
+			list-style: none;
+			width: 70px;
+			margin-bottom: 19px;
+			padding-left: 37px;
+			position: relative;
+			a{
+				cursor: pointer;
+				@extend %gotham-book;
+				font-size: 15px;
+				color: $main-black;
+			}
+			&.ac a, &:hover a{
+				color: $main-red;
+			}
+			span{
+				width: 10px;
+				position: absolute;
+				top: 5px;
+				left: 3px;
+			}
+		}
+		
+	}
+}
+.small{
+  margin-bottom: 10px;
+  display: none;
+}
+.ac .small{
+  display: block;
+}
+.right-timeline{
+  width: 118px;
+  padding-left: 42px;
+  min-height: 1px;
+  float: left;
+  padding-right: 8px;
+  @include respond-to($break-1024){
+		display: none;
+	}
+}
+body.menu-hide{
+	#about-thungo{
+		.fixed-mn-left.fixed{
+			top: 93px;
+			@include transition();
+          &.anchor{
+            @include transition_hover(all, 0s, ease);
+          }
+		}
+	}
+	#about-lichsu{
+		.fixed-mn-left.fixed{
+			top: 93px;
+			@include transition();
+          &.anchor{
+            @include transition_hover(all, 0s, ease);
+          }
+		}
+		.time-line.fixed-tl{
+			top: 93px;
+			@include transition();
+
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.search-icon {
+  width: 24px;
+  height: 24px;
+  background: url(../images/ie/search_icon.png) no-repeat;
+}
+
+.search-icon > div {
+  display: none !important;
+}
+
+#news-wrap .block span {
+  background: url(../images/ie/block_bg.png) repeat !important;
+}
+
+#news-wrap .block:hover span {
+  background: #ed1b2f !important;
+}
+
+#footer .contact {
+  background: url(../images/bg/contact.jpg) no-repeat center top;
+}
+
+select.tax {
+  width: 365px !important;
+}
+
+/*# sourceMappingURL=ielt10.css.map */

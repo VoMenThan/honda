@@ -1,0 +1,238 @@
+.clearfix:before,
+.clearfix:after { 
+	display: table; content: " "; 
+}
+.clearfix:after { 
+	clear:both; 
+}
+ul,li,p,h1,h2,h3,h4{
+	padding: 0;
+	margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+a, a:link, a:hover, a:focus, a:active, a:visited{
+	text-decoration: none;
+}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+}
+body {
+	color: $main-black;
+	overflow-x: hidden;
+	font-size: 14px;
+	@extend %gotham-book;
+	@include respond-to($break-980){
+		overflow-x: hidden;
+	}
+}
+body.noscroll{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+}
+.container{
+  width: 100%;
+  max-width: 1180px + 30px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include respond-to($break-1024){
+    padding: 0 40px;
+  }
+  @include respond-to($break-640){
+    padding: 0 20px;
+  }
+}
+.center-content{
+	width: 100%;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+.text-center{
+  text-align: center;
+}
+#content{
+	overflow: hidden;
+}
+.fl-left{
+	float: left;
+}
+.fl-right{
+	float: right;
+}
+
+.pagination-loading-2{
+	width: 0;
+	height: 2px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background: $main-red;
+	.shadow{
+		width: 100px;
+		height: 2px;
+		float: right;
+		background: $main-red;
+		-webkit-box-shadow: 2px -2px 6px 0px rgba(#000,1);
+		-moz-box-shadow: 2px -2px 6px 0px rgba(#000,1);
+		box-shadow: 2px -2px 6px 0px rgba(#000,1);
+	}
+}
+
+.pagination-loading{
+	width: 100%;
+	height: 5px;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	position: fixed;
+	top: 130px;
+	left: 0;
+	z-index: 9999;
+	display: none;
+	@include respond-to(1024px){
+		top: 154px;
+	}
+}
+
+#noTrespassingOuterBarG{
+	height:100%;
+	width:100%;
+	// border:1px solid rgba(0,0,0,0.03);
+	overflow:hidden;
+	background-color:rgb(255,255,255);
+	margin:auto;
+}
+
+.noTrespassingBarLineG{
+	background-color:rgb(237,27,48);
+	float:left;
+	width:7px;
+	height:63px;
+	margin-right:13px;
+	margin-top:-15px;
+	transform:rotate(45deg);
+		-o-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		-webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+}
+
+.noTrespassingAnimationG{
+	width:100%;
+	animation-name:noTrespassingAnimationG;
+		-o-animation-name:noTrespassingAnimationG;
+		-ms-animation-name:noTrespassingAnimationG;
+		-webkit-animation-name:noTrespassingAnimationG;
+		-moz-animation-name:noTrespassingAnimationG;
+	animation-duration:0.4s;
+		-o-animation-duration:0.4s;
+		-ms-animation-duration:0.4s;
+		-webkit-animation-duration:0.4s;
+		-moz-animation-duration:0.4s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-timing-function:linear;
+		-o-animation-timing-function:linear;
+		-ms-animation-timing-function:linear;
+		-webkit-animation-timing-function:linear;
+		-moz-animation-timing-function:linear;
+}
+
+
+
+@keyframes noTrespassingAnimationG{
+	0%{
+		margin-left:0px;
+	}
+
+	100%{
+		margin-left:-20px;
+	}
+}
+
+@-o-keyframes noTrespassingAnimationG{
+	0%{
+		margin-left:0px;
+	}
+
+	100%{
+		margin-left:-20px;
+	}
+}
+
+@-ms-keyframes noTrespassingAnimationG{
+	0%{
+		margin-left:0px;
+	}
+
+	100%{
+		margin-left:-20px;
+	}
+}
+
+@-webkit-keyframes noTrespassingAnimationG{
+	0%{
+		margin-left:0px;
+	}
+
+	100%{
+		margin-left:-20px;
+	}
+}
+
+@-moz-keyframes noTrespassingAnimationG{
+	0%{
+		margin-left:0px;
+	}
+
+	100%{
+		margin-left:-20px;
+	}
+}
+
+body.menu-hide{
+	.pagination-loading-2{
+		background: #fafafa;
+		.shadow{
+			background: #fafafa;
+		}
+		@include respond-to(1024px){
+			background: $main-red;
+			.shadow{
+				background: $main-red;
+			}
+		}
+	}
+	.pagination-loading{
+		top: 63px;
+		@include respond-to(1024px){
+			top: 73px;
+		}
+	}
+}
+
+img.aligncenter{
+	display: block;
+	margin: 0 auto;
+}
+
+p img, p iframe{
+	max-width: 100%;
+}
+
+p img{
+	height: auto !important;
+}
+
+// .scaled-image{
+// 	@include opacity(0); 
+// }

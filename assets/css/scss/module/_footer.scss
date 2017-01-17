@@ -1,0 +1,406 @@
+#footer{
+	width: 100%;
+// Contact
+	.contact{
+		width: 100%;
+		height: 260px;
+		background: url(../images/bg/contact.jpg) no-repeat center top;
+        background-size: cover;    
+		@include respond-to($break-1200){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@include respond-to($break-767){
+            height: auto;
+          // background: #e3e3e3;
+          background: url(../images/bg/contact2.jpg) no-repeat center center / cover;
+          padding-bottom: 5px;
+		}
+		.center-content{
+			height: 100%;
+			.hotline{
+				width: 50%;
+				height: 100%;
+				float: left;
+				padding-left: 50px;
+				@include respond-to($break-1200){
+					padding-left: 30px;
+				}
+				@include respond-to($break-1065){
+					padding-left: 20px;
+				}
+				@include respond-to($break-640){
+					float: none;
+					width: 100%;
+					padding-left: 0;
+					padding-bottom: 30px;
+				}
+				h2{
+					@extend %gotham-book;
+					font-size: 30px;
+					line-height: 54px;
+					font-weight: normal;
+					margin: 0;
+					padding-top: 29px;
+					@include respond-to($break-980){
+						font-family:  $font-gothamultra;
+						font-size: 22px;
+					}
+                  &.hdvn{
+                    @extend %gotham-ultra;
+                    font-size: calcEm(24, 14);
+                    @include respond-to($break-767){
+                      margin-top: 16px;
+                    }
+                  }
+					@include respond-to($break-980){
+						font-size: 22px;
+					}
+					@include respond-to($break-767){
+						padding-top: 15px;
+					}
+				}
+				.desc{
+					@extend %roboto-regular;
+					font-size: 16px;
+					color: $black-2;
+					padding-bottom: 17px;
+					@include respond-to($break-980){
+						font-size: 14px;
+					}
+				}
+				.number{
+					@extend %roboto-regular;
+					font-size: 14px;
+					color: $black-2;
+                  &.hdvn{
+                    color: #333;
+                  }
+					@include respond-to($break-980){
+						font-size: 13px;
+					}
+
+					span{
+						@extend %roboto-bold;
+						font-size: 30px;
+						color: $main-red;
+						@include respond-to($break-980){
+							font-size: 24px;
+						}
+                      @include respond-to($break-480){
+                        display: block;
+                      }
+					}
+				}
+				.line{
+					width: 430px;
+					height: 1px;
+					border-bottom: 1px solid #bebebe;
+					margin: 11px 0px 4px 0px;
+					@include respond-to($break-980){
+						width: calc(100% - 16px);
+					}
+					@include respond-to($break-767){
+						width: 100%;
+					}
+				}
+			}
+			.rss{
+				width: 50%;
+				height: 100%;
+				float: left;
+				padding-left: 50px;
+				@include respond-to($break-1065){
+					padding-left: 40px;
+				}
+				@include respond-to($break-640){
+					float: none;
+					width: 100%;
+					padding-left: 0;
+					padding-bottom: 45px;
+				}
+				h2{
+					@extend %gotham-book;
+					font-size: 30px;
+					line-height: 54px;
+					font-weight: normal;
+					margin: 0;
+					padding-top: 29px;
+					@include respond-to($break-980){
+						font-family:  $font-gothamultra;
+						font-size: 22px;
+					}
+                  &.hdvn{
+                    @extend %gotham-ultra;
+                    font-size: calcEm(24, 14);
+                  }
+				}
+				.desc{
+					@extend %roboto-regular;
+					font-size: 16px;
+					color: $black-2;
+					padding-bottom: 17px;
+					@include respond-to($break-980){
+						font-size: 14px;
+					}
+				}
+				input{
+					width: 100%;
+					max-width: 460px;
+					height: 40px;
+					border: none;
+					background: #fff;
+					@extend %roboto-regular;
+					font-size: 13px;
+					line-height: 40px;
+					padding: 0px 15px;
+					margin-bottom: 10px;
+					@include placeholder{
+                      color: #999999;
+                      @include opacity(1);
+                    }
+				}
+				.select-wrp{
+					width: 100%;
+					max-width: 460px;
+					height: 40px;
+					select{
+						width: calc(100% - 91px);
+						height: 40px;
+						float: left;
+						border: none;
+						background: #fff;
+						@extend %roboto-regular;
+						font-size: 13px;
+						color: $grey-1;
+						line-height: 40px;
+						padding: 0px 11px;
+                      @include appearance(none);
+                      background: #fff url("../images/icon/select_box.png") no-repeat right center;
+                      &::-ms-expand{
+                        display: none;
+                      }
+                      @include respond-to($break-320){
+                        padding-right: 40px;
+                      }
+					}
+					a{
+						display: block;
+						width: 91px;
+						height: 40px;
+						float: left;
+						background: url(../images/btn/rerss.jpg) no-repeat 0 0;
+						@include transition();
+						&:hover{
+							opacity: .7;
+							@include transition();
+						}
+					}
+				}
+			}
+		}
+	}
+// End Contact
+
+// Site map
+	.site-map{
+		width: 100%;
+		padding: 52px 0 40px 0;
+		background: #131313;
+		ul{
+			list-style: none;
+			li{
+				list-style: none;
+				a{
+					@extend %roboto-regular;
+					font-size: 13px;
+					line-height: 24px;
+					color: #fff;
+					opacity: 0.7;
+					&:hover{
+						opacity: 1;
+					}
+				}
+				&.big{
+					padding-bottom: 15px;
+					a{
+						@extend %roboto-bold;
+						font-size: 15px;
+						line-height: 18px;
+						color: #fff;
+						opacity: 1;
+						&:hover{
+							color: $main-red;
+						}
+					}
+				}
+				&.spctop{
+					margin-top: 13px;
+				}
+			}
+		}
+// Site map pc and tablet
+		.site-map-pc{
+			display: block;
+			@include respond-to($break-1200){
+            	padding: 0 20px;
+            }
+            @include respond-to($break-767){
+            	display: none;
+            }
+			.block{
+				float: left;
+				.list1{
+					float: left;
+					width: 220px;
+				}
+				.list2{
+					float: left;
+					width: 268px;
+				}
+				.small-block{
+					float: left;
+					width: 184px;
+				}
+				@include respond-to($break-1200){
+	            	.list1{
+						width: 190px;
+					}
+					.list2{
+						width: 238px;
+					}
+					.small-block{
+						width: 154px;
+					}
+	            }
+	            @include respond-to($break-1023){
+	            	.list1{
+						width: 170px;
+					}
+					.list2{
+						width: 218px;
+					}
+					.small-block{
+						width: 134px;
+					}
+	            }
+	            @include respond-to($break-980){
+	            	.list1{
+						width: 186px;
+					}
+					.list2{
+						width: 221px;
+					}
+					.small-block{
+						float: none;
+						width: auto;
+						.list3{
+							width: 186px;
+							float: left;
+						}
+						.list4{
+							width: 221px;
+							float: left;
+						}
+					}
+	            }
+			}
+			.list5{
+				float: left;
+				width: 306px;
+			}
+			.list6{
+				float: left;
+			}
+			@include respond-to($break-1200){
+            	.list5{
+					width: 276px;
+				}
+            }
+            @include respond-to($break-1023){
+            	.list5{
+					width: 256px;
+				}
+            }
+            @include respond-to($break-980){
+            	.list5{
+					width: 164px;
+					padding-right:30px
+				}
+            }
+		}
+// End Site map pc and tablet
+// Site map mb
+		.site-map-mb{
+			display: none;
+			padding: 0 20px;
+			@include respond-to($break-767){
+            	display: block;
+            }
+            .list-left{
+            	width: 50%;
+            	float: left;
+            	@include respond-to($break-550){
+	            	padding-right: 30px;
+	            }
+            }
+            .list-right{
+            	width: 50%;
+            	float: left;
+            }
+		}
+// End Site map mb
+	}
+// End Site map
+
+// Bottom
+	.bottom{
+		width: 100%;
+		height: 48px;
+		background: #000;
+		@include respond-to($break-1200){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@include respond-to($break-700){
+			height: auto;
+			text-align: center;
+		}
+		.right{
+			float: right;
+			@include respond-to($break-700){
+				float: none;
+				width: 100%;
+				line-height: 40px;
+			}
+			p{
+				@extend %roboto-regular;
+				font-size: 13px;
+				color: #fff;
+				opacity: .4;
+				display: inline;
+			}
+			a{
+				display: inline-block;
+				opacity: .5;
+				margin: 12px 0px 0px 35px;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+		.left{
+			float: left;
+			@extend %roboto-regular;
+			font-size: 13px;
+			color: #fff;
+			line-height: 48px;
+			opacity: .4;
+			@include respond-to($break-700){
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+// End Bottom
+}

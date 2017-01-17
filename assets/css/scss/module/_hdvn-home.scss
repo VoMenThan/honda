@@ -1,0 +1,1198 @@
+//Homepage slider
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  @include respond-to($break-980) {
+    padding-top: 60px;
+  }
+  &.opened{
+    overflow: hidden;
+  }
+}
+
+#homepage-slider {
+    .replace-slider{
+        width: 100%;
+        img{
+            display: block;
+            width: 100%;
+        }
+        &.tab-version{
+            display: none;
+        }
+        &.mob-version{
+            display: none;
+            .desc{
+              background: #000;
+              padding: 20px;
+              .title{
+                @extend %gotham-ultra;
+                font-size: 24px;
+                color: #fff;
+                padding-bottom: 8px;
+              }
+              .view-more{
+                @extend %roboto-regular;
+                font-size: 15px;
+                color: $black-2;
+                i{
+                  color: $main-red;
+                  margin-left: 8px;
+                }
+              }
+            }
+        }
+    }
+    .tablet-version{
+        display: none;
+    }
+    .mobile-version{
+        display: none;
+        .desc{
+          background: #000;
+          padding: 20px;
+          .title{
+            @extend %gotham-ultra;
+            font-size: 24px;
+            color: #fff;
+            padding-bottom: 8px;
+          }
+          .view-more{
+            @extend %roboto-regular;
+            font-size: 15px;
+            color: $black-2;
+            i{
+              color: $main-red;
+              margin-left: 8px;
+            }
+          }
+        }
+    }
+    @include respond-to(980px){
+        .desktop-version{
+            display: none;
+        }
+        .tablet-version{
+            display: block;
+        }
+        .replace-slider{
+            &.desk-version{
+                display: none;
+            }
+            &.tab-version{
+                display: block;
+            }
+        }
+    }
+    @include respond-to(767px){
+        .tablet-version{
+            display: none;
+        }
+        .mobile-version{
+            display: block;
+        }
+        .replace-slider{
+            &.tab-version{
+                display: none;
+            }
+            &.mob-version{
+                display: block;
+            }
+        }
+    }
+  .swiper-wrapper, .swiper-container {
+    height: 100%;
+  }
+  .swiper-slide {
+    // background: url("../images/hdvn_home/sample_homepage_slider.jpg") no-repeat center center / cover;
+    width: 100%;
+    height: 100%;
+    a{
+        width: 100%;
+        height: 100%;
+        display: block;
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+    .container {
+      position: relative;
+      height: 100%;
+      @include respond-to($break-980){
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      @include respond-to($break-780){
+        position: relative;
+      }
+      @include ipad-portrait{
+        position: absolute ;
+      }
+    }
+    &:nth-child(2){
+      // background: url("../images/hdvn_home/sample_homepage_slider_2.jpg") no-repeat center center / cover;
+    }
+    @include respond-to($break-780) {
+      // background: url("../images/hdvn_home/sample_homepage_slider_tablet.jpg") no-repeat center center / cover;
+      height: auto;
+      &:nth-child(2){
+        // background: url("../images/hdvn_home/sample_homepage_slider_tablet.jpg") no-repeat center center / cover;
+      }
+    }
+  }
+
+  .nav-buttons {
+    position: absolute;
+    left: 0;
+    padding-left: 20px;
+    top: 50%;
+    z-index: 10;
+    color: #fff;
+    font-size: calcEm(20);
+    cursor: pointer;
+    background: url(../images/bg/ov.png) repeat;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-right: 18px;
+    &:hover{
+      background: url(../images/bg/ov_hv.png) repeat;
+    }
+    &.prev-button {
+      -webkit-border-top-right-radius: 4px;
+      -moz-border-radius-topright: 4px;
+      border-top-right-radius: 4px;
+      border-bottom: 1px solid #c7c5c1;
+      margin-top: -18px;
+    }
+    &.next-button {
+      margin-top: 28px;
+      -webkit-border-bottom-right-radius: 4px;
+      -moz-border-radius-bottomright: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    &.swiper-button-disabled {
+      color: rgba(#fff, 0.5)
+    }
+    @include respond-to($break-980) {
+      display: none;
+    }
+  }
+  .swiper-pagination {
+    width: 100%;
+    max-width: 1180px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: left;
+//  bottom: 157/741*100%;
+    bottom: 50px;
+    z-index: 999;
+    @include transition_hover(all, .5s, linear);
+    span {
+      background: #fff;
+      margin: 0 17px 0 0;
+      position: relative;
+      @include opacity(1);
+      @include size(8px);
+      @include border-radius(50%);
+      @include transition_hover(all, .3s, linear);
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        @include size(20px);
+        @include border-radius(50%);
+        background: transparent;
+        left: -6px;
+        top: -6px;
+        @include transition_hover(all, .3s, ease);
+      }
+      &:hover, &.swiper-pagination-bullet-active {
+        @include opacity(1);
+        &::after {
+          background: rgba(#fff, .2);
+        }
+      }
+    }
+    @include respond-to($break-1065) {
+      left: 25px;
+    }
+    @include respond-to($break-980) {
+      left: 20px;
+    }
+    @include respond-to($break-780){
+      bottom: 10%;
+    }
+    @include respond-to($break-480){
+      bottom: 10px;
+    }
+  }
+  .mouse-down {
+//    bottom: 170/741*100%;
+    bottom: 50px;
+    left: 0;
+    display: block;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 20;
+      @include transition_hover(all, .5s, linear);
+      img{
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin-left: -10px;
+      }
+    @include respond-to($break-980) {
+      display: none;
+    }
+  }
+  .mobile-text {
+    display: none;
+  }
+  @include respond-to($break-640) {
+
+    .heading-wrap {
+      position: absolute;
+      top: 0;
+    }
+  }
+  @include respond-to($break-640) {
+    height: auto !important;
+    .swiper-slide {
+      background: #000;
+      &:nth-child(2){
+        background: #000;
+      }
+      h3 {
+        font-size: calcEm(24, 14);
+      }
+      @include respond-to($break-780){
+        height: auto;
+      }
+    }
+    .heading-wrap {
+      position: relative;
+    }
+    .swiper-pagination {
+      bottom: 29%;
+      @include respond-to($break-480) {
+        bottom: 38%;
+      }
+    }
+  }
+}
+
+// Product blocks
+#product-blocks {
+  z-index: 20;
+  position: relative;
+  .product-row {
+    @extend .clearfix;
+    margin: 0 -10px;
+    @include respond-to($break-780){
+      margin: 0 -5px;
+    }
+    @include respond-to($break-480) {
+      margin: 0 -20px;
+    }
+  }
+  .block {
+    opacity: 0;
+    margin-top: -50px;
+    width: 1/3*100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    overflow: hidden;
+    @include respond-to($break-1024){
+      opacity: 1 !important;
+    }
+    @include respond-to($break-780) {
+      margin-top: -35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      opacity: 1 !important;
+    }
+    @include respond-to($break-640) {
+      display: block;
+      width: 100%;
+      margin-top: 20px !important;
+      opacity: 1 !important;
+      @include opacity(1);
+      img {
+        width: 100%;
+      }
+    }
+    @include respond-to($break-480) {
+      padding: 0 20px;
+    }
+  }
+  a {
+    display: block;
+    width: 100%;
+    position: relative;
+    @extend %gotham-ultra;
+    font-size: calcEm(18, 14);
+    color: #ffffff;
+    overflow: hidden;
+    max-height: 380px;
+    img {
+      max-width: 100%;
+      @include transition_hover(all, 1s, ease);
+      z-index: -1;
+      display: block;
+    }
+    span.block-title {
+      position: absolute;
+      bottom: 26px;
+      width: 100%;
+      display: block;
+      padding-right: 80px;
+      padding-left: 20px;
+      z-index: 2;
+      @include respond-to($break-780){
+        padding-right: 85px;
+      }
+      @include ipad-portrait{
+        font-size: calcEm(14, 20);
+      }
+      @include respond-to($break-780){
+        bottom: 21px;
+      }
+    }
+    .block-icon {
+      z-index: 2;
+      @include round-buttons;
+      display: block;
+      border: 1px solid #fff;
+        @include pie;
+      i {
+        font-size: 18px;
+        position: absolute;
+        width: 100%;
+        top: 11px;
+        left: -2px;
+        display: block;
+        text-align: center;
+      }
+      @include respond-to($break-780){
+        @include size(26px, 26px);
+        bottom: 17px;
+        i{
+          top: 6px;
+        }
+      }
+      @include respond-to($break-480){
+        width: 33px;
+        height: 33px;
+        i{
+          top: 9px;
+        }
+      }
+    }
+    &:hover {
+
+      span.block-icon {
+        border-color: $main-red;
+        background: $main-red;
+          @include pie;
+          @include border-radius(50%);
+      }
+      img {
+        @include transform(scale(1.1));
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 95px;
+      background: url(../images/hdvn_home/box_shadow.png) repeat-x;
+      z-index: 1;
+      @include respond-to($break-780){
+        bottom: 0;
+      }
+      @include memo-portrait{
+        bottom: 0;
+      }
+      @include memo-landscape{
+        bottom: 0;
+      }
+      @include ipad-portrait{
+        bottom: 0;
+      }
+    }
+    @include respond-to(800px) {
+      font-size: calcEm(20, 14);
+    }
+  }
+}
+
+//News block
+#news-wrap {
+  h3 {
+    text-align: center;
+    color: $main-red;
+    font-size: calcEm(48, 14);
+    margin-top: 48px;
+    margin-bottom: 18px;
+    @extend %gotham-ultra;
+    @include respond-to($break-980) {
+      margin-top: 80px;
+    }
+    @include respond-to($break-780){
+      margin-top: 40px;
+    }
+    @include respond-to($break-480) {
+      font-size: calcEm(24, 14);
+    }
+    @include ipad-portrait{
+      font-size: calcEm(30, 14);
+    }
+    @include memo-portrait{
+      font-size: calcEm(48, 14);
+    }
+  }
+  .row {
+    width: 100%;
+    @extend .clearfix;
+    &.show {
+      display: none;
+      margin: 0;
+      .block{
+        height: 230px !important;
+      }
+      .medium-100{
+        width: 50% !important;
+      }
+    }
+    @include respond-to($break-780) {
+      &.hidden {
+        display: none;
+      }
+      &.show {
+        display: block;
+      }
+    }
+    @include respond-to($break-640) {
+      margin: 0 -5px;
+      &.hidden {
+        display: block;
+      }
+      &.show {
+        display: none;
+      }
+    }
+  }
+  .col-xs-6 {
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include respond-to($break-780) {
+      &.medium-100 {
+        width: 100%;
+      }
+      &.large-grid {
+        width: 452/688*100%;
+      }
+      &.medium-grid {
+        width: 236/688*100%;
+      }
+    }
+    @include respond-to($break-640) {
+      padding: 0 5px;
+      &.large-grid, &.medium-grid {
+        width: 100%;
+      }
+      .medium-100 {
+        margin-top: 20px;
+        width: 50%;
+      }
+    }
+    @include respond-to($break-480) {
+      width: 100%;
+      .medium-100 {
+        margin-top: 0;
+        width: 50%;
+        > div {
+          height: 135px !important;
+          span {
+            padding: 12px 10px !important;
+            font-size: 12px;
+            i {
+              right: 10px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .block {
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    &.block-image {
+      font-size: calcEm(18, $font-base);
+      &:hover {
+        span {
+          background: $main-red;
+            @include pie;
+        }
+      }
+      span {
+        width: 100%;
+        padding: 26px 70px 26px 30px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgba(#000, .8);
+        color: #fff;
+        overflow: hidden;
+        z-index: 0;
+        @include transition_hover(all, .5s, ease);
+        @extend %roboto-bold;
+        @include pie;
+        i {
+          position: absolute;
+          right: 30px;
+          font-size: 24.5px;
+          top: 50%;
+          margin-top: -18px;
+          // @include ipad-portrait{
+          //   top: 61%;
+          // }
+        }
+        display: block;
+        &.mobile-visible{
+          display: none;
+        }
+
+        @include respond-to($break-480) {
+          font-size: 16px;
+          padding: 15px 45px 15px 20px;
+          i {
+            right: 20px;
+            margin-top: -10px;
+          }
+          &.mobile-hidden{
+            display: none;
+          }
+          &.mobile-visible{
+            display: block;
+          }
+        }
+        @include respond-to(360px){
+          i{
+            margin-top: -20px;
+          }
+        }
+        @include respond-to(320px){
+          margin-top: -10px;
+        }
+      }
+      &.block-small {
+        font-size: 1.071em;
+        height: 230px;
+        span {
+          padding: 10px 35px 10px 20px;
+          i {
+            margin-top: -13px;
+            font-size: 24.5px;
+            right: 20px;
+            @include respond-to($break-780){
+              font-size: 16px;
+              margin-top: -8px;
+            }
+            @include respond-to($break-480) {
+              font-size: 15px;
+              background: none;
+              display: none;
+            }
+          }
+        }
+        @media screen and (max-width: 980px) and (min-width: 780px) {
+          height: 185px;
+        }
+        @include respond-to($break-780) {
+          margin-bottom: 0;
+        }
+        @include respond-to($break-480) {
+          height: 135px;
+          margin-bottom: 10px !important;
+        }
+        @include ipad-portrait{
+          height: 191px;
+          margin-bottom: 20px !important;
+        }
+        @include ipad-landscape{
+          height: 213px;
+          margin-bottom: 20px;
+        }
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        // overflow: hidden;
+        &:hover {
+          span {
+            &::after {
+              transform-origin: 50% 0 0;
+              height: 1000px;
+              width: 300%;
+            }
+          }
+        }
+      }
+    }
+    img {
+      height: 100%;
+    }
+    &.block-small {
+      margin-bottom: 20px;
+      @include respond-to(480px){
+        margin-bottom: 10px;
+      }
+    }
+    &.block-large {
+      width: 100%;
+      height: 480px;
+      &.block-image{
+        i{
+          font-size: 40px;
+        }
+      }
+
+      @media screen and (max-width: 980px) and (min-width: 780px) {
+        height: 402px;
+      }
+      @include respond-to($break-480) {
+        height: 289px;
+        margin-bottom: 10px !important;
+      }
+      @include ipad-portrait{
+        height: 402px;
+      }
+      @include ipad-landscape{
+        height: 446px;
+      }
+    }
+    &.block-text {
+      height: 230px;
+      padding: 20px;
+      letter-spacing: -0.025em;
+      &:hover {
+        @include opacity(.8);
+
+      }
+      a {
+        color: #000;
+        font-size: calcEm(22, $font-base);
+        @extend %gotham-bold-new;
+        line-height: calcEm(26, 22);
+        text-transform: uppercase;
+        display: block;
+        width: 100%;
+        height: 100%;
+        word-wrap: break-word;
+        span {
+          @include size(41px);
+          color: #fff;
+          background: $main-red;
+          position: absolute;
+          text-align: center;
+          line-height: 41px;
+          right: -20px;
+          bottom: -20px;
+          &.strange {
+            right: -14px;
+            bottom: -8px;
+            @include respond-to(767px){
+              right: -5px;
+            }
+          }
+          &.border-bar {
+            height: 3px;
+            width: 100%;
+            bottom: 35px;
+            background: rgba(#fff, .4);
+            left: 0;
+            @include respond-to($break-780) {
+              height: 1px;
+              overflow: hidden;
+              // left: 10px;
+              left: 0;
+              line-height: 0;
+              padding: 0 !important;
+              // width: calc(100% - 20px);
+              width: 100%
+            }
+            @include respond-to(480px){
+              bottom: 25px;
+            }
+          }
+          i {
+            margin-left: 6px;
+            font-size: 24.5px;
+            @include respond-to($break-780){
+              font-size: 16px;
+            }
+          }
+          @include respond-to($break-780){
+            bottom: -23px;
+            right: -23px;
+          }
+          @include respond-to($break-480) {
+            bottom: -15px;
+            right: -15px;
+            padding: 0 !important;
+            @include size(23px, 23px);
+            line-height: 23px;
+            i {
+              font-size: 15px;
+              margin-left: 0;
+            }
+            &.strange{
+              bottom: -4px;
+              i{
+                margin-left: 6px;
+              }
+            }
+
+          }
+          @include memo-landscape{
+            bottom: -2px;
+          }
+        }
+
+      }
+      &.has-border {
+        border: 5px solid $main-red;
+      }
+      &.has-background {
+        background: $main-red;
+        a {
+          color: #fff;
+        }
+      }
+      @include respond-to($break-1065) {
+        height: 186px;
+        a {
+          font-size: 1.2em;
+        }
+      }
+      @include respond-to(962px) {
+        height: 191px;
+      }
+      @include respond-to($break-780) {
+        height: 191px;
+      }
+      @include ipad-portrait{
+        height: 191px;
+      }
+      @include respond-to($break-640) {
+        height: 230px;
+        margin-bottom: 10px;
+        padding: 15px;
+        a {
+          font-size: calcEm(20, 14);
+        }
+      }
+      @include ipad-landscape{
+        height: 213px;
+      }
+      @include respond-to($break-480) {
+        min-height: 135px;
+        padding: 10px;
+        a {
+          letter-spacing: -1px;
+          font-size: calcEm(13, 14);
+        }
+      }
+    }
+    @include respond-to($break-480) {
+      margin-bottom: 20px;
+      &.block-image {
+        span::after {
+          display: none;
+        }
+      }
+    }
+
+  }
+  .view-more-btn {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    @include view-more();
+    @include respond-to(595px){
+      margin-top: 15px;
+    }
+  }
+}
+
+// tabs block
+.tabs {
+  .tab-header {
+    margin-bottom: 30px;
+    ul {
+      list-style-type: none;
+      text-align: center;
+      border: 1px solid #cecece;
+      max-width: 440px;
+      margin: 0 auto;
+      padding: 0 10px;
+      li {
+        display: inline-block;
+        // margin-left: 20px;
+        // margin-right: 20px;
+        margin-left: 35px;
+        margin-right: 35px;
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          background: #666666;
+          @include size(5px);
+          @include border-radius(50%);
+          // right: -24px;
+          right: -42px;
+          top: 23px;
+        }
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+        &.active {
+          a {
+            color: $main-red;
+          }
+        }
+      }
+    }
+    a {
+      @extend %gotham-bold-new;
+      font-size: calcEm(13, 14);
+      color: $main-black;
+      line-height: 48px;
+      position: relative;
+      display: block;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        height: 1px;
+        width: 100%;
+        background: $main-red;
+        @include transform(rotateY(90deg));
+        @include transition_hover(all, 0.3s, ease)
+      }
+      &:hover, &.active {
+        color: $main-red;
+        &::after {
+          @include transform(rotateY(0));
+        }
+      }
+    }
+    #tab-select {
+      display: none;
+      width: 100%;
+      @extend %roboto-bold;
+      color: #666666;
+      padding: 18px 20px 15px;
+      @include appearance(none);
+      background: #fff url("../images/icon/select_box.png") no-repeat right center;
+      &::-ms-expand {
+        display: none;
+      }
+    }
+    @include respond-to($break-640) {
+      ul {
+        display: none;
+      }
+      #tab-select {
+        display: block;
+      }
+    }
+    @include respond-to($break-480) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.homepage-news-blocks{
+  .row.show{
+    display: none !important;
+  }
+}
+
+.tab-body {
+  .tab-content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+//bottom slider
+#bottom-slider {
+  position: relative;
+  background: #f6f6f6;
+  padding-bottom: 50px;
+  .replace-slider-pc{
+    width: 980px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    img{
+      width: 100%;
+    }
+    @include respond-to(1024px){
+      width: calc(100% - 80px);
+      height: auto;
+    }
+    @include respond-to(767px){
+      display: none;
+    }
+  }
+  .replace-slider-mb{
+    width: 100%;
+    padding: 0 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: none;
+    img{
+      width: 100%;
+    }
+    @include respond-to(767px){
+      display: block;
+    }
+  }
+  h3 {
+    text-align: center;
+    font-size: calcEm(48, 14);
+    color: $main-red;
+    @extend %gotham-ultra;
+    margin-top: 0;
+    margin-bottom: 28px;
+    padding-top: 50px;
+    @include respond-to($break-640) {
+      margin-top: 0;
+      padding-top: 65px;
+    }
+    @include respond-to($break-480){
+      font-size: calcEm(24, 14);
+    }
+    @include ipad-portrait{
+      font-size: calcEm(48, 14);
+    }
+  }
+  h4 {
+    font-size: calcEm(36, 14);
+    color: #fff;
+    @extend %gotham-ultra;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .swiper-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+
+  }
+  .swiper-slide {
+    overflow: hidden;
+    position: relative;
+    max-height: 400px;
+    &.swiper-slide-active, &.changed {
+      &::after {
+        display: none;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(#000, .8);
+      z-index: 10;
+    }
+    img {
+      width: 100%;
+    }
+    @include respond-to($break-780){
+      padding: 0 17px;
+    }
+    @include memo-portrait{
+      padding: 0;
+    }
+    @include memo-landscape{
+      padding: 0 17px;
+    }
+    @include respond-to($break-480){
+      padding: 0;
+    }
+    .text-wrap {
+      position: absolute;
+      top: 84/490*100%;
+      left: 58/980*100%;
+      @include respond-to($break-480){
+        top: 12%;
+      }
+    }
+  }
+  .bottom-swiper-container .bottom-slide-nav {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: calc((100% - 980px - 40px) / 2);
+    height: calc(100% - 38px);
+    line-height: 403px;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+    font-size: calcEm(28, $font-base);
+    &.button-prev {
+      left: 0;
+      i {
+        margin-left: 60%;
+      }
+    }
+    &.button-next {
+      right: 0;
+      text-align: right;
+      i {
+        margin-right: 60%;
+      }
+    }
+    @include respond-to($break-1065) {
+      display: none;
+    }
+  }
+  .bottom-swiper-pagination {
+    text-align: center;
+    margin-top: 20px;
+    span {
+      display: inline-block;
+      margin-left: 4px;
+      margin-right: 4px;
+      background: #cccccc;
+      @include size(12px);
+      @include border-radius(50%);
+      @include transition_hover(all, .3s, ease);
+      @include opacity(1);
+      &.swiper-pagination-bullet-active, &:hover {
+        background: $main-red;
+      }
+    }
+  }
+  .mobile-swiper-container {
+    position: relative;
+
+  }
+
+  .bottom-swiper-container{
+    position: relative;
+    @include respond-to(768px){
+      .swiper-slide{
+        padding: 0 40px;
+      }
+    }
+  }
+  .mobile-swiper-container {
+    display: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mobile-image{
+    display: none;
+  }
+  @include respond-to($break-640) {
+    h4 {
+      font-size: calcEm(22, 14);
+    }
+    .bottom-swiper-container {
+      display: none;
+    }
+    .mobile-swiper-container {
+      display: block;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .mobile-image{
+      display: inline-block;
+    }
+    .tablet-image{
+      display: none;
+    }
+  }
+}
+.mobile-visible{
+  display: none;
+}
+@media screen and (max-width: 980px) and (min-width: 768px) {
+  #product-blocks #block-1 a .block-icon {
+    bottom: 35px;
+  }
+}
+@include respond-to($break-780){
+  #product-blocks #block-1 a .block-title {
+    bottom: 16px;
+  }
+  #product-blocks #block-1 a .block-icon {
+    bottom: 17px;
+  }
+}
+@include respond-to($break-480) {
+  #product-blocks #block-1 a .block-icon {
+    bottom: 20px;
+  }
+  #product-blocks a .block-icon {
+    bottom: 19px;
+  }
+  .mobile-hidden{
+    display: none;
+  }
+  .mobile-visible{
+    display: block;
+  }
+}
+@include ipad-landscape{
+  #product-blocks #block-1 a .block-title {
+    bottom: 24px;
+  }
+}
+@include memo-landscape{
+  #product-blocks #block-1 a .block-icon {
+    bottom: 24px;
+  }
+}
+
+#back-to-top{
+  opacity: 0.8;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 9999;
+  outline: none;
+  background: url(../images/icon/back-to-top.png) no-repeat 0 0;
+  display: none;
+}

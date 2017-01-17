@@ -1,0 +1,281 @@
+
+//----- VARIABLES
+	// font variables
+	$font-gothambook: 'gothamvnubook';
+	$font-gothambook-new: 'gothamvnubook_new';
+	$font-gothambold-new: 'gothamvnubold_new';
+	$font-gothambold: 'gothamvnubold';
+	$font-robotolight: 'robotolight';
+	$font-robotoregular: 'robotoregular';
+	$font-robotobold: 'robotobold';
+	$font-gothamultra: 'Gotham Ultra';
+	$font-icielgothammedium: 'Iciel Gotham Medium';
+    $font-base: 14;
+
+	// color variables
+	$main-black: #333333;
+	$black-2: #666666;
+	$grey-1: #999999;
+	$main-red: #ed1b2f;
+	$pink-hover: #c72147;
+	
+	// responsive breakpoint variables
+	$break-1200 : 1200px;
+  $break-1180 : 1180px;
+	$break-1140 : 1140px;
+	$break-1065 : 1065px;
+	$break-1024 : 1024px;
+	$break-1023 : 1023px;
+	$break-980 : 980px;
+	$break-850 : 850px;
+	$break-780 : 780px;
+	$break-767 : 767px;
+	$break-700 : 700px;
+	$break-640 : 640px;
+	$break-550 : 550px;
+  $break-480 : 480px;
+  $break-414 : 414px;
+  $break-375 : 375px;
+	$break-374 : 374px;
+	$break-320 : 320px;
+
+//----- END VARIABLES
+
+
+
+//----- PLACEHOLDER
+
+%gotham-book{
+	font-family: $font-gothambook-new, arial, Helvetica, sans-serif;
+}
+%gotham-book-new{
+  font-family: $font-gothambook-new, arial, Helvetica, sans-serif;
+}
+%gotham-bold{
+	font-family: $font-gothambold-new, arial, Helvetica, sans-serif;
+}
+%gotham-bold-new{
+  font-family: $font-gothambold-new, arial, Helvetica, sans-serif;
+}
+%gotham-ultra{
+  font-family: $font-gothamultra, arial, Helvetica, sans-serif;
+}
+%roboto-light{
+	font-family: $font-robotolight, arial, Helvetica, sans-serif;
+}
+
+%roboto-regular{
+	font-family: $font-robotoregular, arial, Helvetica, sans-serif;
+}
+
+%roboto-bold{
+	font-family: $font-robotobold, arial, Helvetica, sans-serif;
+}
+%iciel-gotham-medium{
+	font-family: $font-icielgothammedium, arial, Helvetica, sans-serif;
+}
+
+
+//----- END PLACEHOLDER
+
+
+
+//----- MIXIN
+
+@mixin border-radius($radius: 2px){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin transition($time: 0.3s){
+	-webkit-transition: $time linear;
+	-moz-transition: $time linear;
+	-ms-transition: $time linear;
+	-o-transition: $time linear;
+	transition: $time linear;
+}
+
+@mixin transition-delay($time: 0.3s){
+	-webkit-transition-delay: $time;
+	-moz-transition-delay: $time;
+	-ms-transition-delay: $time;
+	-o-transition-delay: $time;
+	transition-delay: $time;
+}
+
+@mixin respond-to($device-width) {
+	@media only screen and (max-width: $device-width) { @content; }
+}
+@mixin ipad-portrait{
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) { @content; }
+}
+@mixin ipad-landscape{
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) { @content; }
+}
+
+@mixin memo-portrait{
+  @media only screen
+  and (min-device-width : 601px)
+  and (max-device-width : 793px)
+  and (orientation : portrait) { @content; }
+}
+@mixin memo-landscape{
+  @media only screen
+  and (min-device-width : 433px)
+  and (max-device-width : 962px)
+  and (orientation : landscape) { @content; }
+}
+@mixin transition_hover($property, $duration, $timing-function) {
+	-o-transition: $property $duration $timing-function;
+	-ms-transition: $property $duration $timing-function;
+	-moz-transition: $property $duration $timing-function;
+	-webkit-transition: $property $duration $timing-function;
+	transition: $property $duration $timing-function;
+}
+
+//Gradient mixin
+@mixin bg-gradient-t2b($start-colour, $end-colour) {
+	background-color: $start-colour;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour));
+	background-image: -webkit-linear-gradient(top, $start-colour, $end-colour);
+	background-image:    -moz-linear-gradient(top, $start-colour, $end-colour);
+	background-image:     -ms-linear-gradient(top, $start-colour, $end-colour);
+	background-image:      -o-linear-gradient(top, $start-colour, $end-colour);
+	background-image:         linear-gradient(top, $start-colour, $end-colour);
+	filter:            progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}');
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		box-shadow:inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+
+// button with gradient, box-shadow, box-radius
+@mixin gradient-btn(){
+  height: 50px;
+  line-height: 55px;
+  width: 300px;
+  @include transition_hover(all, .3s, linear);
+  @include border-radius(20px);
+  @include bg-gradient-t2b($pink-4, $pink-2);
+  @include box-shadow(0, 5px, 0, rgba(#fff, .3), true);
+  @include respond-to($break-480){
+    width: 260px;
+  }
+  &:hover{
+    color: #83124e;
+    background: #f192c1;
+    @include box-shadow(0, 0, 0, rgba(#fff, .3), false);
+  }
+}
+@mixin size($width, $height: $width){
+  width: $width;
+  height: $height;
+}
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+// Style for placeholder=""
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content} 
+	&:focus::-webkit-input-placeholder { color:transparent !important; }
+	&:focus:-moz-placeholder { color:transparent !important; } 
+	&:focus::-moz-placeholder { color:transparent !important; } 
+	&:focus:-ms-input-placeholder { color:transparent !important; }
+}
+@mixin appearance ($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+@function calcEm($font, $base: 14){
+  @return $font/$base*1em;
+}
+.img-responsive{
+  max-width: 100%;
+  height: auto;
+}
+.image-desktop{
+  display: inline-block;
+  @include respond-to($break-1024){
+    display: none;
+  }
+}
+.image-desktop-tablet{
+  display: inline-block;
+  @include respond-to($break-640){
+    display: none;
+  }
+}
+.image-tablet{
+  display: none;
+  @include respond-to($break-1024){
+    display: inline-block;
+  }
+  @include respond-to($break-640){
+    display: none;
+  }
+}
+.image-mobile{
+  display: none;
+  @include respond-to($break-640){
+    display: inline-block;
+  }
+}
+@mixin pie{
+    behavior: url(http://localhost/honda_2015/hdvn/PIE.htc);
+}
+//----- END MIXIN

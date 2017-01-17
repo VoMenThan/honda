@@ -1,0 +1,211 @@
+.about-wrapper{
+  padding-top: 60px;
+  position: relative;
+  .block-wrp{
+    width: 100%;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 40px;
+    .block{
+      width: 50%;
+      height: 521px;
+      float: left;
+      padding: 0 20px;
+      position: relative;
+      cursor: pointer;
+      margin-top: 80px;
+      opacity: 0;
+      .image{
+        width: 100%;
+        height: 393px;
+        overflow: hidden;
+        img{
+          display: block;
+          @include transition();
+        }
+      }
+      .desc, .desc2{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -264.5px;
+      }
+      .desc2{
+        opacity: 0;
+      }
+      .view-more{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -264.5px;
+        opacity: 0;
+        &:hover{
+          opacity: 1 !important;
+        }
+      }
+    }
+  }
+  @include respond-to($break-1024){
+    &#about-trietly{
+      padding-bottom: 50px;
+    }
+  }
+  @include respond-to($break-640){
+    padding-bottom: 50px;
+    &#about-trietly{
+      padding-bottom: 10px;
+    }
+  }
+  @include respond-to($break-640){
+    padding-top: 30px;
+  }
+}
+
+.block{
+  &:hover{
+    .image{
+      > img{
+        @include transform(scale(1.05));
+        @include transition();
+      }
+    }
+    .desc2{
+      opacity: 1 !important;
+      @include transition();
+    }
+  }
+}
+
+.about-wrapper{
+  position: relative;
+  @include respond-to($break-1180){
+    padding: 60px 0 0 0;
+  }
+  @include respond-to(767px){
+    padding: 30px 0 0 0;
+  }
+  .sidebar-menu{
+    width: 300px;
+    min-height: 1px;
+    float: left;
+    display: block;
+    @include respond-to($break-1024){
+      display: none;
+    }
+
+  }
+  .main-content{
+    width: calc(100% - 300px);
+    // margin-left: 300px;
+    // padding-left: 20px;
+    min-height: 1px ;
+    float: left;
+    margin-top: -10px;
+    position: relative;
+    padding-bottom: 50px;
+    &.gioithieu{
+      margin-top: -15px;
+    }
+    @include respond-to($break-1024){
+      margin-left: 0;
+      width: 100%;
+      padding: 0 40px;
+      max-width: none;
+    }
+    @include respond-to($break-640){
+      padding: 0 20px;
+    }
+  }
+  .fixed-mn-left{
+    @include transition();
+//    @include transition_hover();
+&.fixed{
+  position: fixed;
+  left: 50%;
+  margin-left: -590px;
+  top: 160px;
+  bottom: auto;
+  @include respond-to($break-1180){
+    margin-left: calc(-50% + 40px);
+  }
+  &.stop-scroll{
+    position: absolute;
+  }
+}
+&.anchor{
+  position: absolute;
+  top: auto;
+  left: 50%;
+  margin-left: -590px;
+  @include respond-to($break-1180){
+    margin-left: calc(-50% + 40px);
+  }
+}
+li{
+  list-style: none;
+  @extend %gotham-ultra;
+  font-size: 18px;
+  line-height: 36px;
+
+  a{
+    color: $main-black;
+    &:hover,{
+      color: $main-red;
+      text-decoration: none;
+    }
+  }
+  &.ac a{
+    color: $main-red;
+    text-decoration: none;
+  }
+
+ 
+    > a{ 
+      &.ac{
+      color: $main-red;
+      text-decoration: none;
+    }
+  }
+
+}
+.small{
+  // display: none;
+  li{
+    font-size: 15px;
+    line-height: 24px;
+    a{
+      color: $main-black;
+      @extend %gotham-book;
+    }
+    &.ac, &:hover{
+      > a{
+        font-size: 15px;
+        line-height: 24px;
+        color: $main-red;
+      }
+
+    }
+  }
+
+}
+}
+}
+
+body.menu-hide{
+  #about-gioithieu{
+    .fixed-mn-left.fixed{
+      top: (160 - 67)*1px;
+      @include transition(0.3s);
+    }
+  }
+  #about-trietly{
+    .fixed-mn-left.fixed{
+      top: (160 - 67)*1px;
+      @include transition(0.3s);
+    }
+  }
+}
+
+// New CSS by Nguyên 06/11/2015

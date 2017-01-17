@@ -1,0 +1,521 @@
+/* Triết lý Honda VN */
+@mixin roboto-bold($font-size: 18){
+  @extend %roboto-bold;
+  font-size: calcEm($font-size, 14);
+  font-weight: normal;
+}
+.about-wrapper{
+  @extend %roboto-regular;
+}
+.tl-hero-image{
+  width: 100%;
+  position: relative;
+  img{
+    width: 100%;
+  }
+  .bottom-text{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0 28px 28px 28px;
+    font-size: calcEm(15, 14);
+    color: #fff;
+    @extend %roboto-regular;
+    p{
+      text-align: justify;
+    }
+    @include respond-to($break-640){
+      font-size: calcEm(13, 14);
+      padding: 0 25px 20px;
+    }
+  }
+}
+.tl-niemtin{
+  margin-top: 46px;
+  padding-top: 37px;
+  border-top: 1px solid #cccccc;
+  h3{
+    color: $main-red;
+    font-size: calcEm(30, 14);
+    margin-top: 0;
+    @extend %gotham-bold-new;
+    margin-bottom: 22px;
+    line-height: calcEm(36, 30);
+    font-weight: normal;
+  }
+  p{
+    text-align: justify;
+    margin-bottom: 7px;
+    font-size: calcEm(15,14);
+    letter-spacing: -0.01em;
+    background: inherit;
+  }
+  @include respond-to($break-640){
+    margin-top: 27px;
+    padding-top: 26px;
+    h3{
+      margin-bottom: 7px;
+    }
+    p{
+      font-size: calcEm(13, 14);
+      margin-bottom: 11px;
+    }
+  }
+}
+ul.right-arrow{
+  list-style-type: none;
+  padding: 0;
+  li{
+    padding-left: 15px;
+    position: relative;
+    font-size: calcEm(15 ,14);
+    margin-bottom: 3px;
+    &::before{
+      content: "\f054";
+      font-family: "FontAwesome", Helvetica, sans-serif;
+      display: block;
+      position: absolute;
+      font-size: 9px;
+      left: 0;
+      top: 6px;
+    }
+    @include respond-to($break-780){
+      font-size: calcEm(13, 14);
+    }
+  }
+}
+.visible-tablet{
+  display: none;
+  @include respond-to($break-850){
+    display: block;
+    .block-ttcn{
+      display: block !important;
+      margin-top: 18px;
+      h5{
+        margin-bottom: 6px;
+      }
+    }
+  }
+  @include respond-to($break-640){
+    .block-ttcn{
+      margin-top: 7px;
+      text-align: justify;
+      p{
+        font-size: calcEm(13,14);
+      }
+    }
+  }
+}
+.tl-ntcb-row{
+  margin: 0 -20px;
+  min-height: 326px;
+  .three-round{
+    width: 100%;
+    max-width: 320px;
+    padding: 17px 20px 0;
+    float: left;
+    min-height: 1px;
+    a{
+      @include size(152px);
+      @include border-radius(50%);
+      background: rgba(#cccccc, .8);
+      color: #333333;
+      display: block;
+      position: absolute;
+      text-align: center;
+      @include roboto-bold();
+      span{
+        display: block;
+        padding: 0 20px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      &.active{
+        background: $main-red;
+        color: #fff;
+        z-index: 5!important;
+      }
+      &[data-position="1"]{
+        top: 0;
+        left: 65px;
+        z-index: 2;
+      }
+      &[data-position="3"]{
+        top: 112px;
+        left: 0;
+        z-index: 1;
+      }
+      &[data-position="2"]{
+        top: 112px;
+        left: 129px;
+        z-index: 1;
+      }
+      &:hover{
+        z-index: 3 !important;
+        background: $main-red;
+        color: #fff;
+      }
+
+    }
+    .three-round-inner{
+      position: relative;
+      min-height: 265px;
+      @include respond-to($break-480){
+        margin: 25px 0;
+      }
+    }
+    @include respond-to($break-640){
+      padding-top: 12px;
+      float: none;
+      margin: 0 auto;
+    }
+  }
+  .right-quote{
+    width: 100%;
+    max-width: 580px;
+    padding: 34px 0 0 20px;
+    float: left;
+    .block-quote{
+      padding-left: 20px;
+      border-left: 3px solid rgba(#000000, .2);
+      margin-top: 28px;
+      min-height: 99px;
+      h5{
+        @include roboto-bold(15);
+        margin: 0 0 8px 0;
+        line-height: 1em;
+      }
+      p{
+        margin-bottom: 0;
+      }
+      > div{
+        display: none;
+        &.active{
+          display: block;
+        }
+      }
+      @include respond-to($break-640){
+        padding-left: 14px;
+        h5{
+          font-size: calcEm(13,14);
+        }
+        p{
+          font-size: calcEm(13, 14);
+        }
+      }
+    }
+    @include respond-to($break-1024){
+      max-width: 650px;
+      padding: 34px 20px 0;
+    }
+    @include respond-to($break-980){
+      .block-quote{
+        min-height: 80px;
+      }
+    }
+    @include respond-to($break-850){
+      max-width: 377px;
+      padding-top: 0;
+      .block-quote{
+        margin-top: 15px;
+      }
+    }
+    @include respond-to($break-640){
+      max-width: none;
+      .block-quote{
+        text-align: justify;
+        h5{
+          margin-bottom: 8px;
+        }
+      }
+    }
+    @include respond-to($break-480){
+      min-height: 160px;
+    }
+  }
+}
+.bnv{
+  h4{
+    @include roboto-bold(18);
+    color: #333;
+    margin-bottom: 10px;
+    @include respond-to($break-780){
+      margin-bottom: -5px;
+      padding-top: 10px;
+    }
+  }
+  .bnv-row{
+    margin: 25px -10px 0;
+    @include clearfix;
+    @include respond-to($break-780){
+      margin-top: 0;
+      padding: 0 20px;
+    }
+    @include respond-to($break-640){
+      margin-top: 0;
+      padding: 20px 0 0;
+    }
+    .bnv-column{
+      overflow: hidden;
+      width: 100%;
+      float: left;
+      max-width: (280+20)*1px;
+      padding: 0 10px;
+      position: relative;
+      .bnv-column-inner{
+        position: relative;
+        line-height: 0;
+        &:hover{
+          .bottom-hover{
+            bottom: 0;
+            background: rgba($main-red, .9);
+            h4{
+              margin-bottom: 15px;
+            }
+          }
+        }
+        .bnv-tablet-img{
+          display: none;
+        }
+        .bnv-mobile-img{
+          display: none;
+        }
+      }
+      .bottom-hover{
+        position: absolute;
+        bottom: -85.714%;
+        background: rgba(#000, .7);
+        width: 100%;
+        padding: 18px 20px;
+        height: 100%;
+        @include transition_hover(all, .5s, ease);
+        h4{
+          min-height: 17px;
+          @include roboto-bold(18);
+          color: #fff;
+          margin-bottom: 20px;
+          line-height: 1em;
+          margin-top: 0;
+        }
+        p{
+          color: #fff;
+          line-height: 1.2em;
+          letter-spacing: -0.02em;
+        }
+      }
+      @include respond-to($break-1024){
+        margin-right: 32px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      @include respond-to($break-850){
+        max-width: none;
+        background: #f3f3f3;
+        margin-bottom: 20px;
+        padding: 0;
+        margin-right: 0;
+        .bottom-hover{
+          position: relative;
+          bottom: auto;
+          width: (688-306)/688*100%;
+          float: left;
+          background: transparent !important;
+          padding: 40px;
+          h4{
+            color: #333333;
+          }
+          p{
+            color: #555555;
+            margin-bottom: 0;
+          }
+          @include respond-to($break-640){
+            width: 100%;
+            padding: 10px 18px 18px 18px;
+            h4{
+              font-size: calcEm(16, 14);
+              margin-top: 8px;
+              margin-bottom: 6px;
+            }
+          }
+        }
+        .bnv-img-wrapper{
+          width: 306/688*100%;
+          float: left;
+          .bnv-desk-img{
+            display: none;
+          }
+          .bnv-tablet-img{
+            display: block;
+            width: 100%;
+          }
+          @include respond-to($break-640){
+            width: 100%;
+          }
+        }
+      }
+      @include respond-to($break-640){
+        .bnv-img-wrapper{
+          .bnv-tablet-img{
+            display: none;
+          }
+          .bnv-mobile-img{
+            display: block;
+            width: 100%;
+          }
+        }
+    }
+
+    @include respond-to($break-850){
+      margin: 25px 0 0;
+    }
+      @include respond-to($break-480){
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+  }
+
+    h4{
+      margin-top: 10px;
+    }
+    > p{
+      display: none;
+    }
+    .bnv-row{
+      margin-top: 16px;
+    }
+    @include respond-to($break-640){
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  > p{
+    @include respond-to($break-780){
+      display: none;
+    }
+  }
+}
+
+.block-ttcn{
+  h5{
+    @include roboto-bold(18);
+    color: #333;
+    margin: 0;
+    margin-bottom: 7px;
+  }
+  @include respond-to($break-850){
+    display: none;
+  }
+}
+.text-image-block{
+  padding-top: 38px;
+  border-top: 1px solid #cccccc;
+  margin-top: 50px;
+  @extend .clearfix;
+  h3{
+    @extend %gotham-bold-new;
+    font-size: calcEm(30, 14);
+    color: $main-red;
+    font-weight: normal;
+  }
+  .block-wrap{
+    background: #f3f3f3;
+    margin-top: 25px;
+    @extend .clearfix;
+    .text-block{
+      width: calc(100% - 500px);
+      float: right;
+      padding:  29px;
+      font-size: 15px;
+      line-height: calcEm(21, 15);
+      text-align: justify;
+      .right-arrow{
+        li{
+          font-size: 1em;
+          &:first-child{
+            letter-spacing: -0.035em;
+          }
+          &::before{
+            top: 1px;
+            font-size: 7px;
+          }
+        }
+      }
+      @include respond-to($break-980){
+        width: (688-382)/688*100%;
+        padding: 25px 20px 20px 25px;
+      }
+    }
+    .image-block{
+      width: (880-366)/880*100%;
+      max-width: 500px;
+      height: 290px;
+      overflow: hidden;
+      float: right;
+      font-size: 0;
+      img{
+        width: 100%;
+        &.image-desktop{
+          display: block;
+        }
+
+        @include respond-to($break-1024) {
+          &.image-desktop {
+            display: block;
+          }
+          &.image-tablet {
+            display: none;
+          }
+        }
+        @include respond-to($break-980){
+          &.image-desktop{
+            display: none;
+          }
+          &.image-tablet{
+            display: block;
+          }
+
+        }
+      }
+      @include respond-to($break-640){
+        width: 100%;
+      }
+      @include respond-to($break-980){
+        width: 382/688*100%;
+      }
+    }
+  }
+  @include respond-to(1024px){
+    padding-top: 28px;
+    .block-wrap{
+      margin-top: 15px;
+    }
+  }
+  @include respond-to($break-640){
+    margin-top: 9px;
+    padding-top: 19px;
+    padding-bottom: 24px;
+    h3{
+      font-size: calcEm(24, 14);
+    }
+    .block-wrap{
+      margin-top: 18px;
+      .text-block{
+        width: 100%;
+        float: none;
+        font-size: calcEm(13, 14);
+        padding: 18px;
+      }
+      .image-block{
+        width: 100%;
+        height: auto;
+        float: none;
+      }
+    }
+  }
+}
+/* end Triết lý Honda VN */

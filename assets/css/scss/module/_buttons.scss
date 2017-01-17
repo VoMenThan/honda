@@ -1,0 +1,82 @@
+@mixin transparent-buttons($height: 49px) {
+    font-size: calcEm(16,14);
+    color: #fff;
+    display: inline-block;
+    height: $height;
+    line-height: $height - 2px;
+    border: 1px solid #fff;
+    @extend %roboto-regular;
+    @include transition_hover(all, 0.3s, ease);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  padding: 0 55px 0 18px;
+    @include respond-to(800px){
+      overflow: visible;
+    }
+    i{
+      right: 18px;
+      font-size: 23px;
+      position: absolute;
+      top: 12px;
+      @include respond-to(800px){
+        position: relative;
+        right: -15px;
+        top: 3px;
+      }
+      @include ipad-portrait{
+        right: -32px;
+      }
+    }
+    &:hover{
+      background: $main-red;
+      border-color: $main-red;
+      color: #fff;
+    }
+}
+@mixin round-buttons(){
+  @include size(36px);
+  text-align: center;
+  line-height: 34px;
+  @include border-radius(50%);
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: 17px;
+  right: 20px;
+  @include transition_hover(all, .2s, ease);
+  i{
+    margin-left: 3px;
+    margin-top: -3px;
+    font-size: calcEm(18, 14);
+    z-index: 1;
+    position: relative;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    display: block;
+    @include size(36px);
+    background: $main-red;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    @include opacity(0);
+    @include transition_hover(all, .5s, ease);
+    @include border-radius(50%);
+    @include transform(translateX(-50%) translateY(-50%) rotate(90deg) scale(0));
+  }
+}
+@mixin view-more(){
+  font-size: calcEm(12.85, 14);
+  color: #666666;
+  @extend %gotham-bold-new;
+  display: inline-block;
+  @include transition_hover(all, .5s, ease);
+  span{
+    display: inline-block;
+    @include transition_hover(all, .5s, ease)
+  }
+  &:hover{
+    color: $main-red;
+  }
+}

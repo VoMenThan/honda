@@ -1,0 +1,432 @@
+/* Giới thiệu Image text block */
+.gt-image-text{
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 55px;
+  margin-bottom: 48px;
+  @include clearfix;
+  &:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .gt-image{
+    padding-left: 20px;
+    width: (880-600)/880*100%;
+    float: right;
+    margin-top: 11px;
+    img{
+      width: 100%;
+    }
+    @include respond-to($break-1024){
+      .image-desktop{
+        display: inline-block;
+      }
+      .image-tablet{
+        display: none;
+      }
+    }
+    @include respond-to($break-780){
+      width: 100%;
+      padding: 0;
+      float: none;
+    }
+    @include respond-to($break-780){
+      .image-desktop{
+        display: none;
+      }
+      .image-tablet{
+        display: inline-block;
+      }
+    }
+    @include respond-to($break-640){
+      .image-desktop, .image-tablet{
+        display: none;
+      }
+      .image-mobile{
+        display: inline-block;
+      }
+    }
+  }
+  .gt-text{
+    padding-right: 20px;
+    width: 600/880*100%;
+    float: right;
+    .invi-content {
+      display: none;
+      p{
+        text-align: justify;
+        font-size: 15px;
+        line-height: 21px;
+         @include respond-to($break-640){
+          margin-bottom: 5px;
+          font-size: 13px;
+          line-height: 15px;
+         }
+        strong{
+          @extend %roboto-bold;
+        }
+      }
+    }
+    > h3{
+      @extend %gotham-bold-new;
+      font-size: calcEm(30, 14);
+      color: $main-red;
+      margin-bottom: 19px;
+      @include respond-to($break-640){
+        font-size: calcEm(24, 14);
+      }
+    }
+    > p{
+      line-height: calcEm(21,15);
+      font-size: calcEm(15, 14);
+      color: #333333;
+      margin-bottom: 5px;
+      text-align: justify;
+      @include respond-to($break-640){
+        font-size: calcEm(13, 14);
+        line-height: 1.2em;
+      }
+    }
+    .view-more{
+      font-size: calcEm(15, 14);
+      color: #333;
+      display: inline-block;
+      position: relative;
+      margin-top: 15px;
+      &:hover{
+        color: $main-red;
+      }
+      i{
+        color: $main-red;
+        position: absolute;
+        right: -28px;
+        top: 4px;
+        font-size: 12px;
+      }
+      @include respond-to($break-640){
+        font-size: calcEm(13,14);
+        margin-top: 12px;
+        i{
+          font-size: 9px;
+          right: -20px;
+          top: 6px;
+        }
+      }
+    }
+    @include respond-to($break-780){
+      width: 100%;
+      padding: 0;
+      float: none;
+      > h3{
+        margin-top: 13px;
+      }
+    }
+  }
+  @include respond-to($break-1024){
+    margin-bottom: 50px;
+    padding-bottom: 46px;
+  }
+  @include respond-to($break-640){
+    margin-bottom: 29px;
+    padding-bottom: 26px;
+  }
+}
+.expand-icon{
+  position: absolute;
+  right: 19px;
+  top: 23px;
+  div{
+    width: 10px;
+    height: 2px;
+    background: $main-red;
+  }
+  .plus{
+    margin-top: -2px;
+    @include transform(rotate(90deg));
+    &.expand{
+      animation: expandIcon 0.25s ease;
+      -webkit-animation: expandIcon 0.25s ease;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    &.collapse{
+      animation: collapseIcon 0.25s ease;
+      -webkit-animation: collapseIcon 0.25s ease;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+  }
+
+}
+@include keyframes(expandIcon) {
+  0%{
+    @include transform(rotate(90deg))
+  }
+  100%{
+    @include transform(rotate(0deg))
+  }
+}
+@include keyframes(collapseIcon) {
+  0%{
+    @include transform(rotate(0))
+  }
+  100%{
+    @include transform(rotate(90deg))
+  }
+}
+.wow.hidden-wow{
+  opacity: 0;
+}
+.danhsach{
+  margin-top: 48px;
+  margin-bottom: -5px;
+  h3{
+    @extend %gotham-ultra;
+    font-size: calcEm(18, 14);
+    color: #000;
+    margin-bottom: 15px;
+  }
+  .block{
+    margin-bottom: 10px;
+    .heading{
+      background: #f7f7f7;
+      border-bottom: 3px solid #efefef;
+      padding: 14px 20px 12px;
+      cursor: pointer;
+      font-size: calcEm(15, 14);
+      color: #000;
+      @include clearfix;
+      position: relative;
+      &:hover{
+        background: darken(#f7f7f7, 10%);
+      }
+    }
+    .cont{
+      margin-top: 19px;
+      display: none;
+      font-size: calcEm(15, 14);
+      @include clearfix;
+      margin-bottom: 34px;
+      img{
+        width: 100%;
+        margin-top: 9px;
+        margin-bottom: 10px;
+        @include respond-to($break-1024){
+          margin-top: 37px;
+        }
+        @include respond-to($break-640){
+          margin-top: 15px;
+        }
+        @include respond-to($break-480){
+          margin-top: 15px;
+        }
+      }
+      p{
+        text-align: justify;
+        margin-bottom: 10px;
+      }
+    }
+    &.ac{
+      .cont{
+        display: block;
+      }
+    }
+    @include respond-to($break-640){
+      .heading{
+        font-size: calcEm(13, 14);
+      }
+      .cont{
+        font-size: calcEm(13, 14);
+      }
+    }
+  }
+  .table-content{
+    .half-content{
+      width: 52%;
+      float: left;
+      &.half-right{
+        width: 48%;
+        padding-left: 21px;
+      }
+      @include respond-to($break-640){
+        width: 100%;
+        float: none;
+        &.half-right{
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+    .cont-heading{
+      width: 100px;
+      float: left;
+      font-size: 15px;
+      color: #333333;
+      @extend %roboto-bold;
+    }
+    .cont-text{
+      width: calc(100% - 100px);
+      padding-left: 8px;
+      float: left;
+      font-size: 15px;
+      color: #333333;
+    }
+    .cont-row{
+      @include clearfix;
+      margin-bottom: 3px;
+    }
+    @include respond-to($break-640){
+      .cont-heading, .cont-text{
+        font-size: calcEm(13, 14);
+      }
+    }
+  }
+  @include respond-to($break-1024){
+    margin-top: 42px;
+  }
+  @include respond-to($break-640){
+    margin-top: 22px;
+  }
+}
+.qmhd{
+  float: left;
+  margin-bottom: -20px;
+  h3{
+    color: $main-red;
+    font-size: calcEm(30, 14);
+    @extend %gotham-bold;
+    margin-top: 20px;
+    margin-bottom: 19px;
+    @include respond-to($break-640){
+      font-size: calcEm(24, 14);
+      margin-bottom: 14px;
+    }
+  }
+  @include respond-to(640px){
+    margin-bottom: -10px;
+  }
+}
+.quymo-line{
+  @media (min-width: 768px) and (max-width:963px){
+    text-align: center;
+  }
+}
+.quymo-block{
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  margin-bottom: 20px;
+  width: 280px;
+
+  @include respond-to($break-1024){
+    width: 334px;
+  }
+  @include respond-to($break-640){
+    float: none;
+    margin: 0 auto 6px !important;
+  }
+  @include respond-to($break-374){
+    width: 100%;
+  }
+  @media (min-width: 850px) and (max-width:963px){
+    display: inline-block;
+    float: none;
+  }
+  img{
+    max-width: 100%;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+  .count{
+    position: absolute;
+    color: #000;
+    @extend %gotham-bold;
+    font-size: calcEm(48,14);
+    display: none;
+    @include respond-to($break-1024){
+      font-size: calcEm(57.19, 14);
+    }
+    @include respond-to($break-374){
+      font-size: calcEm(57,14);
+    }
+    @include respond-to(320px){
+      font-size: calcEm(50,14);
+    }
+  }
+  .block1-num{
+    top: 10/152*100%;
+    left: 20/280*100%;
+    @include respond-to($break-374){
+      top: 5%;
+    }
+    @include respond-to(320px){
+     top: 5.57895%; 
+    }
+  }
+  .block2-num{
+    top: 10/152*100%;
+    right: 24/280*100%;
+    @include respond-to($break-374){
+      top: 5%;
+    }
+    @include respond-to(320px){
+     top: 5.57895%; 
+    }
+  }
+  .block3-num{
+    top: 10/152*100%;
+    left: 20/280*100%;
+     @include respond-to($break-374){
+      top: 5%;
+    }
+    @include respond-to(320px){
+     top: 5.57895%; 
+    }
+  }
+  .block4-num{
+    left: 164/280*100%;
+    bottom: 46px;
+    font-size: 22px;
+    line-height: 21px;
+    height: 21px;
+    @include respond-to($break-1024){
+      font-size: calcEm(25, 14);
+    }
+    @include respond-to($break-374){
+      top: 57%;
+      font-size: 21px;
+    }
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      bottom: 45px;
+      @include respond-to($break-1024){
+        bottom: 55px;
+      }
+      @include respond-to($break-374){
+        top: 57.5%;
+      }
+
+    }
+  }
+  .block5-num{
+    top: 10/152*100%;
+    left: 20/280*100%;
+    @include respond-to($break-374){
+      top: 5.57895%;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .wow {
+    visibility: visible !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
+}
+//#nav-honda-vn, #nav-honda-xm, #nav-honda-oto,.qmhd
+//{
+//  opacity: 0;
+//}
+/* end Giới thiệu Image text block */

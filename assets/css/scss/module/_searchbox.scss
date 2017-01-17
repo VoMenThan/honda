@@ -1,0 +1,394 @@
+// Search box
+.searchbox{
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  height: 50px;
+  background: #fff;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  display: none;
+  form{
+    max-width: 1180px;
+    margin: 0 auto;
+    input[type='text']{
+      border: 0;
+      background: none;
+      @extend %gotham-book;
+      font-size: 15px;
+      color: $main-black;
+      width: calc(100% - 90px);
+      padding-right: 20px;
+    }
+    button{
+      background: none;
+      border: 0;
+      @extend %gotham-book;
+      font-size: 15px;
+      color: $main-black;
+      line-height: 43px;
+      padding: 0;
+      &:hover{
+        opacity: .8;
+      }
+      i{
+        margin-left: 5px;
+      }
+    }
+  }
+  #header-mb &{
+    top: 60px;
+    input[type='text']{
+      padding-left: 15px;
+    }
+  }
+}
+.search-icon {
+  cursor: pointer;
+  display: inline-block;
+}
+.search-icon .search-icon-glass {
+  border: 4px solid #fff;
+  border-radius: 100%;
+  color: #fff;
+  height: 21px;
+  @include transform(rotate(45deg) translate3d(-15px, 15px, 0px) translateX(-50%) translateY(-50%));
+  width: 21px;
+  margin-top: -6px;
+  margin-right: -13px;
+  #header-mb &{
+    border-color: $main-red;
+  }
+}
+.search-icon .search-icon-handle {
+  background-color: #fff;
+  height: 4px;
+  margin-left: -6px;
+  margin-top: -14px;
+  @include transform(rotate(45deg));
+  width: 13px;
+  @include border-radius(2px);
+  #header-mb &{
+    background-color: $main-red;
+  }
+}
+.search-icon .search-icon-crossbar {
+  background-color: #fff;
+  height: 4px;
+  margin-left: -20px;
+  margin-top: -10px;
+  opacity: 0;
+  @include transform(rotate(45deg));
+  width: 25px;
+  @include border-radius(2px);
+  #header-mb &{
+    background-color: $main-red;
+  }
+}
+.search-icon.active .search-icon-glass {
+  animation: collapseGlass 0.25s ease;
+  -webkit-animation: collapseGlass 0.25s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+}
+.search-icon.active .search-icon-handle {
+  animation: rotate315 0.25s ease;
+  -webkit-animation: rotate315 0.25s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.search-icon.active .search-icon-crossbar {
+  animation: showCrossbar 0.25s ease;
+  -webkit-animation: showCrossbar 0.25s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.search-icon.inactive .search-icon-glass {
+  animation: expandGlass 0.25s ease ;
+  -webkit-animation: expandGlass 0.25s ease 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.search-icon.inactive .search-icon-handle {
+  animation: rotate45 0.25s ease 0s ;
+  -webkit-animation: rotate45 0.25s ease 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.search-icon.inactive .search-icon-crossbar {
+  animation: hideCrossbar 0.25s ease;
+  -webkit-animation: hideCrossbar 0.25s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@include keyframes(rotate315)  {
+  0% {
+    margin-left: -6px;
+    margin-top: -14px;
+    @include transform(rotate(45deg));
+    width: 13px;
+  }
+  100% {
+    margin-left: -21px;
+    margin-top: -32px;
+    @include transform(rotate(315deg));
+    width: 25px;
+  }
+}
+
+@include keyframes(rotate45)  {
+  0% {
+    margin-left: -21px;
+    margin-top: -29px;
+    transform: rotate(315deg);
+    width: 23px;
+  }
+  100% {
+    margin-left: -8px;
+    margin-top: -18px;
+    @include transform(rotate(45deg));
+    width: 13px;
+  }
+}
+@include keyframes(collapseGlass) {
+  0% {
+    height: 21px;
+    opacity: 1;
+    transform: rotate(45deg) translate3d(-15px, 15px, 0px) translateX(-50%) translateY(-50%);
+    width: 21px;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    height: 28px;
+    opacity: 0;
+    @include transform(rotate(-225deg) translate3d(-4px, 15px, 0px));
+    width: 1px;
+  }
+}
+@include keyframes(expandGlass) {
+  0% {
+    height: 28px;
+    opacity: 0;
+//    @include transform(rotate(-225deg) translate3d(-4px, 15px, 0px));
+    width: 1px;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    height: 21px;
+    opacity: 1;
+//    @include transform(rotate(45deg) translate3d(-15px, 15px, 0px) translateX(-50%) translateY(-50%));
+    width: 21px;
+  }
+}
+@include keyframes(showCrossbar)  {
+  0% {
+    margin-left: -20px;
+    margin-top: -1px;
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: -21px;
+    margin-top: -4px;
+    opacity: 1;
+  }
+}
+@include keyframes(hideCrossbar)  {
+  0% {
+    margin-left: -20px;
+    margin-top: -1px;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: -20px;
+    margin-top: -10px;
+    opacity: 0;
+  }
+}
+@include keyframes(firstBar)  {
+  0% {
+    top: 0;
+  }
+  50%{
+    top: 7px;
+  }
+  75%{
+    width: 24px;
+  }
+  100% {
+    top: 7px;
+    @include transform(rotate(45deg));
+  }
+}
+@include keyframes(secondBar)  {
+  0%{
+
+  }
+  75%{
+    width: 24px;
+  }
+  100%{
+    @include transform(rotate(-45deg));
+    width: 24px;
+  }
+}
+@include keyframes(thirdBar)  {
+  0% {
+    bottom: 0;
+  }
+  50%{
+    bottom: 7px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// hamburger menu
+.menu-icon {
+  display: inline-block;
+  height: 16px;
+  padding-top: 18px;
+  width: 24px;
+}
+.menu-icon .menu-icon-bar {
+  background-color: $main-red;
+  height: 2px;
+  @include transform(rotate(0deg));
+  width: 24px;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+.menu-icon .menu-icon-bar:nth-child(2) {
+  width: 12px;
+  top: 7px;
+  left: 0
+}
+.menu-icon .menu-icon-bar:nth-child(3) {
+  width: 17px;
+  position: absolute;
+  top: 14px;
+  left: 0
+}
+.menu-icon.active .menu-icon-bar:nth-child(1) {
+  animation: squishTop 0.5s ease;
+  -webkit-animation: squishTop 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.menu-icon.active .menu-icon-bar:nth-child(2) {
+  animation: disappear 0.5s ease ;
+  -webkit-animation: disappear 0.5s ease ;
+//  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.menu-icon.active .menu-icon-bar:nth-child(3) {
+  animation: squishBottom 0.5s ease;
+  -webkit-animation: squishBottom 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  width: 24px;
+}
+.menu-icon.inactive .menu-icon-bar:nth-child(1) {
+  animation: squishTopRev 0.5s ease ;
+  -webkit-animation: squishTopRev 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.menu-icon.inactive .menu-icon-bar:nth-child(2) {
+  animation: dissappearRev 0.5s ease;
+  -webkit-animation: dissappearRev 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.menu-icon.inactive .menu-icon-bar:nth-child(3) {
+  animation: squishBottomRev 0.5s ease;
+  -webkit-animation: squishBottomRev 0.5s ease ;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@include keyframes(squishTop)  {
+  0% {
+    top: 0;
+    @include transform(rotate(0deg));
+  }
+
+  50%, 75% {
+    top: 7px;
+    @include transform(rotate(0deg));
+  }
+  100%{
+    top: 7px;
+    @include transform(rotate(45deg));
+  }
+}
+@include keyframes(squishBottom)  {
+  0% {
+    top: 14px;
+    @include transform(rotate(0deg));
+  }
+  50%, 75%{
+    top: 7px;
+    @include transform(rotate(0deg));
+  }
+  100% {
+    top: 7px;
+    @include transform(rotate(-45deg));
+  }
+}
+@include keyframes(disappear)  {
+  0%, 50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@include keyframes(squishBottomRev)  {
+  0% {
+    @include transform(rotate(-45deg));
+  }
+  50%, 75% {
+    @include transform(rotate(0deg));
+    top: 7px;
+  }
+  100% {
+    top: 14px;
+    @include transform(rotate(0deg));
+    width: 24px !important;
+  }
+}
+@include keyframes(squishTopRev)  {
+  0% {
+    @include transform(rotate(45deg));
+  }
+  50%, 75% {
+    top: 7px;
+    @include transform(rotate(0deg));
+  }
+  100% {
+    top: 0;
+    @include transform(rotate(0deg));
+  }
+}
+@include keyframes(dissappearRev)  {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

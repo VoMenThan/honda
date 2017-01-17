@@ -1,0 +1,420 @@
+// SHARE
+	.clrfix:before,
+	.clrfix:after {
+		display: table;
+		content: " ";
+	}
+	.clrfix:after {
+		clear: both;
+	}
+	
+	$awsome: 'FontAwesome';
+
+	@mixin my_transition($all) {
+		@if length($all) >= 1 {
+			@include css3-prefix('transition', $all);
+		}
+		@else {
+			@include css3-prefix('transition',  'all' + $all + 'ease-in-out');
+		}
+	}
+
+	@mixin css3-prefix($property, $value) {
+		-webkit-#{$property}: #{$value};
+		-khtml-#{$property}: #{$value};
+		-moz-#{$property}: #{$value};
+		-ms-#{$property}: #{$value};
+		-o-#{$property}: #{$value};
+		#{$property}: #{$value};
+	}
+
+// TIN TUC DETAIL
+	.news-detail-page {
+		width: 100%; 
+	}
+
+// INNER
+	.inner-page {
+		width: 100%; max-width: 1180px;
+		margin: 0 auto;
+
+		//----- RESPONSIVE
+		@include respond-to($break-1024) {
+			padding: 0 40px;
+		}
+		@include respond-to($break-767) {
+			padding: 0 20px;
+		}
+	}
+
+	.list-news {
+		float: left; padding-top: 53px;
+		max-width: calc(100% - 900px); width: 100%;
+
+		h3 {
+			padding-bottom: 14px;
+			border-bottom: 1px solid #e5e5e5;
+			font-family: $font-gothamultra; font-size: calcEm(24);
+
+			//----- RESPONSIVE
+			@include respond-to($break-1024) {
+				float: left; padding-top: 8px;
+				border-bottom: none; 
+			}
+			@include respond-to($break-767) {
+				float: none; padding-bottom: 15px;
+				font-size: calcEm(18);
+			}
+		}
+
+		ul.list-detail {
+			li { 
+				list-style: none; 
+
+				a { 
+					position: relative; display: block;
+					padding: 14px 0; 
+					border-bottom: 1px solid #e5e5e5;
+					font-family: $font-robotoregular; font-size: calcEm(15);
+					color: #666666;
+					@include my_transition(0.3s);
+
+					&:before {
+						position: absolute; right: 0;
+						content: "\f105";
+						font-family: $awsome; font-size: 17px;
+						color: #d7d7d7;
+						@include my_transition(0.3s);
+					}
+
+					&:hover,
+					&.active,
+					&.current_page_item {
+						color: #ed1b2f;
+						@include my_transition(0.3s);
+
+						&:before {
+							color: #ed1b2f;
+							@include my_transition(0.3s);
+						}
+					}
+				}
+			}
+
+			//----- RESPONSIVE
+			@include respond-to($break-1024) {
+				display: none;
+			}
+		}
+		
+		// SELECT BOX
+		.sele-mb {
+			display: none; position: relative;
+
+			//----- RESPONSIVE
+			@include respond-to($break-1024) {
+				display: block; 
+				float: right; width: 460px; height: 50px;
+
+				&:after {
+					position: absolute; right: 30px; top: 18px;
+					content: "\f0d7";
+					font-family: $awsome; font-size: 16px;
+					color: #4c4c4c;	
+				}
+
+				select {
+					width: 100%; height: 100%; padding-left: 15px;
+					border: 1px solid #cccccc;
+					font-family: $font-robotoregular; font-size: calcEm(15);
+					color: #666666; 
+
+					@include css3-prefix(appearance, none);
+					text-indent: 0px; text-overflow: '';
+				}
+			}
+			@include respond-to($break-767) {
+				float: none; width: 100%; 
+
+				&:after {
+					right: 20px; 
+				}
+			}
+		}
+
+		//----- RESPONSIVE
+		@include respond-to($break-1200) {
+			max-width: 240px;
+			margin-left: 20px;
+		}
+		@include respond-to($break-1024) {
+			max-width: 100%;
+			margin-left: 0px; padding-top: 30px;
+			@include clearfix;
+		}
+		@include respond-to($break-767) {
+			padding-top: 18px;
+		}
+	}
+
+	.main-news {
+		float: right; padding-left: 20px; padding-top: 50px;
+		max-width: calc(100% - 300px); width: 100%;
+
+		.main-head {
+			border-bottom: 1px solid #cccccc;
+
+			h3.tit {
+				line-height: 36px;
+				font-family: $font-gothambold-new; font-size: calcEm(30);
+				color: #ed1b2f;
+
+				//----- RESPONSIVE
+				@include respond-to($break-767) {
+					font-size: calcEm(24); line-height: 30px;
+				}
+			}
+
+			// CATEGORY - DATE - SOCIAL
+			.mini {
+				width: 100%; margin-top: 9px; margin-bottom: 21px;
+
+				.in-cate,
+				.date-post,
+				.social-share { 
+					float: left; 
+
+					//----- RESPONSIVE
+					@include respond-to($break-767) {
+						float: none; display: inline-block;
+					}
+				}
+
+				.in-cate,
+				.date-post {
+					font-family: $font-robotobold; font-size: calcEm(13);
+					color: #666666;
+					@include my_transition(0.3s);
+
+					&:after { 
+						display: inline-block; margin-left: 9px;
+						content: '|';
+					}
+				}
+
+				.in-cate { 
+					&:hover {
+						color: #ed1b2f;
+						@include my_transition(0.3s);
+					} 
+				}
+				
+				.date-post {
+					margin-left: 9px;
+					font-family: $font-robotoregular;
+
+					//----- RESPONSIVE
+					@include respond-to($break-767) {
+						margin-left: 4px;
+
+						&:after { 
+							display: none;
+						}
+					}
+				}
+
+				.social-share {
+					margin-left: 15px;
+
+					a { 
+						display: inline-block;
+						width: 20px; height: 20px;
+
+						&.sha-fb {
+							background: transparent url('../images/icon/share_face.png') no-repeat scroll 0 0;
+						}
+
+						&.sha-pr {
+							background: transparent url('../images/icon/share_print.png') no-repeat scroll 0 0;
+						}
+
+						&:hover {
+							opacity: 0.6;
+						}
+					}
+
+					//----- RESPONSIVE
+					@include respond-to($break-767) {
+						display: block; margin-left: 0px; margin-top: 12px;
+					}
+				}
+
+				//----- RESPONSIVE
+				@include respond-to($break-1024) {
+					margin-top: 20px; margin-bottom: 30px;
+				}
+				@include respond-to($break-767) {
+					margin-top: 15px; margin-bottom: 17px;
+				}
+			}
+		}
+
+		.ctn {
+			padding: 25px 0 34px; 
+			border-bottom: 1px solid #cccccc;
+
+			p {
+				margin-bottom: 21px;
+				font-family: $font-robotoregular; font-size: calcEm(15);
+				color: #333333; text-align: justify;
+			}
+
+			//----- RESPONSIVE
+			@include respond-to($break-767) {
+				padding: 9px 0 4px;
+			}
+		}
+
+		.news-relate {
+			padding-top: 50px; 
+
+			.tits{
+				h3 {
+					float: left;
+					font-family: $font-gothambold-new; font-size: calcEm(18);
+					color: #000;
+				}
+
+				a {
+					float: right; padding-right: 23px; position: relative; 
+					font-family: $font-robotoregular; font-size: calcEm(15); line-height: 28px;
+					color: #000;
+					@include my_transition(0.3s);
+
+					&:hover {
+						color: #ed1b2f;
+						@include my_transition(0.3s);
+					} 
+
+					&:after {
+						position: absolute; right: 3px; top: 1px;
+						content: "\f105";
+						font-family: $awsome; font-size: 17px;
+						color: #ff3535;	
+					}
+
+					//----- RESPONSIVE
+					@include respond-to($break-767) {
+						display: none;
+					}
+				}
+			} 
+
+			.suggest {
+				padding: 22px 0 60px; 
+
+				.item {
+					overflow: hidden;
+					float: left; width: calc(272 * 100% / 860);
+					margin-right: calc(22 * 100% / 860);;
+
+					&:last-child { margin-right: 0; margin-bottom: 0; }
+
+					a {
+						display: block; position: relative; 
+					}
+
+					img {
+						display: block; width: 100%;
+						@include my_transition(0.5s);
+
+						&:hover {
+							 transform: scale(1.1);
+							 @include my_transition(0.5s);
+						}
+					}
+
+					.item-tits {
+						position: absolute; bottom: 0; 
+						padding: 9px 80px 10px 20px; width: 100%;
+						background-color: rgba(0, 0, 0, 0.5);
+
+						&:before {
+							position: absolute; right: 20px; top: 15px;
+							content: "\f105";
+							font-family: $awsome; font-size: 24px;
+							color: #fff;
+							@include my_transition(0.3s);
+						}
+
+						&:hover {
+							&:before {
+								color: #ed1b2f;
+								@include my_transition(0.3s);
+							}
+							p {
+								color: #ed1b2f;
+								@include my_transition(0.3s);
+							}
+						}
+
+						p {
+							display: block; width: 100%;
+							font-family: $font-robotobold; font-size: calcEm(13);
+							color: #fff;
+							@include my_transition(0.3s);
+						}
+
+						//----- RESPONSIVE
+						@include respond-to($break-1024) {
+							padding: 9px 15% 10px 20px; 
+						}
+						@include respond-to(600px) {
+							padding: 9px 35% 10px 20px; 
+						}
+					}
+
+					//----- RESPONSIVE
+					@include respond-to(600px) {
+						float: none; width: 100%; margin-right: 0px; margin-bottom: 20px;
+					}
+				}
+
+				//----- RESPONSIVE
+				@include respond-to($break-767) {
+					padding: 24px 0 22px; 
+				}
+			}
+
+			.vm-mb {
+				@extend .tits;
+
+				a {
+					display: none;
+
+					//----- RESPONSIVE
+					@include respond-to($break-767) {
+						float: none; display: inline-block;
+						text-align: left;
+					}
+				}
+			}
+
+			//----- RESPONSIVE
+			@include respond-to($break-1024) {
+				padding-top: 47px; 
+			}
+			@include respond-to($break-767) {
+				padding: 23px 0 51px;
+			}
+		}
+
+		//----- RESPONSIVE
+		@include respond-to($break-1200) {
+			margin-right: 20px;
+		}
+		@include respond-to($break-1024) {
+			max-width: 100%;
+			margin-right: 0px; padding-top: 20px; padding-left: 0;
+		}
+	}

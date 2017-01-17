@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'gothamvnubook';
+    src: url('../fonts/gothamvnu-book-webfont.eot');
+    src: url('../fonts/gothamvnu-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gothamvnu-book-webfont.woff2') format('woff2'),
+         url('../fonts/gothamvnu-book-webfont.woff') format('woff'),
+         url('../fonts/gothamvnu-book-webfont.ttf') format('truetype'),
+         url('../fonts/gothamvnu-book-webfont.svg#gothamvnubook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothamvnubook_new';
+    src: url('../fonts/gothamvnu_book_new/gothamvnu-book-webfont.eot');
+    src: url('../fonts/gothamvnu_book_new/gothamvnu-book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gothamvnu_book_new/gothamvnu-book-webfont.woff2') format('woff2'),
+    url('../fonts/gothamvnu_book_new/gothamvnu-book-webfont.woff') format('woff'),
+    url('../fonts/gothamvnu_book_new/gothamvnu-book-webfont.ttf') format('truetype'),
+    url('../fonts/gothamvnu_book_new/gothamvnu-book-webfont.svg#gothamvnubook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothamvnubold';
+    src: url('../fonts/gothamvnu-bold-webfont.eot');
+    src: url('../fonts/gothamvnu-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gothamvnu-bold-webfont.woff2') format('woff2'),
+         url('../fonts/gothamvnu-bold-webfont.woff') format('woff'),
+         url('../fonts/gothamvnu-bold-webfont.ttf') format('truetype'),
+         url('../fonts/gothamvnu-bold-webfont.svg#gothamvnubold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothamvnubold_new';
+    src: url('../fonts/gothamvnu_bold_new/gothamvnu-bold-webfont.eot');
+    src: url('../fonts/gothamvnu_bold_new/gothamvnu-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gothamvnu_bold_new/gothamvnu-bold-webfont.woff2') format('woff2'),
+    url('../fonts/gothamvnu_bold_new/gothamvnu-bold-webfont.woff') format('woff'),
+    url('../fonts/gothamvnu_bold_new/gothamvnu-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light.woff') format('woff'),
+         url('../fonts/Roboto-Light.ttf')  format('truetype'),
+         url('../fonts/Roboto-Light.svg#Roboto-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular.woff') format('woff'),
+         url('../fonts/Roboto-Regular.ttf')  format('truetype'),
+         url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold.woff') format('woff'),
+         url('../fonts/Roboto-Bold.ttf')  format('truetype'),
+         url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Ultra';
+    src: url('../fonts/gotham_ultra/Gotham-Ultra.eot');
+    src: local('☺'), url('../fonts/gotham_ultra/Gotham-Ultra.woff') format('woff'), url('../fonts/gotham_ultra/Gotham-Ultra.ttf') format('truetype'), url('../fonts/gotham_ultra/Gotham-Ultra.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Iciel Gotham Medium';
+    src: url('../fonts/iciel_gotham_medium/iCielGotham-Medium.eot');
+    src: local('☺'), url('../fonts/iciel_gotham_medium/iCielGotham-Medium.woff') format('woff'), url('../fonts/iciel_gotham_medium/iCielGotham-Medium.ttf') format('truetype'), url('../fonts/iciel_gotham_medium/iCielGotham-Medium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

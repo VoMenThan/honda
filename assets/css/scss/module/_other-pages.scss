@@ -1,0 +1,1101 @@
+.hide{
+	display: none;
+}
+.nodata {
+  color: #ed1b2f;
+  font-family: "gothamvnubold_new";
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#support{
+	.pagination-wrp{
+		margin-top: 0 !important;
+	}
+	.left-content{
+		width: 300px;
+		float: left;
+		padding-right: 20px;
+		margin-top: 40px;
+		@include respond-to(1200px){
+	    	padding-left: 40px;
+	    }
+	    @include respond-to(1024px){
+	    	display: none;
+	    }
+		ul.main-list{
+			width: 100%;
+			list-style: none;
+			>li{
+				width: 100%;
+				list-style: none;
+				padding: 14px 0 15px 0;
+				border-bottom: 1px solid #e5e5e5;
+				position: relative;
+				>a{
+					@extend %roboto-regular;
+					font-size: 15px;
+					color: $black-2;
+				}
+				>i{
+					font-size: 14px;
+					color: #000;
+					position: absolute;
+					top: 18px;
+					right: 0;
+					cursor: pointer;
+					@include opacity(0.3);
+					&.fa-chevron-down{
+						display: none;
+					}
+				}
+				&.has-child{
+					padding: 14px 0 0 0;
+				}
+				&:first-child{
+					@extend %gotham-ultra;
+					font-size: 24px;
+					color: $main-black;
+					padding-bottom: 15px;
+				}
+				&:hover, &.active{
+					>a{
+						color: $main-red;
+					}
+					>i{
+						@include opacity(1);
+					}
+				}
+				&.active{
+					i{
+						&.fa-chevron-right{
+							display: none;
+						}
+						&.fa-chevron-down{
+							display: block;
+						}
+					}
+					// >.sub-list{
+					// 	max-height: 500px;
+					// }
+				}
+				.sub-list{
+					max-height: 0px;
+					margin-top: 15px;
+					width: 100%;
+					list-style: none;
+					background: #f5f5f5;
+					overflow: hidden;
+					>li{
+						width: 100%;
+						list-style: none;
+						padding: 14px 0 15px 0;
+						border-top: 1px solid #e5e5e5;
+						position: relative;
+						a{
+							@extend %roboto-regular;
+							font-size: 15px;
+							color: $black-2;
+							margin-left: 40px;
+						}
+						i{
+							font-size: 9px;
+							color: $main-red;
+							position: absolute;
+							top: 20px;
+							left: 20px;
+							display: none;
+						}
+						&:hover, &.active{
+							a{
+								color: #000;
+							}
+							i{
+								display: block;
+							}
+						}
+					}
+				}
+			}
+		}
+		.send-question{
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 50px;
+			margin: 30px 0 30px 0;
+			background: $main-red;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: #fff;
+			line-height: 50px;
+			padding-left: 20px;
+			i{
+				font-size: 20px;
+				color: #fff;
+				position: absolute;
+				top: 50%;
+				margin-top: -10px;
+				right: 20px;
+			}
+			&:hover{
+				background: rgba($main-red,0.7);
+			}
+		}
+	}
+
+	.right-content{
+		width: calc(100% - 300px);
+		padding-left: 20px;
+		float: left;
+		@include respond-to(1200px){
+	    	width: calc(100% - 340px);
+	    }
+	    @include respond-to(1024px){
+	    	width: 100%;
+	    	padding: 0 40px;
+	    }
+	    @include respond-to(767px){
+	    	padding: 0 20px;
+	    }
+	    .title{
+			@extend %roboto-bold;
+			font-size: 30px;
+			color: $main-red;
+			line-height: 31px;
+			padding: 53px 0 26px 0;
+			@include respond-to(1024px){
+		    	padding: 55px 0 25px 0;
+		    }
+		    @include respond-to(767px){
+		    	font-size: 23px;
+		    	line-height: 30px;
+		    	padding: 25px 0 20px 0;
+		    }
+		}
+	    .mob-list{
+	    	padding: 0;
+	    	display: none;
+	    	@include respond-to(1024px){
+		    	display: block;
+		    }
+	    	p{
+	    		@extend %gotham-ultra;
+	    		font-size: 24px;
+	    		color: $main-black;
+	    		line-height: 50px;
+	    		float: left;
+	    		@include respond-to(767px){
+			    	font-size: 18px;
+			    	line-height: 20px;
+			    }
+	    	}
+	    	select{
+	    		width: calc(100% - 235px);
+	    		height: 50px;
+	    		float: right;
+	    		border: 1px solid #cccccc;
+	    		padding-left: 20px;
+	    		@extend %roboto-regular;
+	    		font-size: 15px;
+	    		color: $black-2;
+	    		appearance:none;
+				-moz-appearance:none; /* Firefox */
+				-webkit-appearance:none; /* Safari and Chrome */
+				background: url(../images/icon/select_box.png) #fff no-repeat right center;
+	    		@include respond-to(767px){
+			    	width: 100%;
+			    	float: none;
+			    	margin-top: 8px;
+			    }
+	    	}
+	    	select::-ms-expand {
+			    display: none;
+			}
+	    }
+	    .send-question{
+			position: relative;
+			display: block;
+			width: 280px;
+			height: 50px;
+			margin: 10px 0 30px 235px;
+			background: $main-red;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: #fff;
+			line-height: 50px;
+			padding-left: 20px;
+			display: none;
+			@include respond-to(1024px){
+		    	display: block;
+		    }
+		    @include respond-to(767px){
+		    	width: 100%;
+		    }
+			i{
+				font-size: 20px;
+				color: #fff;
+				position: absolute;
+				top: 50%;
+				margin-top: -10px;
+				right: 20px;
+			}
+			&:hover{
+				background: rgba($main-red,0.7);
+			}
+			@include respond-to(767px){
+		    	margin: 10px 0 30px 0;
+		    }
+		}
+		.danhsach{
+			padding: 25px 0 30px 0;
+			margin-top: 0;
+			border-top: 1px solid #cccccc;
+			h3{
+				@extend %gotham-ultra;
+				font-size: 18px;
+				color: $main-black;
+				margin-bottom: 15px;
+				@include respond-to(1024px){
+			    	margin: 10px 0 25px 0;
+			    }
+			}
+			.block{
+				margin-bottom: 10px;
+				.heading{
+					background: #f7f7f7;
+					border-bottom: 3px solid #efefef;
+					padding: 14px 35px 12px 20px;
+					cursor: pointer;
+					@extend %roboto-regular;
+					font-size: 15px;
+					color: $main-black;
+					@include clearfix;
+					position: relative;
+					&:hover{
+						background: darken(#f7f7f7, 10%);
+					}
+				}
+				.cont{
+					margin: 10px 0 10px 0;
+					display: none;
+					border: 1px solid $main-red;
+					padding: 15px 20px 7px 20px;
+					position: relative;
+					.rectangle{
+						margin: 0;
+						position: absolute;
+						top: -9px;
+						left: 30px;
+						width: 22px;
+						@include respond-to(1024px){
+					    	margin: 0;
+					    }
+					}
+					p{
+						@extend %roboto-regular;
+						font-size: 15px;
+						color: $main-black;
+						line-height: 21px;
+					}
+				}
+				&.ac{
+					.cont{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+.pagination-wrp{
+	margin: 35px 0 60px 0;
+	.pagination{
+		list-style: none;
+		text-align: center;
+		li{
+			list-style: none;
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			border: 1px solid #cccccc;
+			text-align: center;
+			margin: 0 5px;
+			@include respond-to(767px){
+				width: 29px;
+				height: 29px;
+			}
+			a{
+				display: block;
+				text-align: center;
+				@extend %roboto-regular;
+				font-size: 15px;
+				line-height: 30px;
+				color: $main-black;
+				@include respond-to(767px){
+					line-height: 27px;
+				}
+			}
+			&:hover, &.active{
+				background: $main-red;
+				border: 1px solid $main-red;
+				a{
+					color: #fff;
+				}
+			}
+			&.disabled{
+				@include opacity(0.3);
+				cursor: default;
+				&:hover{
+					background: none;
+					border: 1px solid #cccccc;
+					a{
+						color: $main-black;
+						cursor: default;
+					}
+				}
+			}
+		}
+	}
+}
+
+#asking-form{
+	min-width: 100%;
+	// min-height: 100%;
+	background: rgba(#000,0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 99999;
+	display: none;
+	padding: 0 20px;
+	@include respond-to(767px){
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+	.outside-form{
+		width: 685px;
+		height: 585px;
+		background: #fff;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		@include respond-to(767px){
+	    	width: 100%;
+	    	height: 720px;
+	    	padding: 20px 0 0 0;
+	    	position: relative;
+	    	top: auto;
+	    	right: auto;
+	    	bottom: auto;
+	    	left: auto;
+	    	margin: 100px auto;
+	    }
+		.close-pop{
+			display: block;
+			position: absolute;
+			cursor: pointer;
+			z-index: 10;
+			&.close1{
+				top: -41px;
+				right: -41px;
+				@include respond-to(767px){
+			    	display: none;
+			    }
+			}
+			&.close2{
+				top: 12px;
+				right: 12px;
+				display: none;
+				@include respond-to(767px){
+			    	display: block;
+			    }
+			}
+		}
+	}
+	.form-wrp{
+		width: 685px;
+		height: 585px;
+		background: #fff;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		padding: 60px;
+		@include respond-to(767px){
+	    	width: 100%;
+	    	height: 700px;
+	    	padding: 20px;
+	    	position: relative;
+	    	top: auto;
+	    	right: auto;
+	    	bottom: auto;
+	    	left: auto;
+	    }
+	    #mCSB_1_container{
+	    	margin-right: 23px;
+	    }
+	    .mCSB_scrollTools{
+	    	right: -7px;
+	    }
+	    .mCSB_dragger_bar{
+	    	background: $main-red !important;
+	    }
+		p{
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: $main-black;
+			padding-bottom: 16px;
+		}
+		input{
+			float: left;
+			width: 100%;
+			height: 50px;
+			background: #fff;
+			border: 1px solid #cccccc;
+			padding-left: 20px;
+			@extend %roboto-regular;
+			font-size: 15px;
+			// line-height: 50px;
+			margin-bottom: 10px;
+			&.half.hl{
+				width: calc(50% - 5px);
+				margin-right: 5px;
+				@include respond-to(767px){
+			    	width: 100%;
+			    	margin: 0 0 10px 0;
+			    }
+			}
+			&.half.hr{
+				width: calc(50% - 5px);
+				margin-left: 5px;
+				@include respond-to(767px){
+			    	width: 100%;
+			    	margin: 0 0 10px 0;
+			    }
+			}
+		}
+		select{
+			width: 100%;
+			height: 50px;
+			background: #fff;
+			border: 1px solid #cccccc;
+			padding-left: 20px;
+			@extend %roboto-regular;
+			font-size: 15px;
+			margin-bottom: 10px;
+			appearance:none;
+			-moz-appearance:none; /* Firefox */
+			-webkit-appearance:none; /* Safari and Chrome */
+			background: url(../images/icon/select_box.png) #fff no-repeat right center;
+			&.half.hl{
+				width: calc(50% - 5px);
+				margin-right: 5px;
+				@include respond-to(767px){
+			    	width: 100%;
+			    	margin: 0 0 10px 0;
+			    }
+			}
+			&.half.hr{
+				width: calc(50% - 5px);
+				margin-left: 5px;
+				@include respond-to(767px){
+			    	width: 100%;
+			    	margin: 0 0 10px 0;
+			    }
+			}
+		}
+		select::-ms-expand {
+		    display: none;
+		}
+		textarea{
+			@extend %roboto-regular;
+			font-size: 15px;
+			border: 1px solid #cccccc;
+			width: 100%;
+			max-width: 100%;
+			height: 120px;
+			max-height: 150px;
+			padding: 10px 20px 20px 20px;
+		}
+		a{
+			position: relative;
+			display: block;
+			float: left;
+			margin-top: 20px;
+			height: 50px;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: #fff;
+			line-height: 50px;
+			padding: 0 30px;
+			background: $main-red;
+			&:hover{
+				background: rgba($main-red, 0.8);
+			}
+			@include respond-to(767px){
+				margin-bottom: 0;
+			}
+		}
+		.submit-progress{
+			width: 0;
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: url(../images/icon/progress-bar.gif) no-repeat -35px center / auto 215%;
+			display: none;
+		}
+		.msg-questions,
+		.msg-done{
+			margin: 15px 0 0 155px;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: $main-red;
+			@include respond-to(767px){
+				margin: 75px 0 60px 0;
+				height: 20px;
+			}
+		}
+		.msg-done{
+			color: green;
+		}
+	}
+}
+
+#contact{
+	@include respond-to(1200px){
+		padding: 0 40px;
+	}
+	@include respond-to(767px){
+		padding: 0 20px;
+	}
+	.title{
+		@extend %gotham-bold;
+		font-size: 30px;
+		color: $main-red;
+		border-bottom: 1px solid #cccccc;
+		padding: 48px 0 24px 0;
+		@include respond-to(767px){
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+	}
+	.left-content{
+		width: 50%;
+		float: left;
+		padding-top: 25px;
+		@include respond-to(980px){
+			width: 100%;
+			float: none;
+		}
+		.row{
+			padding-bottom: 22px;
+			p{
+				@extend %roboto-regular;
+				font-size: 15px;
+				color: $main-black;
+				line-height: 19px;
+				&.name{
+					padding-bottom: 1px;
+				}
+			}
+		}
+	}
+	.form-wrp{
+		width: 50%;
+		float: left;
+		background: #fff;
+		padding: 20px 0 0 20px;
+		position: relative;
+		@include respond-to(980px){
+			width: 100%;
+			float: none;
+			padding: 30px 0 0 0;
+		}
+		p{
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: $main-black;
+			padding-bottom: 16px;
+		}
+		input{
+			float: left;
+			width: 100%;
+			height: 50px;
+			background: #fff;
+			border: 1px solid #cccccc;
+			padding-left: 20px;
+			@extend %roboto-regular;
+			font-size: 15px;
+			margin-bottom: 10px;
+			&.half.hl{
+				width: calc(50% - 5px);
+				margin-right: 5px;
+				@include respond-to(767px){
+			    	width: 100%;
+			    	margin: 0 0 10px 0;
+			    }
+			}
+			&.half.hr{
+				width: calc(50% - 5px);
+				margin-left: 5px;
+				@include respond-to(767px){
+			    	width: 100%;
+			    	margin: 0 0 10px 0;
+			    }
+			}
+		}
+		select{
+			width: 100%;
+			height: 50px;
+			background: #fff;
+			border: 1px solid #cccccc;
+			padding-left: 20px;
+			@extend %roboto-regular;
+			font-size: 15px;
+			margin-bottom: 10px;
+			appearance:none;
+			-moz-appearance:none; /* Firefox */
+			-webkit-appearance:none; /* Safari and Chrome */
+			background: url(../images/icon/select_box.png) #fff no-repeat right center;
+			&.half.hl{
+				width: calc(50% - 5px);
+				margin-right: 5px;
+				@include respond-to(767px){
+			    	width: 100%;
+			    	margin: 0 0 10px 0;
+			    }
+			}
+			&.half.hr{
+				width: calc(50% - 5px);
+				margin-left: 5px;
+				@include respond-to(767px){
+			    	width: 100%;
+			    	margin: 0 0 10px 0;
+			    }
+			}
+		}
+		select::-ms-expand {
+		    display: none;
+		}
+		textarea{
+			@extend %roboto-regular;
+			font-size: 15px;
+			border: 1px solid #cccccc;
+			width: 100%;
+			max-width: 100%;
+			height: 120px;
+			padding: 10px 20px 20px 20px;
+		}
+		a{
+			position: relative;
+			display: block;
+			float: left;
+			margin: 20px 0 60px 0;
+			height: 50px;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: #fff;
+			line-height: 50px;
+			padding: 0 30px;
+			background: $main-red;
+			&:hover{
+				background: rgba($main-red, 0.8);
+			}
+			@include respond-to(767px){
+				margin-bottom: 0;
+			}
+		}
+		.submit-progress{
+			width: 0px;
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: url(../images/icon/progress-bar.gif) no-repeat -35px center / auto 215%;
+			display: none;
+		}
+		.msg-questions,
+		.msg-done{
+			margin: 15px 0 0 155px;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: $main-red;
+			@include respond-to(767px){
+				height: 20px;
+				margin: 75px 0 60px 0;
+			}
+		}
+		.msg-done{
+			color: green;
+		}
+	}
+}
+
+#search-result{
+	padding: 46px 0 60px 0;
+	@include respond-to(1200px){
+		padding: 46px 40px 60px 40px;
+	}
+	@include respond-to(767px){
+		padding: 0 20px;
+	}
+	h1.title{
+		@extend %gotham-bold;
+		font-size: 30px;
+		color: $main-red;
+		float: left;
+		width: 200px;
+		line-height: 50px;
+		@include respond-to(767px){
+			padding: 10px 0;
+		}
+	}
+	.search-bar-wrp{
+		width: calc(100% - 201px);
+		float: left;
+		border: 1px solid #cccccc;
+		background: #fff;
+		position: relative;
+		@include respond-to(767px){
+			width: 100%;
+		}
+		input{
+			width: calc(100% - 138px);
+			height: 48px;
+			float: left;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: $main-black;
+			padding: 0 20px;
+			border: none;
+			@include respond-to(767px){
+				width: calc(100% - 105px);
+			}
+		}
+		.search-submit{
+			display: block;
+			width: 137px;
+			height: 50px;
+			position: absolute;
+			top: -1px;
+			right: -1px;
+			background: $main-red;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: #fff;
+			text-align: center;
+			line-height: 50px;
+			@include respond-to(767px){
+				width: 103px;
+			}
+			&:hover{
+				@include opacity(0.7);
+			}
+		}
+	}
+	.filter{
+		background: #f5f5f5;
+		padding: 10px 20px;
+		margin: 30px 0 0 0;
+		@include respond-to(767px){
+			padding: 20px;
+			height: 157px;
+			position: relative;
+		}
+		h2{
+			@extend %gotham-ultra;
+			font-size: 18px;
+			color: $main-black;
+			padding-top: 11px;
+			float: left;
+			@include respond-to(767px){
+				padding: 0 0 6px 0;
+			}
+		}
+		select{
+			height: 40px;
+			background: #fff;
+			border: 1px solid #cccccc;
+			@extend %roboto-regular;
+			font-size: 15px;
+			color: $main-black;
+			padding-left: 20px;
+			appearance:none;
+			-moz-appearance:none; /* Firefox */
+			-webkit-appearance:none; /* Safari and Chrome */
+			background: url(../images/icon/select_box.png) #fff no-repeat right center;
+			float: right;
+			&.filter-time{
+				width: 212px;
+				@include respond-to(830px){
+					width: 192px
+				}
+				@include respond-to(767px){
+					width: calc(100% - 40px);
+					position: absolute;
+					bottom: 20px;
+					left: 20px;
+				}
+			}
+			&.filter-type{
+				width: 262px;
+				margin-right: 10px;
+				@include respond-to(830px){
+					width: 222px;
+				}
+				@include respond-to(767px){
+					width: calc(100% - 40px);
+					margin-right: 0;
+					position: absolute;
+					bottom: 70px;
+					left: 20px;
+				}
+			}
+		}
+		select::-ms-expand {
+		    display: none;
+		}
+	}
+	.result-show{
+		min-height: 60px;
+		@include respond-to(640px){
+			padding-bottom: 60px;
+		}
+		.pagination-wrp{
+			margin-bottom: 0;
+		}
+		.has-image{
+			border-bottom: 1px solid #cccccc;
+			padding: 30px 0 28px 0;
+			@include respond-to(767px){
+				padding: 20px 0 18px 0;
+			}
+			.img-wrp{
+				width: 380px;
+				// height: 210px;
+				float: left;
+				overflow: hidden;
+				position: relative;
+				@include respond-to(768px){
+					width: 50%;
+				}
+				@include respond-to(767px){
+					width: 100%;
+					// height: 200px;
+					float: none;
+				}
+				a{
+					width: 100%;
+					// height: 100%;
+					position: relative;
+					display: block;
+					img{
+						display: block;
+						width: 100%;
+						@include transition();
+					}
+				}
+				&:hover{
+					img{
+						@include transform(scale(1.025));
+					}
+				}
+				.video-cover{
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: rgba(#000,0.7);
+					z-index: 8;
+					@include opacity(0);
+					@include transition(0.1s);
+					img{
+						width: 45px;
+						height: 52px;
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						margin: auto;
+						cursor: pointer;
+					}
+				}
+				&:hover{
+					.video-cover{
+						@include opacity(1);
+					}
+				}
+			}
+			.desc{
+				width: calc(100% - 380px);
+				float: left;
+				padding: 0 30px;
+				margin-top: -6px;
+				@include respond-to(768px){
+					width: 50%;
+				}
+				@include respond-to(767px){
+					width: 100%;
+					float: none;
+					padding: 0;
+					margin: 0;
+				}
+				.category{
+					@extend %roboto-bold;
+					font-size: 15px;
+					color: $main-red;
+					padding-right: 10px;
+				}
+				.date{
+					@extend %roboto-regular;
+					font-size: 15px;
+					color: $black-2;
+					padding-left: 10px;
+				}
+				.title{
+					padding: 0 0 5px 0;
+					a{
+						@extend %roboto-bold;
+						font-size: 18px;
+						color: $main-black;
+						line-height: 24px;
+						&:hover{
+							color: $main-red;
+						}
+					}
+					&.tablet{
+						display: none;
+					}
+					@include respond-to(768px){
+						display: none;
+						&.tablet{
+							display: block;
+						}
+					}
+					@include respond-to(767px){
+						padding: 0;
+						margin: 12px 0 5px 0;
+					}
+				}
+				.short-cont{
+					padding-top: 13px;
+					p{
+						@extend %roboto-regular;
+						font-size: 15px;
+						color: #000;
+						line-height: 21px;
+					}
+					&.tablet{
+						display: none;
+					}
+					@include respond-to(768px){
+						display: none;
+						&.tablet{
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		.no-image, 
+		.support{
+			border-bottom: 1px solid #cccccc;
+			padding: 30px 0;
+			@include respond-to(767px){
+				padding: 20px 0;
+			}
+			.desc{
+				float: left;
+				margin-top: -6px;
+				@include respond-to(767px){
+					width: 100%;
+					float: none;
+					padding: 0;
+					margin: 0;
+				}
+				.category{
+					@extend %roboto-bold;
+					font-size: 15px;
+					color: $main-red;
+					padding-right: 10px;
+				}
+				.date{
+					@extend %roboto-regular;
+					font-size: 15px;
+					color: $black-2;
+					padding-left: 10px;
+				}
+				.title{
+					padding: 0 0 5px 0;
+					a{
+						@extend %roboto-bold;
+						font-size: 18px;
+						color: $main-black;
+						line-height: 24px;
+						&:hover{
+							color: $main-red;
+						}
+					}
+					@include respond-to(767px){
+						padding: 0;
+						margin: 12px 0 5px 0;
+					}
+				}
+				.short-cont{
+					cursor: pointer;
+				}
+				.full-cont,
+				.short-cont{
+					padding-top: 13px;
+					p{
+						@extend %roboto-regular;
+						font-size: 15px;
+						color: #000;
+						line-height: 21px;
+					}
+				}
+			}
+		}
+	}
+}
+// NOTE: CSS for 404 Page start here
+.not-found{
+    padding-top: 7%;
+    padding-bottom: 5%;
+    text-align: center;
+    img{
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    a{
+        color: #f2f2f2;
+        background: #ed1b2f;
+        display: inline-block;
+        padding: 15px 20px;
+        margin-top: 40px;
+        i{
+            margin-left: 30px;
+            top: 1px;
+            position: relative;
+            left: -10px;
+            @include transition(all .1s);
+        }
+        &:hover{
+            i{
+                left: 0;
+            }
+        }
+    }
+}
