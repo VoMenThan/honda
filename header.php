@@ -19,7 +19,8 @@
     <link rel='stylesheet' id='selectbox1-css' href='assets/css/jquery.mCustomScrollbar.css' type='text/css' media='all'/>
     <link rel='stylesheet' id='mce-css' href='assets/css/mce.css' type='text/css' media='all'/>
     <link rel='stylesheet' id='style-hdvn-css' href='assets/css/style_hdvn.css' type='text/css' media='all'/>
-    <link rel='stylesheet' id='lxat-css' href='assets/css/lxat.css?' type='text/css' media='all'/>
+    <link rel='stylesheet' id='lxat-css' href='assets/css/lxat.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='lxat-css' href='assets/css/dauthau.css' type='text/css' media='all'/>
     <script type='text/javascript'src='assets/js/jquery-1.11.3.min.js'></script>
     <style>
         #header-pc .top-nav-wrp .top-nav ul li a,
