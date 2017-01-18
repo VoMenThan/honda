@@ -1,4 +1,37 @@
+.img-responsive {
+  max-width: 100%;
+  height: auto; }
+
+.image-desktop {
+  display: inline-block; }
+  @media only screen and (max-width: 1024px) {
+    .image-desktop {
+      display: none; } }
+
+.image-desktop-tablet {
+  display: inline-block; }
+  @media only screen and (max-width: 640px) {
+    .image-desktop-tablet {
+      display: none; } }
+
+.image-tablet {
+  display: none; }
+  @media only screen and (max-width: 1024px) {
+    .image-tablet {
+      display: inline-block; } }
+  @media only screen and (max-width: 640px) {
+    .image-tablet {
+      display: none; } }
+
+.image-mobile {
+  display: none; }
+  @media only screen and (max-width: 640px) {
+    .image-mobile {
+      display: inline-block; } }
+
 .right-content .box-search-login .box-search {
+  width: -moz-calc(100% - 200px);
+  width: -webkit-calc(100% - 200px);
   width: calc(100% - 200px);
   float: left;
   position: relative; }
@@ -35,6 +68,22 @@
     top: 80%;
     right: 0%;
     border: 1px solid; }
+    .right-content .box-search-login .box-login .pupup-login .row-pup {
+      width: 100%;
+      height: 40px; }
+      .right-content .box-search-login .box-login .pupup-login .row-pup .text-login {
+        width: 30%;
+        float: left;
+        text-align: left; }
+      .right-content .box-search-login .box-login .pupup-login .row-pup .input-login {
+        width: 70%;
+        display: block;
+        float: left; }
+      .right-content .box-search-login .box-login .pupup-login .row-pup .btn-dn {
+        display: block;
+        width: 30%;
+        float: right;
+        background: #eb212e; }
 .right-content .title-name {
   clear: both;
   height: 110px;

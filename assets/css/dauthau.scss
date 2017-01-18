@@ -1,7 +1,8 @@
+@import "scss/module/variables";
 .right-content{
   .box-search-login{
     .box-search{
-      width: calc(100% - 200px);
+      @include calc('width', '100% - 200px');
       float: left;
       position: relative;
       .input-search{
@@ -42,6 +43,26 @@
         top: 80%;
         right: 0%;
         border: 1px solid;
+        .row-pup{
+          width: 100%;
+          height: 40px;
+          .text-login{
+            width: 30%;
+            float: left;
+            text-align: left;
+          }
+          .input-login{
+            width:70%;
+            display: block;
+            float: left;
+          }
+          .btn-dn{
+            display: block;
+            width: 30%;
+            float: right;
+            background: #eb212e;
+          }
+        }
       }
     }
   }
