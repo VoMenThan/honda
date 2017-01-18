@@ -397,15 +397,18 @@ p img {
             vertical-align: middle;
             width: 100%;
             height: 50px;
-            padding: 0 29px;
+            padding: 0 28px;
             text-align: center;
             font-size: 13px;
             color: #fff;
             line-height: 16px;
             background: url(../images/bg/menu-fence.png) no-repeat right center; }
+            @media only screen and (max-width: 1200px) {
+              #header-pc .static-menu-wrp .menu-wrp ul li a {
+                padding: 0 18px; } }
             @media only screen and (max-width: 1065px) {
               #header-pc .static-menu-wrp .menu-wrp ul li a {
-                font-size: 11px; } }
+                font-size: 12px; } }
           #header-pc .static-menu-wrp .menu-wrp ul li .rectangle {
             position: absolute;
             left: 50%;
@@ -2247,7 +2250,7 @@ body.menu-hide .mask {
             @media only screen and (max-width: 780px) {
               #footer .contact .center-content .rss .select-wrp select {
                 padding-right: 40px;
-                width: calc(100% - 71px); } }
+                /* width: calc(100% - 71px); */ } }
           #footer .contact .center-content .rss .select-wrp a {
             display: inline-block;
             width: 91px;
@@ -2556,6 +2559,9 @@ div.selector {
   padding-left: 0;
   float: left;
   width: calc(100% - 91px) !important; }
+  @media only screen and (max-width: 780px) {
+    div.selector {
+      width: calc(100% - 70px) !important; } }
 
 div.selector.hover, div.selector.focus {
   background-position: right center; }

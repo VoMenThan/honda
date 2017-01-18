@@ -1,5 +1,99 @@
 @import "scss/module/variables";
+//css table
+.box-all-tbmt{
+  font-family: $font-robotoregular;
+  .all-tbmt{
+    .head-table{
+      height: 70px;
+      background: #ebebeb;
+      th{
+        text-align: left;
+        font-size: 14px;
+      }
+      th:first-child{
+        text-align: center;
+      }
+      .stt{
+        width: 60px;
+      }
+      .so-tbmt{
+        width: 140px;
+      }
+      .ten-goi-thau{
+        @include calc('width', '100% - 600px');
+      }
+      .thoi-diem-tai{
+        width: 170px;
+      }
+      .thoi-gian-mo{
+        width: 170px;
+      }
+      .table-edit{
+        padding-right: 10px;
+        width: 30px;
+        color: #000;
+      }
+    }
+    .row-content{
+      height: 70px;
+      .date-time{
+        width:50%;
+        display: inline-block;
+        padding-right: 20px;
+        padding-left: 10px;
+      }
+      .date{
+        text-align: left;
+      }
+      .time{
+        text-align: right;
+      }
+      td:first-child{
+        text-align: center;
+      }
+      .btn-edit{
+        color: #000000;
+        &:hover{
+          color: #ea2036;
+        }
+      }
+    }
+    .row-content:nth-child(even) {
+      background: #f5f5f5;
+    }
+  }
+  .pagination-wrp {
+    .pagination{
+      text-align: right;
+    }
+  }
+}
+@include respond-to($break-767){
+  .box-all-tbmt{
+    .all-tbmt {
+      .head-table {
+        .stt {
+          width: 40px;
+        }
+        .so-tbmt {
+          width: 110px;
+        }
+        .ten-goi-thau {
+          @include calc('width', '100% - 480px');
+        }
+        .thoi-diem-tai {
+          width: 160px;
+        }
+        .thoi-gian-mo {
+          width: 170px;
+        }
+      }
+    }
+  }
+}
+//end css table
 .right-content{
+  font-family: $font-robotoregular;
   .box-search-login{
     .box-search{
       @include calc('width', '100% - 200px');
@@ -32,17 +126,69 @@
       text-align: right;
       height: 50px;
       padding-right: 10px;
+      .user-login{
+        font-family: "Iciel Gotham Medium";
+        color: #000;
+        opacity: 0.6;
+        .name-user{
+          line-height: 40px;
+          float: right;
+          margin-left: 10px;
+        }
+      }
       .login{
+        &:hover{
+          cursor: pointer;
+        }
         line-height: 50px;
+        font-family: $font-icielgothammedium;
+        color: #000;
+        opacity: 0.6;
       }
       .pupup-login{
+        &:before{
+          content: " ";
+          width: 30px;
+          height: 30px;
+          display: block;
+          @include rotate(-45deg);
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          right: 50px;
+          background: #fff;
+          top: -6px;
+          border-top: 1px solid #c9c9c9;
+          border-right: 1px solid #c9c9c9;
+
+        }
         width: 430px;
-        height: 230px;
+        height: 210px;
+        display: none;
         background: #FFFFFF;
         position: absolute;
         top: 80%;
         right: 0%;
-        border: 1px solid;
+        border: 1px solid #c9c9c9;
+        padding: 30px;
+        font-size: 13px;
+        font-family: $font-icielgothammedium;
+        .btn-login {
+          margin-top: 15px;
+        }
+        .username{
+          margin-top: 15px;
+        }
+        .btn-lose{
+          &:hover{
+            cursor: pointer;
+          }
+          img{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+          }
+        }
         .row-pup{
           width: 100%;
           height: 40px;
@@ -50,18 +196,32 @@
             width: 30%;
             float: left;
             text-align: left;
+            line-height: 30px;
           }
           .input-login{
-            width:70%;
+            width: 70%;
             display: block;
             float: left;
+            height: 35px;
           }
-          .btn-dn{
-            display: block;
-            width: 30%;
-            float: right;
-            background: #eb212e;
-          }
+            .link-qmk{
+              margin-right: 20px;
+              line-height: 40px;
+              color: #000000;
+            }
+            .btn-dn{
+              display: block;
+              width: 40%;
+              float: right;
+              background: #eb212e;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              a{
+                color: #FFFFFF;
+              }
+            }
+
         }
       }
     }
@@ -72,53 +232,113 @@
     font-size: 30px;
     color: #eb212e;
     line-height: 110px;
-  }
-  .box-all-tbmt{
-    .all-tbmt{
-      .head-table{
-        height: 70px;
-        background: #ebebeb;
-        th{
-          text-align: left;
-          font-size: 14px;
-        }
-        th:first-child{
-          text-align: center;
-        }
-        .stt{
-          width: 60px;
-        }
-        .so-tbmt{
-          width: 140px;
-        }
-        .ten-goi-thau{
-          width: calc(100% - 600px);
-        }
-        .thoi-diem-tai{
-          width: 170px;
-        }
-        .thoi-gian-mo{
-          width: 230px;
-        }
-      }
-      .row-content{
-        height: 70px;
-        td:first-child{
-          text-align: center;
-        }
-      }
-      .row-content:nth-child(even) {
-        background: #f5f5f5;
-      }
-    }
-    .pagination-wrp {
-      .pagination{
-        text-align: right;
-      }
+    font-family: $font-robotobold;
+    position: relative;
+    .add-new{
+      width: 150px;
+      text-align: center;
+      height: 40px;
+      background: #eb212e;
+      color: #fff;
+      font-size: 14px;
+      display: block;
+      position: absolute;
+      line-height: 40px;
+      top: 30%;
+      right: 0px;
+      cursor: pointer;
     }
   }
 }
-
-
+//tao thau moi
+.create-new-tm{
+  width:100%;
+  font-family: $font-icielgothammedium;
+  font-size: 13px;
+  .them-thau-moi{
+    width:100%;
+    .h50{
+      height: 50px;
+    }
+    .lh50{
+      line-height: 50px;
+    }
+    .text-name-tm{
+      width:250px;
+      line-height: 50px;
+      position: relative;
+    }
+    .input-name-tm{
+      position: relative;
+      @include calc('width', '100% - 450px');
+      input{
+        width:100%;
+        height:40px;
+        padding-left: 10px;
+      }
+      .date-pic{
+        position: absolute;
+        right: 15px;
+        top: 30%;
+        cursor: pointer;
+      }
+      select{
+        width:100%;
+        height:40px;
+        padding-left: 10px;
+      }
+    }
+    .upload-file-tm{
+      width: 200px;
+      padding: 0 10px;
+      .upload-file{
+        border: 2px dashed #eb212e;
+        border-radius: 10px;
+        height: 180px;
+        text-align: center;
+        padding: 30px;
+        font-size: 14px;
+        font-family: $font-icielgothammedium;
+      }
+      .text-ttlq{
+        border: 2px solid #c9c9c9;
+        height: 180px;
+        textarea{
+          @include calc('height', '100% - 34px');
+          border: none;
+          padding: 10px;
+        }
+        .thong-bao-moi{
+          border-top:2px solid #c9c9c9;
+          text-align: center;
+          line-height: 30px;
+        }
+      }
+    }
+    .btn-red{
+      width: 150px;
+      text-align: center;
+      height: 40px;
+      background: #eb212e;
+      color: #fff;
+      font-size: 14px;
+      display: block;
+      position: absolute;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    .quay-lai{
+      top: 30%;
+      left: 0px;
+    }
+    .xem-truoc{
+      top: 30%;
+      right: 0px;
+    }
+    }
+}
+.color-red{
+  color: #ea2036;
+}
 //Form
 //Form
