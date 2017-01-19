@@ -157,5 +157,7 @@
 <script type='text/javascript' src='assets/js/jquery.sticky-kit.min.js'></script>
 <script type='text/javascript' src='assets/js/hdvn_main.js'></script>
 <script type='text/javascript' src='assets/js/my_libs.js'></script>
+<script type='text/javascript' src='assets/js/jquery-ui.js'></script>
+
 </body>
 </html>

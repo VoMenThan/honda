@@ -43,13 +43,35 @@ function Page() {
     var self = this;
 
     this.jqueryEvent = function(){
+        /* popup login */
       $('.login').click(function(){
             $('.pupup-login').css('display','block');
         });
       $('.btn-lose').click(function(){
             $('.pupup-login').css('display','none');
         });
+    /* popup search advance */
+        $('.advanced-search').click(function () {
+            $('.pupup-search-advance').css('display','block');
+        });
+        $('.btn-search').click(function () {
+            $('.pupup-search-advance').css('display','none');
+        });
+    /* popup thong bao */
+        $('.btn-edit').click(function () {
+            $('.backgroud-popup').css('display','block');
+        });
+        $('.close-popup-request').click(function () {
+            $('.backgroud-popup').css('display','none');
+        });
 
+    $(function() {
+        $( "#datepicker-1" ).datepicker();
+        $( "#datepicker-2" ).datepicker();
+        $( "#datepicker-3" ).datepicker();
+        $( "#datepicker-4" ).datepicker();
+
+    });
 
     };
 

@@ -2,6 +2,11 @@
 //css table
 .box-all-tbmt{
   font-family: $font-robotoregular;
+  .xem-truoc-admin{
+    .row-content:nth-child(odd) {
+      background: #f5f5f5;
+    }
+  }
   .all-tbmt{
     .head-table{
       height: 70px;
@@ -36,6 +41,9 @@
     }
     .row-content{
       height: 70px;
+      td{
+        padding-left: 10px;
+      }
       .date-time{
         width:50%;
         display: inline-block;
@@ -99,10 +107,14 @@
       @include calc('width', '100% - 200px');
       float: left;
       position: relative;
+      .advanced-search{
+        cursor: pointer;
+      }
       .input-search{
         line-height: normal;
         width: 100%;
         height: 50px;
+        padding-left: 20px;
         padding-left: 20px;
       }
       .advanced-search{
@@ -118,6 +130,97 @@
           color: #ea2036;
         }
       }
+      //css box search advance
+      .pupup-search-advance{
+        display: none;
+        border: 1px solid #c9c9c9;
+        background: #FFFFFF;
+        width:100%;
+        height: 280px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px 25px;
+        font-size: 13px;
+        font-family: $font-icielgothammedium;
+        z-index:1;
+        .edit-radio-choose{
+          input[type="radio"] {
+            display:none;
+          }
+          input[type="radio"] + label:before {
+            content: "";
+            display:inline-block;
+            width:15px;
+            height:15px;
+            margin:-1px 4px 0 0;
+            vertical-align:middle;
+            cursor:pointer;
+            @include border-radius(50%);
+          }
+          input[type="radio"] + label:before {
+            border: 1px solid;
+            color: #ececec;
+          }
+          input[type="radio"]:checked + label:before{
+            background-color:#ea2036;
+          }
+          input[type="radio"] + label:before,
+          input[type="radio"]:checked + label:before {
+            @include transition(0.3s);
+          }
+        }
+
+        tr{
+          height:60px;
+        }
+        .table-search{
+          width:100%;
+          height: 100%;
+
+          .text-key-search{
+            padding-right: 50px;
+          }
+          .w50{
+            width:50%;
+            float: left;
+            text-align: right;
+            position: relative;
+            .date-pic{
+              position: absolute;
+              top: 20%;
+              right:10px;
+            }
+          }
+          .input-date{
+            height: 40px;
+            border: 1px solid #c9c9c9;
+            padding-left: 10px;
+
+          }
+          .calc{
+            @include calc('width', '100% - 130px');
+            input{
+              width: 100%;
+              height:40px;
+              border: 1px solid #c9c9c9;
+              padding-left: 10px;
+            }
+          }
+          .btn-search{
+            text-align: center;
+            background: red;
+            width: 100px;
+            display: block;
+            float: right;
+            height: 35px;
+            line-height: 35px;
+            color: #fff;
+            cursor: pointer;
+          }
+        }
+      }
+      //end box search ad
     }
     .box-login{
       position: relative;
@@ -148,8 +251,6 @@
       .pupup-login{
         &:before{
           content: " ";
-          width: 30px;
-          height: 30px;
           display: block;
           @include rotate(-45deg);
           width: 10px;
@@ -173,6 +274,7 @@
         padding: 30px;
         font-size: 13px;
         font-family: $font-icielgothammedium;
+        z-index:1;
         .btn-login {
           margin-top: 15px;
         }
@@ -234,6 +336,7 @@
     line-height: 110px;
     font-family: $font-robotobold;
     position: relative;
+    z-index:0;
     .add-new{
       width: 150px;
       text-align: center;
@@ -247,6 +350,27 @@
       top: 30%;
       right: 0px;
       cursor: pointer;
+      a{
+        color: #FFFFFF;
+      }
+    }
+    .cac-phien-ban{
+      width: 300px;
+      height: 40px;
+      position: absolute;
+      line-height: 40px;
+      top: 30px;
+      right: 130px;
+      &.pagination-wrp{
+        margin: 0;
+      }
+      .ul-phien-ban{
+        display: inline-block;
+      }
+      .color-gray{
+        color: gray;
+        font-size: 14px;
+      }
     }
   }
 }
@@ -267,6 +391,7 @@
       width:250px;
       line-height: 50px;
       position: relative;
+      padding-left: 10px;
     }
     .input-name-tm{
       position: relative;
@@ -291,6 +416,34 @@
     .upload-file-tm{
       width: 200px;
       padding: 0 10px;
+      background: #FFFFFF;
+      .pd-l-10{
+        padding-left: 10px;
+      }
+      &.ds-ban-tin{
+        vertical-align: top;
+      }
+        .ban-tin{
+          width:100%;
+          font-size: 12px;
+          height: 40px;
+        }
+      .uploaded-file{
+        float: left;
+      }
+      .lh50{
+        float: left;
+      }
+      &.vtc-al-t{
+        vertical-align: top;
+      }
+      td{
+        vertical-align: top;
+        height: 80px;
+      }
+      .color-gray{
+        color: #989898;
+      }
       .upload-file{
         border: 2px dashed #eb212e;
         border-radius: 10px;
@@ -340,5 +493,94 @@
 .color-red{
   color: #ea2036;
 }
+
+//Datepicker
+
+//#ui-datepicker-div{
+//  background: #FFFFFF;
+//  .ui-datepicker-header{
+//    background: #FFFFFF;
+//    border: none;
+//    color: #000000;
+//  }
+//}
+
+//request-popup
+.backgroud-popup{
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  .request-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: #FFFFFF;
+    width: 600px;
+    height: 330px;
+    @include translate(-50%, -50%);
+    border: 1px solid;
+    padding: 20px;
+    font-family: $font-icielgothammedium;
+    font-size: 14px;
+    .close-popup-request{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+    h2{
+      color: red;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .text-popup{
+      width: 30%;
+      float: left;
+    }
+    .content-popup{
+      width:70%;
+      float: left;
+    }
+    .lh30{
+      line-height: 30px;
+    }
+    textarea{
+      height: 100px;
+      width: 382px;
+      padding: 15px;
+    }
+    .box-submit{
+      padding-right: 8px;
+      padding-top: 20px;
+      .btn-submit{
+        text-align: center;
+        background: red;
+        width: 100px;
+        display: block;
+        float: right;
+        height: 35px;
+        line-height: 35px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    //&:after{
+    //  content: " ";
+    //  width: 100%;
+    //  height: 100%;
+    //  display: block;
+    //  background: #000;
+    //  opacity: 0.4;
+    //}
+  }
+}
+
+
 //Form
 //Form

@@ -211,6 +211,13 @@
   -webkit-transform: $transforms;
   transform: $transforms;
 }
+@mixin translate($x, $y) {
+  -moz-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
 @mixin rotate($rotate){
   -moz-transform: rotate($rotate);
   -o-transform: rotate($rotate);
