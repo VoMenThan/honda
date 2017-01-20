@@ -686,6 +686,7 @@
     border: 2px solid #c9c9c9;
     height: 180px;
     textarea{
+      @include appearance(none);
       @include calc('height', '100% - 34px');
       border: none;
       padding: 10px;

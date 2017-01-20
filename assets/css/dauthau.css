@@ -578,6 +578,9 @@
     border: 2px solid #c9c9c9;
     height: 180px; }
     .aside-right .text-ttlq textarea {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
       height: -moz-calc(100% - 34px);
       height: -webkit-calc(100% - 34px);
       height: calc(100% - 34px);
