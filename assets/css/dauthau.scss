@@ -1,5 +1,13 @@
 @import "scss/module/variables";
 //css table
+#footer{
+  position: relative;
+  .stop-side-menu{
+    position: absolute;
+    top: -50px;
+    left: 0;
+  }
+}
 .box-all-tbmt{
   font-family: $font-robotoregular;
   .xem-truoc-admin{
@@ -142,6 +150,7 @@
       font-size: 13px;
       font-family: $font-icielgothammedium;
       z-index:1;
+
       .edit-radio-choose{
         input[type="radio"] {
           display:none;

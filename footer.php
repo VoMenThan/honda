@@ -1,8 +1,9 @@
-<div class="stop-side-menu"></div>
+
 </div>
 <!-- end #content -->
 
 <div id="footer">
+    <div class="stop-side-menu"></div>
     <!-- Contact -->
     <div class="contact clearfix" style="height: 270px">
         <div class="center-content">
