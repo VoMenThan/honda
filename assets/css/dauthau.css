@@ -29,6 +29,12 @@
     .image-mobile {
       display: inline-block; } }
 
+.large_hidden {
+  display: none; }
+
+@media only screen and (max-width: 767px) {
+  .large_hidden {
+    display: block; } }
 #footer {
   position: relative; }
   #footer .stop-side-menu {
@@ -40,51 +46,87 @@
   font-family: "robotoregular"; }
   .box-all-tbmt .xem-truoc-admin .row-content:nth-child(odd) {
     background: #f5f5f5; }
-  .box-all-tbmt .all-tbmt .head-table {
-    height: 70px;
-    background: #ebebeb; }
-    .box-all-tbmt .all-tbmt .head-table th {
-      text-align: left;
-      font-size: 14px; }
-    .box-all-tbmt .all-tbmt .head-table th:first-child {
-      text-align: center; }
-    .box-all-tbmt .all-tbmt .head-table .stt {
-      width: 60px; }
-    .box-all-tbmt .all-tbmt .head-table .so-tbmt {
-      width: 140px; }
-    .box-all-tbmt .all-tbmt .head-table .ten-goi-thau {
-      width: -moz-calc(100% - 600px);
-      width: -webkit-calc(100% - 600px);
-      width: calc(100% - 600px); }
-    .box-all-tbmt .all-tbmt .head-table .thoi-diem-tai {
-      width: 170px; }
-    .box-all-tbmt .all-tbmt .head-table .thoi-gian-mo {
-      width: 170px; }
-    .box-all-tbmt .all-tbmt .head-table .table-edit {
-      padding-right: 10px;
-      width: 30px;
-      color: #000; }
-  .box-all-tbmt .all-tbmt .row-content {
-    height: 70px; }
-    .box-all-tbmt .all-tbmt .row-content td {
-      padding-left: 10px; }
-    .box-all-tbmt .all-tbmt .row-content .date-time {
-      width: 50%;
-      display: inline-block;
-      padding-right: 20px;
-      padding-left: 10px; }
-    .box-all-tbmt .all-tbmt .row-content .date {
-      text-align: left; }
-    .box-all-tbmt .all-tbmt .row-content .time {
-      text-align: right; }
-    .box-all-tbmt .all-tbmt .row-content td:first-child {
-      text-align: center; }
-    .box-all-tbmt .all-tbmt .row-content .btn-edit {
-      color: #000000; }
-      .box-all-tbmt .all-tbmt .row-content .btn-edit:hover {
-        color: #ea2036; }
-  .box-all-tbmt .all-tbmt .row-content:nth-child(even) {
-    background: #f5f5f5; }
+  .box-all-tbmt .all-tbmt {
+    width: 100%; }
+    .box-all-tbmt .all-tbmt .col-3 {
+      padding: 0 10px; }
+    .box-all-tbmt .all-tbmt .head-table {
+      height: 70px;
+      background: #ebebeb; }
+      @media only screen and (max-width: 767px) {
+        .box-all-tbmt .all-tbmt .head-table {
+          display: none; } }
+      .box-all-tbmt .all-tbmt .head-table th {
+        text-align: left;
+        font-size: 14px; }
+      .box-all-tbmt .all-tbmt .head-table th:first-child {
+        text-align: center; }
+      .box-all-tbmt .all-tbmt .head-table .stt {
+        width: 60px; }
+      .box-all-tbmt .all-tbmt .head-table .so-tbmt {
+        width: 110px; }
+      .box-all-tbmt .all-tbmt .head-table .thoi-diem-tai {
+        width: 170px; }
+        @media only screen and (max-width: 1199px) {
+          .box-all-tbmt .all-tbmt .head-table .thoi-diem-tai {
+            width: 140px; } }
+      .box-all-tbmt .all-tbmt .head-table .thoi-gian-mo {
+        width: 170px; }
+      .box-all-tbmt .all-tbmt .head-table .table-edit {
+        padding-right: 10px;
+        width: 30px;
+        color: #000; }
+    .box-all-tbmt .all-tbmt .row-content {
+      height: 70px; }
+      .box-all-tbmt .all-tbmt .row-content .date-time {
+        width: 50%;
+        display: inline-block;
+        padding-right: 20px;
+        padding-left: 10px; }
+      .box-all-tbmt .all-tbmt .row-content .date {
+        text-align: left; }
+      .box-all-tbmt .all-tbmt .row-content .time {
+        text-align: right; }
+      .box-all-tbmt .all-tbmt .row-content td:first-child {
+        text-align: center; }
+      .box-all-tbmt .all-tbmt .row-content .btn-edit {
+        color: #000000; }
+        .box-all-tbmt .all-tbmt .row-content .btn-edit:hover {
+          color: #ea2036; }
+      .box-all-tbmt .all-tbmt .row-content .btn-mb-admin {
+        display: none; }
+      .box-all-tbmt .all-tbmt .row-content .btn-admin {
+        font-size: 20px; }
+      @media only screen and (max-width: 767px) {
+        .box-all-tbmt .all-tbmt .row-content .btn-mb-admin {
+          display: table-cell;
+          width: 20px;
+          font-size: 20px;
+          padding: 0px 10px; }
+        .box-all-tbmt .all-tbmt .row-content .btn-admin,
+        .box-all-tbmt .all-tbmt .row-content .col-1 {
+          display: none; }
+        .box-all-tbmt .all-tbmt .row-content td {
+          display: table;
+          width: 100%;
+          font-size: 12px; }
+          .box-all-tbmt .all-tbmt .row-content td.col-2 {
+            background: #ececec; }
+          .box-all-tbmt .all-tbmt .row-content td > div {
+            text-align: right;
+            padding: 10px;
+            display: table-cell; }
+            .box-all-tbmt .all-tbmt .row-content td > div:first-child {
+              text-align: left;
+              white-space: nowrap;
+              padding-right: 20px;
+              font-family: "robotobold";
+              color: #000; } }
+    .box-all-tbmt .all-tbmt .row-content:nth-child(even) {
+      background: #f5f5f5; }
+      @media only screen and (max-width: 767px) {
+        .box-all-tbmt .all-tbmt .row-content:nth-child(even) {
+          background: transparent; } }
   .box-all-tbmt .pagination-wrp .pagination {
     text-align: right; }
 
@@ -93,10 +135,6 @@
     width: 40px; }
   .box-all-tbmt .all-tbmt .head-table .so-tbmt {
     width: 110px; }
-  .box-all-tbmt .all-tbmt .head-table .ten-goi-thau {
-    width: -moz-calc(100% - 480px);
-    width: -webkit-calc(100% - 480px);
-    width: calc(100% - 480px); }
   .box-all-tbmt .all-tbmt .head-table .thoi-diem-tai {
     width: 160px; }
   .box-all-tbmt .all-tbmt .head-table .thoi-gian-mo {
@@ -295,13 +333,16 @@
   font-family: "robotoregular"; }
   .right-content .title-name {
     clear: both;
-    height: 110px;
     font-size: 30px;
     color: #eb212e;
-    line-height: 110px;
-    font-family: "robotobold";
+    font-family: "gothamvnubold_new";
     position: relative;
-    z-index: 0; }
+    z-index: 0;
+    padding: 34px 0;
+    line-height: 1.41; }
+    @media only screen and (max-width: 767px) {
+      .right-content .title-name {
+        font-size: 24px; } }
     .right-content .title-name .add-new {
       width: 150px;
       text-align: center;
