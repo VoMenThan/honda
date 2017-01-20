@@ -704,6 +704,8 @@
     height: 300px; }
     .box-search-login .box-login .pupup-login .row-pup {
       height: auto; }
+      .box-search-login .box-login .pupup-login .row-pup .btn-dn {
+        width: 100%; }
       .box-search-login .box-login .pupup-login .row-pup .text-login {
         width: 100%;
         float: none; }
