@@ -29,6 +29,23 @@
     .image-mobile {
       display: inline-block; } }
 
+.link-direct {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 15px;
+  background: url(" ../images/icon/select_box.png") right center no-repeat;
+  padding: 0 40px 0 20px;
+  font-size: 14px;
+  font-family: "gothamvnubold_new";
+  color: #ed1b2f;
+  display: none; }
+  @media only screen and (max-width: 1024px) {
+    .link-direct {
+      display: block; } }
+
 .large_hidden {
   display: none; }
 
@@ -460,7 +477,7 @@
   border: 2px dashed #eb212e;
   border-radius: 10px;
   height: 180px;
-  width: 180px;
+  width: 100%;
   text-align: center;
   padding: 30px 0;
   font-size: 14px;
@@ -622,7 +639,7 @@
 .aside-right {
   width: 200px;
   float: left;
-  padding: 10px 0 10px 10px;
+  padding: 10px 0 10px 20px;
   font-size: 14px;
   font-family: "Iciel Gotham Medium"; }
   .aside-right .ban-tin {

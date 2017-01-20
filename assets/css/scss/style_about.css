@@ -2023,7 +2023,6 @@ body.menu-hide .mask {
   width: 100%; }
   #footer .contact {
     width: 100%;
-    height: 230px;
     background: url(../images/bg/contact.jpg) no-repeat center top/cover; }
     @media only screen and (max-width: 1200px) {
       #footer .contact {
@@ -2045,7 +2044,8 @@ body.menu-hide .mask {
         width: 50%;
         height: 100%;
         float: left;
-        padding-left: 50px; }
+        padding-left: 50px;
+        padding-bottom: 20px; }
         @media only screen and (max-width: 1200px) {
           #footer .contact .center-content .hotline {
             padding-left: 30px; } }

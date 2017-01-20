@@ -5,7 +5,7 @@
 <div id="footer">
     <div class="stop-side-menu"></div>
     <!-- Contact -->
-    <div class="contact clearfix" style="height: 270px">
+    <div class="contact clearfix">
         <div class="center-content">
             <div class="hotline">
                 <h2 class="hdvn">Hotline hỗ trợ</h2>
