@@ -45,7 +45,7 @@ function Page() {
     this.jqueryEvent = function(){
 
         /* popup login */
-      $('.login').click(function(){
+      $('.name-user').click(function(){
             $('.pupup-login').css('display','block');
         });
       $('.btn-lose').click(function(){

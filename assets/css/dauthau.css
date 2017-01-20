@@ -176,7 +176,9 @@
     line-height: 50px;
     height: 50px;
     color: #000;
-    opacity: 0.8; }
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 1; }
   .box-search-login .box-search .advanced-search {
     position: absolute;
     right: 20px;
@@ -279,7 +281,8 @@
     .box-search-login .box-login .user-login .name-user {
       line-height: 40px;
       float: right;
-      margin-left: 10px; }
+      margin-left: 10px;
+      cursor: pointer; }
   .box-search-login .box-login .login {
     line-height: 50px;
     font-family: "Iciel Gotham Medium";
