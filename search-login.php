@@ -13,11 +13,17 @@
         </div>
         <div class="pupup-login">
             <div class="btn-lose"><img src="assets/images/icon/btn-close.png" alt=""></div>
-            <div class="username row-pup"><div class="text-login">Tên tài khoản</div><input class="input-login" type="text" placeholder="Tên tài khoản"></div>
-            <div class="password row-pup"><div class="text-login">Mật khẩu</div><input class="input-login" type="password" placeholder="Mật khẩu"></div>
+            <div class="username row-pup">
+                <div class="text-login">Tên tài khoản</div>
+                <input class="input-login" type="text" placeholder="Tên tài khoản">
+            </div>
+            <div class="password row-pup">
+                <div class="text-login">Mật khẩu</div>
+                <input class="input-login" type="password" placeholder="Mật khẩu">
+            </div>
             <div class="btn-login row-pup">
-                <a class="link-qmk" href="#">Quên mật khẩu</a>
                 <div class="btn-dn"><a href="../honda/tat-ca-tbmt.php">Đăng nhập</a></div>
+                <a class="link-qmk" href="#">Quên mật khẩu</a>
             </div>
         </div>
     </div>

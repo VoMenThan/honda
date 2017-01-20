@@ -226,8 +226,7 @@
       padding: 20px 25px;
       font-size: 13px;
       font-family: $font-icielgothammedium;
-      z-index:1;
-
+      z-index:2;
       .edit-radio-choose{
         input[type="radio"] {
           display:none;
@@ -315,8 +314,7 @@
     padding-right: 10px;
     .user-login{
       font-family: "Iciel Gotham Medium";
-      color: #000;
-      opacity: 0.6;
+      color: #666666;
       .name-user{
         line-height: 40px;
         float: right;
@@ -359,7 +357,7 @@
       padding: 30px;
       font-size: 13px;
       font-family: $font-icielgothammedium;
-      z-index:1;
+      z-index:2;
       .btn-login {
         margin-top: 15px;
       }
@@ -810,11 +808,10 @@
     }
   }
 }
-
-@include respond-to($break-320){
-.box-search-login {
+@include  respond-to($break-767){
+  .box-search-login {
     .box-search {
-        width: 100%;
+      width: 100%;
       .advanced-search-text{
         top: 40px;
         right: 0;
@@ -822,9 +819,34 @@
       }
     }
     .box-login {
-        width:100%;
+      width:100%;
+      .name-user{
+        color: #eb212e;
+
+      }
     }
   }
+  .box-search-login {
+    .box-login {
+      .pupup-login {
+        width: 280px;
+        height: 300px;
+        .row-pup {
+          height:auto;
+          .text-login{
+            width:100%;
+            float: none;
+          }
+          .input-login{
+            width: 100%;
+            float: none;
+          }
+        }
+      }
+    }
+  }
+}
+@include respond-to($break-320){
 
 }
 //Form

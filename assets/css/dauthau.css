@@ -202,7 +202,7 @@
     padding: 20px 25px;
     font-size: 13px;
     font-family: "Iciel Gotham Medium";
-    z-index: 1; }
+    z-index: 2; }
     .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] {
       display: none; }
     .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] + label:before {
@@ -276,8 +276,7 @@
   padding-right: 10px; }
   .box-search-login .box-login .user-login {
     font-family: "Iciel Gotham Medium";
-    color: #000;
-    opacity: 0.6; }
+    color: #666666; }
     .box-search-login .box-login .user-login .name-user {
       line-height: 40px;
       float: right;
@@ -302,7 +301,7 @@
     padding: 30px;
     font-size: 13px;
     font-family: "Iciel Gotham Medium";
-    z-index: 1; }
+    z-index: 2; }
     .box-search-login .box-login .pupup-login:before {
       content: " ";
       display: block;
@@ -684,7 +683,7 @@
       float: left;
       padding-left: 10px; }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .box-search-login .box-search {
     width: 100%; }
     .box-search-login .box-search .advanced-search-text {
@@ -692,6 +691,20 @@
       right: 0;
       z-index: 1; }
   .box-search-login .box-login {
-    width: 100%; } }
+    width: 100%; }
+    .box-search-login .box-login .name-user {
+      color: #eb212e; }
+
+  .box-search-login .box-login .pupup-login {
+    width: 280px;
+    height: 300px; }
+    .box-search-login .box-login .pupup-login .row-pup {
+      height: auto; }
+      .box-search-login .box-login .pupup-login .row-pup .text-login {
+        width: 100%;
+        float: none; }
+      .box-search-login .box-login .pupup-login .row-pup .input-login {
+        width: 100%;
+        float: none; } }
 
 /*# sourceMappingURL=dauthau.css.map */
