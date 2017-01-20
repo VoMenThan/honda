@@ -106,12 +106,21 @@
       }
       .btn-mb-admin{display: none;}
       .btn-admin{
-        font-size: 20px;}
+        font-size: 20px;
+        a{
+          color: #000;
+        }
+      }
       @include respond-to($break-767){
-        .btn-mb-admin{display: table-cell;
+        .btn-mb-admin{
+          display: table-cell;
           width: 20px;
           font-size: 20px;
-          padding: 0px 10px;}
+          padding: 0px 10px;
+          a{
+            color: #000;
+          }
+        }
         .btn-admin,
         .col-1{
 
