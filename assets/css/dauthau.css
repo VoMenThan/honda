@@ -143,7 +143,7 @@
   width: -moz-calc(100% - 200px);
   width: -webkit-calc(100% - 200px);
   width: calc(100% - 200px);
-  float: left;
+  float: right;
   position: relative; }
   .box-search-login .box-search .advanced-search {
     cursor: pointer; }
@@ -152,6 +152,14 @@
     width: 100%;
     height: 50px;
     padding-left: 20px; }
+  .box-search-login .box-search .advanced-search-text {
+    position: absolute;
+    right: 55px;
+    top: 0px;
+    line-height: 50px;
+    height: 50px;
+    color: #000;
+    opacity: 0.8; }
   .box-search-login .box-search .advanced-search {
     position: absolute;
     right: 20px;
@@ -243,7 +251,7 @@
 .box-search-login .box-login {
   position: relative;
   width: 200px;
-  float: left;
+  float: right;
   text-align: right;
   height: 50px;
   padding-right: 10px; }
@@ -398,6 +406,10 @@
         right: 45px;
         top: 15px;
         color: #007fff; }
+        @media only screen and (max-width: 767px) {
+          .create-new-tm .them-thau-moi .input-name-tm .lock-unlock {
+            right: 10px;
+            top: 17px; } }
       .create-new-tm .them-thau-moi .input-name-tm input {
         width: 100%;
         height: 40px;
@@ -651,5 +663,15 @@
       width: calc(100% - 50px);
       float: left;
       padding-left: 10px; }
+
+@media only screen and (max-width: 320px) {
+  .box-search-login .box-search {
+    width: 100%; }
+    .box-search-login .box-search .advanced-search-text {
+      top: 40px;
+      right: 0;
+      z-index: 1; }
+  .box-search-login .box-login {
+    width: 100%; } }
 
 /*# sourceMappingURL=dauthau.css.map */
