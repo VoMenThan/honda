@@ -114,6 +114,8 @@
         display: none; }
       .box-all-tbmt .all-tbmt .row-content .btn-admin {
         font-size: 20px; }
+        .box-all-tbmt .all-tbmt .row-content .btn-admin a {
+          color: #000; }
       @media only screen and (max-width: 767px) {
         .box-all-tbmt .all-tbmt .row-content .btn-mb-admin {
           display: table-cell;
