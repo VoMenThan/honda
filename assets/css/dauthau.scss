@@ -406,6 +406,12 @@
     .input-name-tm{
       position: relative;
       @include calc('width', '100% - 450px');
+      .lock-unlock{
+        position: absolute;
+        right: 45px;
+        top: 15px;
+        color: #007fff;
+      }
       input{
         width:100%;
         height:40px;
@@ -638,6 +644,7 @@
       height: 100px;
       width: 382px;
       padding: 15px;
+      resize: none;
     }
     .box-submit{
       padding-right: 8px;

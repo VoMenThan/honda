@@ -352,6 +352,11 @@
       width: -moz-calc(100% - 450px);
       width: -webkit-calc(100% - 450px);
       width: calc(100% - 450px); }
+      .create-new-tm .them-thau-moi .input-name-tm .lock-unlock {
+        position: absolute;
+        right: 45px;
+        top: 15px;
+        color: #007fff; }
       .create-new-tm .them-thau-moi .input-name-tm input {
         width: 100%;
         height: 40px;
@@ -539,7 +544,8 @@
     .backgroud-popup .request-popup textarea {
       height: 100px;
       width: 382px;
-      padding: 15px; }
+      padding: 15px;
+      resize: none; }
     .backgroud-popup .request-popup .box-submit {
       padding-right: 8px;
       padding-top: 20px; }
