@@ -45,7 +45,7 @@ function Page() {
     this.jqueryEvent = function(){
 
         /* popup login */
-      $('.login').click(function(){
+      $('.name-user').click(function(){
             $('.pupup-login').css('display','block');
         });
       $('.btn-lose').click(function(){
@@ -53,7 +53,7 @@ function Page() {
         });
 
     /* popup search advance */
-        $('.advanced-search').click(function () {
+        $('.advanced-search-text').click(function () {
             $('.pupup-search-advance').css('display','block');
         });
         $('.btn-search').click(function () {
