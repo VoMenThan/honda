@@ -68,10 +68,14 @@ function Page() {
             var size = this.files[0].size;
             if(size < 1024){
                 $('.upload-file .size').text(size+'byte');
+            }else if(size > 1048576) {
+                var size = this.files[0].size/1048576;
+                size = Math.round(size * 100) / 100;
+                $('.upload-file .size').text(size+' Mb');
             }else{
                 var size = this.files[0].size/1024;
                 size = Math.round(size * 100) / 100;
-                $('.upload-file .size').text(size+'kb');
+                $('.upload-file .size').text(size+' Kb');
             }
 
             $('.upload-file').addClass('has-file');
