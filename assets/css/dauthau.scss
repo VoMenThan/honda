@@ -421,15 +421,15 @@
       line-height: 40px;
       top: 30px;
       right: 130px;
+      .color-gray{
+        color: gray;
+        font-size: 14px;
+      }
       &.pagination-wrp{
         margin: 0;
       }
       .ul-phien-ban{
         display: inline-block;
-      }
-      .color-gray{
-        color: gray;
-        font-size: 14px;
       }
     }
   }
@@ -479,17 +479,6 @@
       background: #FFFFFF;
       .pd-l-10{
         padding-left: 10px;
-      }
-      &.ds-ban-tin{
-        vertical-align: top;
-      }
-        .ban-tin{
-          width:100%;
-          font-size: 12px;
-          height: 40px;
-        }
-      .uploaded-file{
-        float: left;
       }
       .lh50{
         float: left;
@@ -719,19 +708,23 @@
 }
 //content center
 .content-center{
-  width:75%;
+  @include calc('width', '100% - 200px');
   float: left;
 }
 //aside right
 .aside-right{
-  width:25%;
+  width:200px;
   float: left;
-  padding:10px 20px;
+  padding:10px 0 10px 10px ;
   font-size: 14px;
   font-family: $font-icielgothammedium;
+  .ban-tin{
+    font-size: 12px;
+    padding-bottom: 10px;
+    line-height: 16px;
+  }
   .name-aside{
-    height: 30px;
-    line-height: 30px;
+    height: 50px;
   }
   .upload-file{
     margin-bottom: 30px;
@@ -739,21 +732,38 @@
   .head-ttlq{
     height: 50px;
     line-height: 50px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .text-ttlq{
     border: 2px solid #c9c9c9;
-    height: 180px;
+    height: 150px;
     textarea{
-      @include appearance(none);
-      @include calc('height', '100% - 34px');
       border: none;
       padding: 10px;
+      resize: none;
+      width: 100%;
     }
     .thong-bao-moi{
       border-top:2px solid #c9c9c9;
       text-align: center;
-      line-height: 30px;
+    }
+    .dang-thong-bao{
+      line-height: 40px;
+    }
+  }
+  .color-gray{
+    color: gray;
+  }
+  .box-file{
+    margin-bottom: 20px;
+    .image-upload{
+      width: 50px;
+      float: left;
+    }
+    .info-file{
+      @include calc('width', '100% - 50px');
+      float: left;
+      padding-left: 10px;
     }
   }
 }
