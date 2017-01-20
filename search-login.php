@@ -23,7 +23,7 @@
             </div>
             <div class="btn-login row-pup">
                 <div class="btn-dn"><a href="../honda/tat-ca-tbmt.php">Đăng nhập</a></div>
-                <a class="link-qmk" href="#">Quên mật khẩu</a>
+                <div class="qmk"><a class="link-qmk" href="#">Quên mật khẩu</a></div>
             </div>
         </div>
     </div>

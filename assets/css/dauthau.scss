@@ -390,7 +390,7 @@
           width: 30%;
           float: left;
           text-align: left;
-          line-height: 30px;
+          padding: 10px 0;
         }
         .input-login{
           width: 70%;
@@ -842,12 +842,18 @@
         height: 300px;
         .row-pup {
           height:auto;
+          text-align: center;
           .btn-dn{
-            width: 100%;
+            width: 70%;
+            float: none;
+            margin: auto;
           }
           .text-login{
-            width:100%;
+            width: 100px;
             float: none;
+          }
+          .link-qmk{
+            margin: 0;
           }
           .input-login{
             width: 100%;

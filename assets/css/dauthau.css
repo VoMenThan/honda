@@ -339,7 +339,7 @@
         width: 30%;
         float: left;
         text-align: left;
-        line-height: 30px; }
+        padding: 10px 0; }
       .box-search-login .box-login .pupup-login .row-pup .input-login {
         width: 70%;
         display: block;
@@ -703,12 +703,17 @@
     width: 280px;
     height: 300px; }
     .box-search-login .box-login .pupup-login .row-pup {
-      height: auto; }
+      height: auto;
+      text-align: center; }
       .box-search-login .box-login .pupup-login .row-pup .btn-dn {
-        width: 100%; }
+        width: 70%;
+        float: none;
+        margin: auto; }
       .box-search-login .box-login .pupup-login .row-pup .text-login {
-        width: 100%;
+        width: 100px;
         float: none; }
+      .box-search-login .box-login .pupup-login .row-pup .link-qmk {
+        margin: 0; }
       .box-search-login .box-login .pupup-login .row-pup .input-login {
         width: 100%;
         float: none; } }
