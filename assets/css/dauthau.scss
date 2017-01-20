@@ -224,7 +224,7 @@
     }
     //css box search advance
     .pupup-search-advance{
-      display: none;
+      //display: none;
       border: 1px solid #c9c9c9;
       background: #FFFFFF;
       width:100%;
@@ -236,6 +236,21 @@
       font-size: 13px;
       font-family: $font-icielgothammedium;
       z-index:2;
+      .w100{
+        width: 100%;
+      }
+      .w210{
+        width: 210px;
+        float: right;
+      }
+      .text-search{
+        width: 200px;
+        float: left;
+      }
+      .content-search{
+        @include calc('width', '100% - 200px');
+        float: left;
+      }
       .edit-radio-choose{
         input[type="radio"] {
           display:none;
@@ -265,51 +280,6 @@
 
       tr{
         height:60px;
-      }
-      .table-search{
-        width:100%;
-        height: 100%;
-
-        .text-key-search{
-          padding-right: 50px;
-        }
-        .w50{
-          width:50%;
-          float: left;
-          text-align: right;
-          position: relative;
-          .date-pic{
-            position: absolute;
-            top: 20%;
-            right:10px;
-          }
-        }
-        .input-date{
-          height: 40px;
-          border: 1px solid #c9c9c9;
-          padding-left: 10px;
-
-        }
-        .calc{
-          @include calc('width', '100% - 130px');
-          input{
-            width: 100%;
-            height:40px;
-            border: 1px solid #c9c9c9;
-            padding-left: 10px;
-          }
-        }
-        .btn-search{
-          text-align: center;
-          background: red;
-          width: 100px;
-          display: block;
-          float: right;
-          height: 35px;
-          line-height: 35px;
-          color: #fff;
-          cursor: pointer;
-        }
       }
     }
     //end box search ad

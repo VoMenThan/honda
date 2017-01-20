@@ -33,53 +33,35 @@
         <span class="advanced-search-text">Tìm kiếm nâng cao</span>
         <span class="advanced-search"><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
         <div class="pupup-search-advance">
-            <table class="table-search">
-                <tr>
-                    <td class="w30 text-key-search">
-                        <div class="key-text-search">Từ khoá</div>
-                    </td>
-                    <td colspan="3" class="calc">
-                        <div><input placeholder="Nhập từ khoá" type="text" class="input-key-search"></div>
-                    </td>
-                </tr>
-                <tr class="edit-radio-choose">
-                    <td class="w30">
-                        <div class="time-text-search">Thời gian</div>
-                    </td>
-                    <td class="w30">
-                        <input class="radio-choose" checked type="radio" id="ndtai" name="time" value="ndt">
-                        <label for="ndtai">Ngày đăng tải</label>
-                    </td>
-                    <td class="w30">
-                        <input class="radio-choose" type="radio" id="ndthau" name="time" value="ndt">
-                        <label for="ndthau">Ngày đóng thầu</label>
-                    </td>
-                    <td class="w30">
-                        <input class="radio-choose" type="radio" id="nph" name="time" value="nph">
-                        <label for="nph">Ngày phát hành HSMT</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="w30">
-                    </td>
-                    <td colspan="3">
-                        <div class="w50">
-                            <span>từ ngày</span> <input  placeholder="Chọn ngày" class="input-date date-picker" type="text" id="datepicker-3">
-                            <i class="date-pic fa fa-calendar fa-2x" aria-hidden="true"></i>
-                        </div>
+            <div class="keyword-search w100 clearfix">
+                <div class="key-text-search text-search">Từ khoá</div>
+                <div class="content-search"><input placeholder="Nhập từ khoá" type="text" class="input-key-search"></div>
+            </div>
+            <div class="time-search w100 clearfix">
+                <div class="time-text-search text-search">Thời gian</div>
+                <div class="list-choose content-search">
+                    <input class="radio-choose" checked type="radio" id="ndtai" name="time" value="ndt">
+                    <label for="ndtai">Ngày đăng tải</label>
+                    <input class="radio-choose" type="radio" id="ndthau" name="time" value="ndt">
+                    <label for="ndthau">Ngày đóng thầu</label>
+                    <input class="radio-choose" type="radio" id="nph" name="time" value="nph">
+                    <label for="nph">Ngày phát hành HSMT</label>
+                </div>
 
-                        <div class="w50">
-                            <span>đến ngày</span><input  placeholder="Chọn ngày" class="input-date date-picker" type="text" id="datepicker-4">
-                            <i class="date-pic fa fa-calendar fa-2x" aria-hidden="true"></i>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <div class="btn-search">Tìm kiếm &gt;</div>
-                    </td>
-                </tr>
-            </table>
+            </div>
+            <div class="date-search w100 clearfix">
+                <div class="w210">
+                    <span>từ ngày</span> <input  placeholder="Chọn ngày" class="input-date date-picker" type="text" id="datepicker-3">
+                    <i class="date-pic fa fa-calendar fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="w210">
+                    <span>đến ngày</span><input  placeholder="Chọn ngày" class="input-date date-picker" type="text" id="datepicker-4">
+                    <i class="date-pic fa fa-calendar fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="box-btn-search w100 clearfix">
+                <div class="btn-search">Tìm kiếm &gt;</div>
+            </div>
         </div>
 
     </div>

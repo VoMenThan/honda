@@ -195,7 +195,6 @@
       padding-left: 15px;
       color: #ea2036; }
   .box-search-login .box-search .pupup-search-advance {
-    display: none;
     border: 1px solid #c9c9c9;
     background: #FFFFFF;
     width: 100%;
@@ -207,6 +206,19 @@
     font-size: 13px;
     font-family: "Iciel Gotham Medium";
     z-index: 2; }
+    .box-search-login .box-search .pupup-search-advance .w100 {
+      width: 100%; }
+    .box-search-login .box-search .pupup-search-advance .w210 {
+      width: 210px;
+      float: right; }
+    .box-search-login .box-search .pupup-search-advance .text-search {
+      width: 200px;
+      float: left; }
+    .box-search-login .box-search .pupup-search-advance .content-search {
+      width: -moz-calc(100% - 200px);
+      width: -webkit-calc(100% - 200px);
+      width: calc(100% - 200px);
+      float: left; }
     .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] {
       display: none; }
     .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] + label:before {
@@ -234,43 +246,6 @@
       transition: 0.3s linear; }
     .box-search-login .box-search .pupup-search-advance tr {
       height: 60px; }
-    .box-search-login .box-search .pupup-search-advance .table-search {
-      width: 100%;
-      height: 100%; }
-      .box-search-login .box-search .pupup-search-advance .table-search .text-key-search {
-        padding-right: 50px; }
-      .box-search-login .box-search .pupup-search-advance .table-search .w50 {
-        width: 50%;
-        float: left;
-        text-align: right;
-        position: relative; }
-        .box-search-login .box-search .pupup-search-advance .table-search .w50 .date-pic {
-          position: absolute;
-          top: 20%;
-          right: 10px; }
-      .box-search-login .box-search .pupup-search-advance .table-search .input-date {
-        height: 40px;
-        border: 1px solid #c9c9c9;
-        padding-left: 10px; }
-      .box-search-login .box-search .pupup-search-advance .table-search .calc {
-        width: -moz-calc(100% - 130px);
-        width: -webkit-calc(100% - 130px);
-        width: calc(100% - 130px); }
-        .box-search-login .box-search .pupup-search-advance .table-search .calc input {
-          width: 100%;
-          height: 40px;
-          border: 1px solid #c9c9c9;
-          padding-left: 10px; }
-      .box-search-login .box-search .pupup-search-advance .table-search .btn-search {
-        text-align: center;
-        background: red;
-        width: 100px;
-        display: block;
-        float: right;
-        height: 35px;
-        line-height: 35px;
-        color: #fff;
-        cursor: pointer; }
 .box-search-login .box-login {
   position: relative;
   width: 200px;
