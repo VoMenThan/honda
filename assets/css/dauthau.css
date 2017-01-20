@@ -29,6 +29,13 @@
     .image-mobile {
       display: inline-block; } }
 
+#footer {
+  position: relative; }
+  #footer .stop-side-menu {
+    position: absolute;
+    top: -50px;
+    left: 0; }
+
 .box-all-tbmt {
   font-family: "robotoregular"; }
   .box-all-tbmt .xem-truoc-admin .row-content:nth-child(odd) {
