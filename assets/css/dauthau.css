@@ -94,198 +94,198 @@
     width: 160px; }
   .box-all-tbmt .all-tbmt .head-table .thoi-gian-mo {
     width: 170px; } }
-.right-content {
-  font-family: "robotoregular"; }
-  .right-content .box-search-login .box-search {
-    width: -moz-calc(100% - 200px);
-    width: -webkit-calc(100% - 200px);
-    width: calc(100% - 200px);
-    float: left;
-    position: relative; }
-    .right-content .box-search-login .box-search .advanced-search {
-      cursor: pointer; }
-    .right-content .box-search-login .box-search .input-search {
-      line-height: normal;
+.box-search-login .box-search {
+  width: -moz-calc(100% - 200px);
+  width: -webkit-calc(100% - 200px);
+  width: calc(100% - 200px);
+  float: left;
+  position: relative; }
+  .box-search-login .box-search .advanced-search {
+    cursor: pointer; }
+  .box-search-login .box-search .input-search {
+    line-height: normal;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px; }
+  .box-search-login .box-search .advanced-search {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    line-height: 50px;
+    height: 50px;
+    color: #000;
+    opacity: 0.8; }
+    .box-search-login .box-search .advanced-search i {
+      padding-left: 15px;
+      color: #ea2036; }
+  .box-search-login .box-search .pupup-search-advance {
+    display: none;
+    border: 1px solid #c9c9c9;
+    background: #FFFFFF;
+    width: 100%;
+    height: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 25px;
+    font-size: 13px;
+    font-family: "Iciel Gotham Medium";
+    z-index: 1; }
+    .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] {
+      display: none; }
+    .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] + label:before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin: -1px 4px 0 0;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%; }
+    .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] + label:before {
+      border: 1px solid;
+      color: #ececec; }
+    .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"]:checked + label:before {
+      background-color: #ea2036; }
+    .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] + label:before,
+    .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"]:checked + label:before {
+      -webkit-transition: 0.3s linear;
+      -moz-transition: 0.3s linear;
+      -ms-transition: 0.3s linear;
+      -o-transition: 0.3s linear;
+      transition: 0.3s linear; }
+    .box-search-login .box-search .pupup-search-advance tr {
+      height: 60px; }
+    .box-search-login .box-search .pupup-search-advance .table-search {
       width: 100%;
-      height: 50px;
-      padding-left: 20px;
-      padding-left: 20px; }
-    .right-content .box-search-login .box-search .advanced-search {
-      position: absolute;
-      right: 20px;
-      top: 0px;
-      line-height: 50px;
-      height: 50px;
-      color: #000;
-      opacity: 0.8; }
-      .right-content .box-search-login .box-search .advanced-search i {
-        padding-left: 15px;
-        color: #ea2036; }
-    .right-content .box-search-login .box-search .pupup-search-advance {
-      display: none;
-      border: 1px solid #c9c9c9;
-      background: #FFFFFF;
-      width: 100%;
-      height: 280px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 20px 25px;
-      font-size: 13px;
-      font-family: "Iciel Gotham Medium";
-      z-index: 1; }
-      .right-content .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] {
-        display: none; }
-      .right-content .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] + label:before {
-        content: "";
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        margin: -1px 4px 0 0;
-        vertical-align: middle;
-        cursor: pointer;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%; }
-      .right-content .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] + label:before {
-        border: 1px solid;
-        color: #ececec; }
-      .right-content .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"]:checked + label:before {
-        background-color: #ea2036; }
-      .right-content .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"] + label:before,
-      .right-content .box-search-login .box-search .pupup-search-advance .edit-radio-choose input[type="radio"]:checked + label:before {
-        -webkit-transition: 0.3s linear;
-        -moz-transition: 0.3s linear;
-        -ms-transition: 0.3s linear;
-        -o-transition: 0.3s linear;
-        transition: 0.3s linear; }
-      .right-content .box-search-login .box-search .pupup-search-advance tr {
-        height: 60px; }
-      .right-content .box-search-login .box-search .pupup-search-advance .table-search {
-        width: 100%;
-        height: 100%; }
-        .right-content .box-search-login .box-search .pupup-search-advance .table-search .text-key-search {
-          padding-right: 50px; }
-        .right-content .box-search-login .box-search .pupup-search-advance .table-search .w50 {
-          width: 50%;
-          float: left;
-          text-align: right;
-          position: relative; }
-          .right-content .box-search-login .box-search .pupup-search-advance .table-search .w50 .date-pic {
-            position: absolute;
-            top: 20%;
-            right: 10px; }
-        .right-content .box-search-login .box-search .pupup-search-advance .table-search .input-date {
+      height: 100%; }
+      .box-search-login .box-search .pupup-search-advance .table-search .text-key-search {
+        padding-right: 50px; }
+      .box-search-login .box-search .pupup-search-advance .table-search .w50 {
+        width: 50%;
+        float: left;
+        text-align: right;
+        position: relative; }
+        .box-search-login .box-search .pupup-search-advance .table-search .w50 .date-pic {
+          position: absolute;
+          top: 20%;
+          right: 10px; }
+      .box-search-login .box-search .pupup-search-advance .table-search .input-date {
+        height: 40px;
+        border: 1px solid #c9c9c9;
+        padding-left: 10px; }
+      .box-search-login .box-search .pupup-search-advance .table-search .calc {
+        width: -moz-calc(100% - 130px);
+        width: -webkit-calc(100% - 130px);
+        width: calc(100% - 130px); }
+        .box-search-login .box-search .pupup-search-advance .table-search .calc input {
+          width: 100%;
           height: 40px;
           border: 1px solid #c9c9c9;
           padding-left: 10px; }
-        .right-content .box-search-login .box-search .pupup-search-advance .table-search .calc {
-          width: -moz-calc(100% - 130px);
-          width: -webkit-calc(100% - 130px);
-          width: calc(100% - 130px); }
-          .right-content .box-search-login .box-search .pupup-search-advance .table-search .calc input {
-            width: 100%;
-            height: 40px;
-            border: 1px solid #c9c9c9;
-            padding-left: 10px; }
-        .right-content .box-search-login .box-search .pupup-search-advance .table-search .btn-search {
-          text-align: center;
-          background: red;
-          width: 100px;
-          display: block;
-          float: right;
-          height: 35px;
-          line-height: 35px;
-          color: #fff;
-          cursor: pointer; }
-  .right-content .box-search-login .box-login {
-    position: relative;
-    width: 200px;
-    float: left;
-    text-align: right;
-    height: 50px;
-    padding-right: 10px; }
-    .right-content .box-search-login .box-login .user-login {
-      font-family: "Iciel Gotham Medium";
-      color: #000;
-      opacity: 0.6; }
-      .right-content .box-search-login .box-login .user-login .name-user {
-        line-height: 40px;
-        float: right;
-        margin-left: 10px; }
-    .right-content .box-search-login .box-login .login {
-      line-height: 50px;
-      font-family: "Iciel Gotham Medium";
-      color: #000;
-      opacity: 0.6; }
-      .right-content .box-search-login .box-login .login:hover {
-        cursor: pointer; }
-    .right-content .box-search-login .box-login .pupup-login {
-      width: 430px;
-      height: 210px;
-      display: none;
-      background: #FFFFFF;
-      position: absolute;
-      top: 80%;
-      right: 0%;
-      border: 1px solid #c9c9c9;
-      padding: 30px;
-      font-size: 13px;
-      font-family: "Iciel Gotham Medium";
-      z-index: 1; }
-      .right-content .box-search-login .box-login .pupup-login:before {
-        content: " ";
+      .box-search-login .box-search .pupup-search-advance .table-search .btn-search {
+        text-align: center;
+        background: red;
+        width: 100px;
         display: block;
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        right: 50px;
-        background: #fff;
-        top: -6px;
-        border-top: 1px solid #c9c9c9;
-        border-right: 1px solid #c9c9c9; }
-      .right-content .box-search-login .box-login .pupup-login .btn-login {
-        margin-top: 15px; }
-      .right-content .box-search-login .box-login .pupup-login .username {
-        margin-top: 15px; }
-      .right-content .box-search-login .box-login .pupup-login .btn-lose:hover {
+        float: right;
+        height: 35px;
+        line-height: 35px;
+        color: #fff;
         cursor: pointer; }
-      .right-content .box-search-login .box-login .pupup-login .btn-lose img {
-        position: absolute;
-        top: 10px;
-        right: 10px; }
-      .right-content .box-search-login .box-login .pupup-login .row-pup {
-        width: 100%;
-        height: 40px; }
-        .right-content .box-search-login .box-login .pupup-login .row-pup .text-login {
-          width: 30%;
-          float: left;
-          text-align: left;
-          line-height: 30px; }
-        .right-content .box-search-login .box-login .pupup-login .row-pup .input-login {
-          width: 70%;
-          display: block;
-          float: left;
-          height: 35px; }
-        .right-content .box-search-login .box-login .pupup-login .row-pup .link-qmk {
-          margin-right: 20px;
-          line-height: 40px;
-          color: #000000; }
-        .right-content .box-search-login .box-login .pupup-login .row-pup .btn-dn {
-          display: block;
-          width: 40%;
-          float: right;
-          background: #eb212e;
-          height: 40px;
-          line-height: 40px;
-          text-align: center; }
-          .right-content .box-search-login .box-login .pupup-login .row-pup .btn-dn a {
-            color: #FFFFFF; }
+.box-search-login .box-login {
+  position: relative;
+  width: 200px;
+  float: left;
+  text-align: right;
+  height: 50px;
+  padding-right: 10px; }
+  .box-search-login .box-login .user-login {
+    font-family: "Iciel Gotham Medium";
+    color: #000;
+    opacity: 0.6; }
+    .box-search-login .box-login .user-login .name-user {
+      line-height: 40px;
+      float: right;
+      margin-left: 10px; }
+  .box-search-login .box-login .login {
+    line-height: 50px;
+    font-family: "Iciel Gotham Medium";
+    color: #000;
+    opacity: 0.6; }
+    .box-search-login .box-login .login:hover {
+      cursor: pointer; }
+  .box-search-login .box-login .pupup-login {
+    width: 430px;
+    height: 210px;
+    display: none;
+    background: #FFFFFF;
+    position: absolute;
+    top: 80%;
+    right: 0%;
+    border: 1px solid #c9c9c9;
+    padding: 30px;
+    font-size: 13px;
+    font-family: "Iciel Gotham Medium";
+    z-index: 1; }
+    .box-search-login .box-login .pupup-login:before {
+      content: " ";
+      display: block;
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      right: 50px;
+      background: #fff;
+      top: -6px;
+      border-top: 1px solid #c9c9c9;
+      border-right: 1px solid #c9c9c9; }
+    .box-search-login .box-login .pupup-login .btn-login {
+      margin-top: 15px; }
+    .box-search-login .box-login .pupup-login .username {
+      margin-top: 15px; }
+    .box-search-login .box-login .pupup-login .btn-lose:hover {
+      cursor: pointer; }
+    .box-search-login .box-login .pupup-login .btn-lose img {
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+    .box-search-login .box-login .pupup-login .row-pup {
+      width: 100%;
+      height: 40px; }
+      .box-search-login .box-login .pupup-login .row-pup .text-login {
+        width: 30%;
+        float: left;
+        text-align: left;
+        line-height: 30px; }
+      .box-search-login .box-login .pupup-login .row-pup .input-login {
+        width: 70%;
+        display: block;
+        float: left;
+        height: 35px; }
+      .box-search-login .box-login .pupup-login .row-pup .link-qmk {
+        margin-right: 20px;
+        line-height: 40px;
+        color: #000000; }
+      .box-search-login .box-login .pupup-login .row-pup .btn-dn {
+        display: block;
+        width: 40%;
+        float: right;
+        background: #eb212e;
+        height: 40px;
+        line-height: 40px;
+        text-align: center; }
+        .box-search-login .box-login .pupup-login .row-pup .btn-dn a {
+          color: #FFFFFF; }
+
+.right-content {
+  font-family: "robotoregular"; }
   .right-content .title-name {
     clear: both;
     height: 110px;

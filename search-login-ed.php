@@ -2,6 +2,7 @@
     <div class="box-search">
         <input class="input-search" type="text" placeholder="Nhập từ khoá">
         <span class="advanced-search">Tìm kiếm nâng cao<i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
+
         <div class="pupup-search-advance">
             <table class="table-search">
                 <tr>
@@ -54,14 +55,14 @@
 
     </div>
     <div class="box-login">
-        <a class="login">Đăng nhập</a>
+        <div class="user-login"><img src="assets/images/icon/login-user.png" alt=""><span class="name-user">admin_01</span></div>
         <div class="pupup-login">
             <div class="btn-lose"><img src="assets/images/icon/btn-close.png" alt=""></div>
             <div class="username row-pup"><div class="text-login">Tên tài khoản</div><input class="input-login" type="text" placeholder="Tên tài khoản"></div>
             <div class="password row-pup"><div class="text-login">Mật khẩu</div><input class="input-login" type="password" placeholder="Mật khẩu"></div>
             <div class="btn-login row-pup">
                 <a class="link-qmk" href="#">Quên mật khẩu</a>
-                <div class="btn-dn"><a href="../honda/tat-ca-tbmt.php">Đăng nhập</a></div>
+                <div class="btn-dn"><a href="#">Đăng nhập</a></div>
             </div>
         </div>
     </div>
