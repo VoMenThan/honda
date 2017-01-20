@@ -58,12 +58,12 @@
                     </td>
                     <td colspan="3">
                         <div class="w50">
-                            <span>từ ngày</span> <input  placeholder="Chọn ngày" class="input-date" type="text" id="datepicker-3">
+                            <span>từ ngày</span> <input  placeholder="Chọn ngày" class="input-date date-picker" type="text" id="datepicker-3">
                             <i class="date-pic fa fa-calendar fa-2x" aria-hidden="true"></i>
                         </div>
 
                         <div class="w50">
-                            <span>đến ngày</span><input  placeholder="Chọn ngày" class="input-date" type="text" id="datepicker-4">
+                            <span>đến ngày</span><input  placeholder="Chọn ngày" class="input-date date-picker" type="text" id="datepicker-4">
                             <i class="date-pic fa fa-calendar fa-2x" aria-hidden="true"></i>
                         </div>
                     </td>
