@@ -73,6 +73,39 @@ function Page() {
 
     });
 
+        ( function( factory ) {
+            if ( typeof define === "function" && define.amd ) {
+
+                // AMD. Register as an anonymous module.
+                define( [ "../widgets/datepicker" ], factory );
+            } else {
+
+                // Browser globals
+                factory( jQuery.datepicker );
+            }
+        }( function( datepicker ) {
+
+            datepicker.regional.vi = {
+                closeText: "Đóng",
+                prevText: "&#x3C;Trước",
+                nextText: "Tiếp&#x3E;",
+                currentText: "Hôm nay",
+                monthNames: [ "Tháng 1,", "Tháng 2,", "Tháng 3,", "Tháng 4,", "Tháng 5,", "Tháng 6,",
+                    "Tháng 7,", "Tháng 8,", "Tháng 9,", "Tháng 10,", "Tháng 11,", "Tháng 12," ],
+                dayNamesShort: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
+                dayNamesMin: [ "CN", "T2", "T3", "T4", "T5", "T6", "T7" ],
+                weekHeader: "Tu",
+                dateFormat: "dd/mm/yy",
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: "" };
+            datepicker.setDefaults( datepicker.regional.vi );
+
+            return datepicker.regional.vi;
+
+        } ) );
+
     };
 
     this.loadAjaxImg = function () {

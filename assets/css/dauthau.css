@@ -336,7 +336,7 @@
     .create-new-tm .them-thau-moi .lh50 {
       line-height: 50px; }
     .create-new-tm .them-thau-moi .text-name-tm {
-      width: 250px;
+      width: 300px;
       line-height: 50px;
       position: relative;
       padding-left: 10px; }
@@ -389,6 +389,10 @@
         padding: 30px;
         font-size: 14px;
         font-family: "Iciel Gotham Medium"; }
+      .create-new-tm .them-thau-moi .upload-file-tm .head-ttlq {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 30px; }
       .create-new-tm .them-thau-moi .upload-file-tm .text-ttlq {
         border: 2px solid #c9c9c9;
         height: 180px; }
@@ -422,6 +426,31 @@
 
 .color-red {
   color: #ea2036; }
+
+#ui-datepicker-div {
+  background: #FFFFFF; }
+  #ui-datepicker-div .ui-datepicker-calendar thead {
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #c6c6c6; }
+  #ui-datepicker-div .ui-datepicker-header {
+    background: #FFFFFF;
+    border: none;
+    color: #000000; }
+  #ui-datepicker-div .ui-state-default {
+    text-align: center;
+    border: none;
+    background: transparent; }
+  #ui-datepicker-div .ui-state-hover {
+    color: #FFFFFF;
+    background: #ea2036; }
+  #ui-datepicker-div .ui-state-active {
+    color: #FFFFFF;
+    background: #ea2036;
+    opacity: 0.3; }
+  #ui-datepicker-div .ui-icon-circle-triangle-w {
+    background-position: -98px 0px; }
+  #ui-datepicker-div .ui-icon-circle-triangle-e {
+    background-position: -33px 0px; }
 
 .backgroud-popup {
   background: rgba(0, 0, 0, 0.7);
