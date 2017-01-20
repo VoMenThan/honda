@@ -1,3 +1,4 @@
+<div class="stop-side-menu"></div>
 </div>
 <!-- end #content -->
 
