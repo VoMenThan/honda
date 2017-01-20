@@ -1,3 +1,11 @@
+<select class="link-direct" name="" id="">
+    <option value="">Tất cả thông báo mời thầu</option>
+    <option value="">Hàng có sẵn trên thị trường</option>
+    <option value="">Hàng phải thiết kế</option>
+    <option value="">Hỗn hợp</option>
+</select>
+
+
 <div class="box-search-login clearfix">
     <div class="box-search">
         <input class="input-search" type="text" placeholder="Nhập từ khoá">
@@ -54,7 +62,11 @@
 
     </div>
     <div class="box-login">
-        <a class="login">Đăng nhập</a>
+        <div class="user-login">
+            <!--            <img src="assets/images/icon/login-user.png" alt="">-->
+            <span class="name-user">admin_01</span>
+        </div>
+
         <div class="pupup-login">
             <div class="btn-lose"><img src="assets/images/icon/btn-close.png" alt=""></div>
             <div class="username row-pup"><div class="text-login">Tên tài khoản</div><input class="input-login" type="text" placeholder="Tên tài khoản"></div>
