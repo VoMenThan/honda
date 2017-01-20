@@ -122,6 +122,8 @@
           width: 20px;
           font-size: 20px;
           padding: 0px 10px; }
+          .box-all-tbmt .all-tbmt .row-content .btn-mb-admin a {
+            color: #000; }
         .box-all-tbmt .all-tbmt .row-content .btn-admin,
         .box-all-tbmt .all-tbmt .row-content .col-1 {
           display: none; }
