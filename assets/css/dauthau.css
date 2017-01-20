@@ -381,23 +381,6 @@
         height: 80px; }
       .create-new-tm .them-thau-moi .upload-file-tm .color-gray {
         color: #989898; }
-      .create-new-tm .them-thau-moi .upload-file-tm .head-ttlq {
-        height: 50px;
-        line-height: 50px;
-        margin-top: 30px; }
-      .create-new-tm .them-thau-moi .upload-file-tm .text-ttlq {
-        border: 2px solid #c9c9c9;
-        height: 180px; }
-        .create-new-tm .them-thau-moi .upload-file-tm .text-ttlq textarea {
-          height: -moz-calc(100% - 34px);
-          height: -webkit-calc(100% - 34px);
-          height: calc(100% - 34px);
-          border: none;
-          padding: 10px; }
-        .create-new-tm .them-thau-moi .upload-file-tm .text-ttlq .thong-bao-moi {
-          border-top: 2px solid #c9c9c9;
-          text-align: center;
-          line-height: 30px; }
     .create-new-tm .them-thau-moi .btn-red {
       width: 150px;
       text-align: center;
@@ -571,5 +554,38 @@
         line-height: 35px;
         color: #fff;
         cursor: pointer; }
+
+.content-center {
+  width: 75%;
+  float: left; }
+
+.aside-right {
+  width: 25%;
+  float: left;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: "Iciel Gotham Medium"; }
+  .aside-right .name-aside {
+    height: 30px;
+    line-height: 30px; }
+  .aside-right .upload-file {
+    margin-bottom: 30px; }
+  .aside-right .head-ttlq {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 30px; }
+  .aside-right .text-ttlq {
+    border: 2px solid #c9c9c9;
+    height: 180px; }
+    .aside-right .text-ttlq textarea {
+      height: -moz-calc(100% - 34px);
+      height: -webkit-calc(100% - 34px);
+      height: calc(100% - 34px);
+      border: none;
+      padding: 10px; }
+    .aside-right .text-ttlq .thong-bao-moi {
+      border-top: 2px solid #c9c9c9;
+      text-align: center;
+      line-height: 30px; }
 
 /*# sourceMappingURL=dauthau.css.map */

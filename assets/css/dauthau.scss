@@ -445,26 +445,6 @@
       .color-gray{
         color: #989898;
       }
-
-      .head-ttlq{
-        height: 50px;
-        line-height: 50px;
-        margin-top: 30px;
-      }
-      .text-ttlq{
-        border: 2px solid #c9c9c9;
-        height: 180px;
-        textarea{
-          @include calc('height', '100% - 34px');
-          border: none;
-          padding: 10px;
-        }
-        .thong-bao-moi{
-          border-top:2px solid #c9c9c9;
-          text-align: center;
-          line-height: 30px;
-        }
-      }
     }
     .btn-red{
       width: 150px;
@@ -676,17 +656,47 @@
         cursor: pointer;
       }
     }
-    //&:after{
-    //  content: " ";
-    //  width: 100%;
-    //  height: 100%;
-    //  display: block;
-    //  background: #000;
-    //  opacity: 0.4;
-    //}
   }
 }
-
+//content center
+.content-center{
+  width:75%;
+  float: left;
+}
+//aside right
+.aside-right{
+  width:25%;
+  float: left;
+  padding:10px 20px;
+  font-size: 14px;
+  font-family: $font-icielgothammedium;
+  .name-aside{
+    height: 30px;
+    line-height: 30px;
+  }
+  .upload-file{
+    margin-bottom: 30px;
+  }
+  .head-ttlq{
+    height: 50px;
+    line-height: 50px;
+    margin-top: 30px;
+  }
+  .text-ttlq{
+    border: 2px solid #c9c9c9;
+    height: 180px;
+    textarea{
+      @include calc('height', '100% - 34px');
+      border: none;
+      padding: 10px;
+    }
+    .thong-bao-moi{
+      border-top:2px solid #c9c9c9;
+      text-align: center;
+      line-height: 30px;
+    }
+  }
+}
 
 //Form
 //Form
