@@ -1,5 +1,10 @@
+
 @import "scss/module/variables";
 //css table
+.large_hidden{display: none}
+@include respond-to($break-767){
+  .large_hidden{display: block}
+}
 #footer{
   position: relative;
   .stop-side-menu{
@@ -16,9 +21,16 @@
     }
   }
   .all-tbmt{
+    width: 100%;
+    .col-3{
+      padding: 0 10px;
+    }
     .head-table{
       height: 70px;
       background: #ebebeb;
+      @include respond-to($break-767){
+        display: none;
+      }
       th{
         text-align: left;
         font-size: 14px;
@@ -30,13 +42,14 @@
         width: 60px;
       }
       .so-tbmt{
-        width: 140px;
+        width: 110px;
       }
-      .ten-goi-thau{
-        @include calc('width', '100% - 600px');
-      }
+
       .thoi-diem-tai{
         width: 170px;
+        @include respond-to($break-1199){
+          width: 140px;
+        }
       }
       .thoi-gian-mo{
         width: 170px;
@@ -50,7 +63,7 @@
     .row-content{
       height: 70px;
       td{
-        padding-left: 10px;
+        //padding-left: 10px;
       }
       .date-time{
         width:50%;
@@ -73,9 +86,46 @@
           color: #ea2036;
         }
       }
+      .btn-mb-admin{display: none;}
+      .btn-admin{
+        font-size: 20px;}
+      @include respond-to($break-767){
+        .btn-mb-admin{display: table-cell;
+          width: 20px;
+          font-size: 20px;
+          padding: 0px 10px;}
+        .btn-admin,
+        .col-1{
+
+          display: none;
+        }
+        td{
+          display: table;
+          width: 100%;
+          font-size: 12px;
+          &.col-2{
+            background: #ececec;
+          }
+          > div{
+            text-align: right;
+            padding: 10px;
+            &:first-child{
+              text-align: left;
+              white-space: nowrap;
+              padding-right: 20px;
+              font-family: $font-robotobold;
+              color: #000;
+            }
+            display: table-cell;
+          }
+        }
+      }
     }
     .row-content:nth-child(even) {
       background: #f5f5f5;
+      @include respond-to($break-767){
+        background: transparent;
+      }
     }
   }
   .pagination-wrp {
@@ -93,9 +143,6 @@
         }
         .so-tbmt {
           width: 110px;
-        }
-        .ten-goi-thau {
-          @include calc('width', '100% - 480px');
         }
         .thoi-diem-tai {
           width: 160px;
@@ -340,13 +387,16 @@
   font-family: $font-robotoregular;
   .title-name{
     clear: both;
-    height: 110px;
     font-size: 30px;
     color: #eb212e;
-    line-height: 110px;
-    font-family: $font-robotobold;
+    font-family: $font-gothambold-new;
     position: relative;
     z-index:0;
+    padding: 34px 0;
+    line-height: 1.41;
+    @include respond-to($break-767){
+      font-size: 24px;
+    }
     .add-new{
       width: 150px;
       text-align: center;
