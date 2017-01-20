@@ -324,13 +324,13 @@
       line-height: 40px;
       top: 30px;
       right: 130px; }
+      .right-content .title-name .cac-phien-ban .color-gray {
+        color: gray;
+        font-size: 14px; }
       .right-content .title-name .cac-phien-ban.pagination-wrp {
         margin: 0; }
       .right-content .title-name .cac-phien-ban .ul-phien-ban {
         display: inline-block; }
-      .right-content .title-name .cac-phien-ban .color-gray {
-        color: gray;
-        font-size: 14px; }
 
 .create-new-tm {
   width: 100%;
@@ -371,14 +371,6 @@
       background: #FFFFFF; }
       .create-new-tm .them-thau-moi .upload-file-tm .pd-l-10 {
         padding-left: 10px; }
-      .create-new-tm .them-thau-moi .upload-file-tm.ds-ban-tin {
-        vertical-align: top; }
-      .create-new-tm .them-thau-moi .upload-file-tm .ban-tin {
-        width: 100%;
-        font-size: 12px;
-        height: 40px; }
-      .create-new-tm .them-thau-moi .upload-file-tm .uploaded-file {
-        float: left; }
       .create-new-tm .them-thau-moi .upload-file-tm .lh50 {
         float: left; }
       .create-new-tm .them-thau-moi .upload-file-tm.vtc-al-t {
@@ -563,39 +555,54 @@
         cursor: pointer; }
 
 .content-center {
-  width: 75%;
+  width: -moz-calc(100% - 200px);
+  width: -webkit-calc(100% - 200px);
+  width: calc(100% - 200px);
   float: left; }
 
 .aside-right {
-  width: 25%;
+  width: 200px;
   float: left;
-  padding: 10px 20px;
+  padding: 10px 0 10px 10px;
   font-size: 14px;
   font-family: "Iciel Gotham Medium"; }
+  .aside-right .ban-tin {
+    font-size: 12px;
+    padding-bottom: 10px;
+    line-height: 16px; }
   .aside-right .name-aside {
-    height: 30px;
-    line-height: 30px; }
+    height: 50px; }
   .aside-right .upload-file {
     margin-bottom: 30px; }
   .aside-right .head-ttlq {
     height: 50px;
     line-height: 50px;
-    margin-top: 30px; }
+    margin-top: 20px; }
   .aside-right .text-ttlq {
     border: 2px solid #c9c9c9;
-    height: 180px; }
+    height: 150px; }
     .aside-right .text-ttlq textarea {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      height: -moz-calc(100% - 34px);
-      height: -webkit-calc(100% - 34px);
-      height: calc(100% - 34px);
       border: none;
-      padding: 10px; }
+      padding: 10px;
+      resize: none;
+      width: 100%; }
     .aside-right .text-ttlq .thong-bao-moi {
       border-top: 2px solid #c9c9c9;
-      text-align: center;
-      line-height: 30px; }
+      text-align: center; }
+    .aside-right .text-ttlq .dang-thong-bao {
+      line-height: 40px; }
+  .aside-right .color-gray {
+    color: gray; }
+  .aside-right .box-file {
+    margin-bottom: 20px; }
+    .aside-right .box-file .image-upload {
+      width: 50px;
+      float: left; }
+    .aside-right .box-file .info-file {
+      width: -moz-calc(100% - 50px);
+      width: -webkit-calc(100% - 50px);
+      width: calc(100% - 50px);
+      float: left;
+      padding-left: 10px; }
 
 /*# sourceMappingURL=dauthau.css.map */
