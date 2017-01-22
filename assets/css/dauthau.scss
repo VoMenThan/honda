@@ -185,14 +185,15 @@
 
 //search-login
 .box-search-login{
+  input{
+    @include appearance(none);
+    border: 1px solid #cbcbcb;
+    padding-left: 10px;
+  }
   .box-search{
     @include calc('width', '100% - 200px');
     float: right;
     position: relative;
-    input{
-      @include appearance(none);
-      border: 1px solid #cbcbcb;
-    }
     .advanced-search{
       cursor: pointer;
     }
@@ -345,7 +346,7 @@
   padding: 20px 25px;
   font-size: 13px;
   font-family: $font-icielgothammedium;
-  z-index:2;
+  z-index:4;
   .content-search{
     .input-key{
       height: 40px;
@@ -372,7 +373,7 @@
     }
     input{
       height: 40px;
-      width: 160px;
+      width: 169px;
       padding-left: 10px;
       float: left;
     }
@@ -470,7 +471,7 @@
       display: block;
       position: absolute;
       line-height: 40px;
-      top: 30%;
+      top: 35px;
       right: 0px;
       cursor: pointer;
       a{
@@ -502,8 +503,6 @@
   width:100%;
   font-family: $font-icielgothammedium;
   font-size: 13px;
-  .them-thau-moi{
-    width:100%;
     .h50{
       height: 50px;
     }
@@ -511,14 +510,16 @@
       line-height: 50px;
     }
     .text-name-tm{
-      width:300px;
+      width: 250px;
       line-height: 50px;
       position: relative;
       padding-left: 10px;
+      float: left;
     }
     .input-name-tm{
       position: relative;
-      @include calc('width', '100% - 450px');
+      @include calc('width', '100% - 250px');
+      float: left;
       .lock-unlock{
         position: absolute;
         right: 45px;
@@ -538,7 +539,7 @@
       .date-pic{
         position: absolute;
         right: 15px;
-        top: 12px;
+        top: 7px;
         cursor: pointer;
       }
       select{
@@ -568,27 +569,32 @@
         color: #989898;
       }
     }
-    .btn-red{
-      width: 150px;
-      text-align: center;
-      height: 40px;
-      background: #eb212e;
-      color: #fff;
-      font-size: 14px;
+  .box-btn-conent{
+    clear: both;
+    padding-top: 30px;
+    .quay-lai, .xem-truoc{
+      width: 50%;
       display: block;
-      position: absolute;
-      line-height: 40px;
-      cursor: pointer;
-    }
-    .quay-lai{
-      top: 30%;
-      left: 0px;
+      float: left;
     }
     .xem-truoc{
-      top: 30%;
-      right: 0px;
+      .btn-red{
+        float: right;
+        margin-right: 200px;
+      }
     }
-    }
+  }
+}
+.btn-red{
+  width: 150px;
+  text-align: center;
+  height: 40px;
+  background: #eb212e;
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  line-height: 40px;
+  cursor: pointer;
 }
 
 .upload-file{
@@ -842,57 +848,9 @@
     }
   }
 }
-@include  respond-to($break-767){
-  .box-search-login {
-    .box-search {
-      width: 100%;
-      .advanced-search-text{
-        top: 40px;
-        right: 0;
-        z-index:1;
-      }
-    }
-    .box-login {
-      width:100%;
-      .name-user{
-        color: #eb212e;
-
-      }
-    }
-  }
-  .box-search-login {
-    .box-login {
-      .pupup-login {
-        width: 280px;
-        height: 300px;
-        .row-pup {
-          height:auto;
-          text-align: center;
-          .btn-dn{
-            width: 70%;
-            float: none;
-            margin: auto;
-          }
-          .text-login{
-            width: 100px;
-            float: none;
-          }
-          .link-qmk{
-            margin: 0;
-          }
-          .input-login{
-            width: 100%;
-            float: none;
-          }
-        }
-      }
-    }
-  }
-
-  //reponse ad search
+@include  respond-to($break-991){
   .pupup-search-advance{
     padding: 10px;
-    display: block;
     .text-search{
       width:100%;
     }
@@ -949,9 +907,111 @@
 
     }
   }
+}
+@include  respond-to($break-767){
+  .box-search-login {
+    .box-search {
+      width: 100%;
+      .advanced-search-text{
+        top: 40px;
+        right: 0;
+        z-index:1;
+      }
+    }
+    .box-login {
+      width:100%;
+      .name-user{
+        color: #eb212e;
 
+      }
+    }
+  }
+  .box-search-login {
+    .box-login {
+      .pupup-login {
+        width: 280px;
+        height: 300px;
+        .row-pup {
+          height:auto;
+          text-align: center;
+          .btn-dn{
+            width: 70%;
+            float: none;
+            margin: auto;
+          }
+          .text-login{
+            width: 100px;
+            float: none;
+          }
+          .link-qmk{
+            margin: 0;
+          }
+          .input-login{
+            width: 100%;
+            float: none;
+          }
+        }
+      }
+    }
+  }
+  .right-content {
+    .title-name {
+      .add-new{
+        position: static;
+        line-height: 40px;
+        margin-top: 30px;
+        width:100%;
+      }
+    }
+  }
 
-
+  .content-center{
+    width: 100%;
+    .text-name-tm{
+      width: 100%;
+      position: relative;
+      padding-left: 0;
+      float: left;
+      line-height: 30px;
+      height: 30px;
+    }
+    .input-name-tm{
+      position: relative;
+      width: 100%;
+      float: left;
+    }
+  }
+  .aside-right{
+    width: 100%;
+    padding: 0;
+    .name-aside{
+      height: 50px;
+      padding-top: 20px;
+    }
+    .head-ttlq{
+      line-height: 0;
+    }
+    .text-ttlq{
+      width: 90%;
+      margin: auto;
+    }
+  }
+  .create-new-tm {
+    .box-btn-conent {
+      .xem-truoc {
+        .btn-red{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .btn-red{
+    width: 125px;
+  }
+  .upload-file{
+    width: 90%;
+    margin: auto;
+  }
 
 }
 //Form

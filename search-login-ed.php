@@ -1,7 +1,10 @@
 <div class="box-search-login clearfix">
 
     <div class="box-login">
-        <div class="user-login"><img src="assets/images/icon/login-user.png" alt=""><span class="name-user">admin_01</span></div>
+        <div class="user-login">
+            <img src="assets/images/icon/login-user.png" alt="">
+            <span class="name-user">admin_01</span>
+        </div>
     </div>
 
     <div class="box-search">
