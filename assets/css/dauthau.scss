@@ -189,6 +189,10 @@
     @include calc('width', '100% - 200px');
     float: right;
     position: relative;
+    input{
+      @include appearance(none);
+      border: 1px solid #cbcbcb;
+    }
     .advanced-search{
       cursor: pointer;
     }
@@ -342,11 +346,6 @@
   font-size: 13px;
   font-family: $font-icielgothammedium;
   z-index:2;
-  input{
-    @include appearance(none);
-    border: 1px solid #cbcbcb;
-
-  }
   .content-search{
     .input-key{
       height: 40px;

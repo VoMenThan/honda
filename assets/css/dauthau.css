@@ -166,6 +166,11 @@
   width: calc(100% - 200px);
   float: right;
   position: relative; }
+  .box-search-login .box-search input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #cbcbcb; }
   .box-search-login .box-search .advanced-search {
     cursor: pointer; }
   .box-search-login .box-search .input-search {
@@ -295,11 +300,6 @@
   font-size: 13px;
   font-family: "Iciel Gotham Medium";
   z-index: 2; }
-  .pupup-search-advance input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: 1px solid #cbcbcb; }
   .pupup-search-advance .content-search .input-key {
     height: 40px;
     width: 100%;
