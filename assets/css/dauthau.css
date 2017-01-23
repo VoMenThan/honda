@@ -416,6 +416,9 @@
       top: 35px;
       right: 0px;
       cursor: pointer; }
+      .right-content .title-name .add-new:hover {
+        opacity: 0.8;
+        transition: 0.3s; }
       .right-content .title-name .add-new a {
         color: #FFFFFF; }
     .right-content .title-name .cac-phien-ban {
