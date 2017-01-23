@@ -508,15 +508,16 @@
       margin-right: 200px; }
 
 .btn-red {
-  width: 150px;
+  min-width: 150px;
   text-align: center;
   height: 40px;
   background: #eb212e;
   color: #fff;
   font-size: 14px;
-  display: block;
+  display: inline-block;
   line-height: 40px;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 0 15px; }
 
 .upload-file {
   border: 2px dashed #eb212e;
