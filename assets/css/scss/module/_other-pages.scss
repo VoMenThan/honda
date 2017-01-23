@@ -322,6 +322,7 @@
 			border: 1px solid #cccccc;
 			text-align: center;
 			margin: 0 5px;
+			@include transition;
 			@include respond-to(767px){
 				width: 29px;
 				height: 29px;

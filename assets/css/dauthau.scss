@@ -111,6 +111,9 @@
         font-size: 20px;
         a{
           color: #000;
+          &:hover{
+            color: $main-red;
+          }
         }
       }
       @include respond-to($break-767){
@@ -121,6 +124,9 @@
           padding: 0px 10px;
           a{
             color: #000;
+            &:hover{
+              color: $main-red;
+            }
           }
         }
         .btn-admin,
@@ -660,6 +666,7 @@
     }
   }
   input{
+    cursor: pointer;
     position: absolute;
     @include size(100%);
     z-index: 2;
