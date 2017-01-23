@@ -100,7 +100,9 @@
       }
       .btn-edit{
         color: #000000;
+        @include transition(0.3s);
         &:hover{
+          opacity: 0.8;
           color: #ea2036;
         }
       }
@@ -161,6 +163,7 @@
     }
   }
 }
+
 @include respond-to($break-767){
   .box-all-tbmt{
     .all-tbmt {
@@ -449,8 +452,11 @@
     display: block;
     line-height: 40px;
     cursor: pointer;
+    @include transition(0.3s);
+    &:hover{
+      opacity: 0.8;
+    }
   }
-
 }
 //end box search ad
 //end search login
@@ -481,9 +487,9 @@
       top: 35px;
       right: 0px;
       cursor: pointer;
+      @include transition(0.3s);
       &:hover{
         opacity: 0.8;
-        transition: 0.3s;
       }
       a{
         color: #FFFFFF;
@@ -616,9 +622,9 @@
   line-height: 40px;
   cursor: pointer;
   padding:0 20px;
+  @include transition(0.3s);
   &:hover{
     opacity: 0.8;
-    transition: 0.3s;
   }
 }
 

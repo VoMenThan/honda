@@ -107,8 +107,14 @@
       .box-all-tbmt .all-tbmt .row-content td:first-child {
         text-align: center; }
       .box-all-tbmt .all-tbmt .row-content .btn-edit {
-        color: #000000; }
+        color: #000000;
+        -webkit-transition: 0.3s linear;
+        -moz-transition: 0.3s linear;
+        -ms-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+        transition: 0.3s linear; }
         .box-all-tbmt .all-tbmt .row-content .btn-edit:hover {
+          opacity: 0.8;
           color: #ea2036; }
       .box-all-tbmt .all-tbmt .row-content .btn-mb-admin {
         display: none; }
@@ -387,7 +393,14 @@
     font-size: 14px;
     display: block;
     line-height: 40px;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear; }
+    .pupup-search-advance .btn-search:hover {
+      opacity: 0.8; }
 
 .right-content {
   font-family: "robotoregular"; }
@@ -415,10 +428,14 @@
       line-height: 40px;
       top: 35px;
       right: 0px;
-      cursor: pointer; }
+      cursor: pointer;
+      -webkit-transition: 0.3s linear;
+      -moz-transition: 0.3s linear;
+      -ms-transition: 0.3s linear;
+      -o-transition: 0.3s linear;
+      transition: 0.3s linear; }
       .right-content .title-name .add-new:hover {
-        opacity: 0.8;
-        transition: 0.3s; }
+        opacity: 0.8; }
       .right-content .title-name .add-new a {
         color: #FFFFFF; }
     .right-content .title-name .cac-phien-ban {
@@ -519,10 +536,14 @@
   display: inline-block;
   line-height: 40px;
   cursor: pointer;
-  padding: 0 20px; }
+  padding: 0 20px;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear; }
   .btn-red:hover {
-    opacity: 0.8;
-    transition: 0.3s; }
+    opacity: 0.8; }
 
 .upload-file {
   border: 2px dashed #eb212e;
