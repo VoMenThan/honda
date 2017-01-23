@@ -22,9 +22,9 @@
                 <div class="text-login">Mật khẩu</div>
                 <input class="input-login" type="password" placeholder="Mật khẩu">
             </div>
-            <div class="btn-login row-pup">
-                <a class="btn-red" href="../honda/tat-ca-tbmt.php">Đăng nhập</a>
-                <div class="qmk"><a class="link-qmk" href="#">Quên mật khẩu</a></div>
+            <div class="btn-login row-pup clearfix">
+                <a class="btn-red btn-dn" href="../honda/tat-ca-tbmt.php">Đăng nhập</a>
+                <div class="qmk clearfix"><a class="link-qmk" href="#">Quên mật khẩu</a></div>
             </div>
         </div>
 
@@ -34,7 +34,7 @@
                 <div class="text-login">Địa chỉ email</div>
                 <input class="input-login" type="email" placeholder="Nhập địa chỉ email">
             </div>
-            <div class="btn-login row-pup">
+            <div class="btn-login row-pup clearfix">
                 <a class="btn-red" href="../honda/tat-ca-tbmt.php">Gửi mật khẩu</a>
             </div>
         </div>

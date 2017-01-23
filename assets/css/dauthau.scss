@@ -319,10 +319,15 @@
           float: left;
           height: 35px;
         }
+        .btn-dn{
+          float: right;
+        }
         .link-qmk{
-          margin-right: 20px;
           line-height: 40px;
           color: #000000;
+          display: inline-block;
+          float: right;
+          margin-right: 20px;
         }
         a{
           color: #FFFFFF;
@@ -980,7 +985,7 @@
             float: none;
           }
           .link-qmk{
-            margin: 0;
+            margin-right: 20px;
           }
           .input-login{
             width: 100%;
