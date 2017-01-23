@@ -534,6 +534,7 @@
       position: relative;
       @include calc('width', '100% - 250px');
       float: left;
+      font-family: $font-robotoregular;
       .lock-unlock{
         position: absolute;
         right: 45px;

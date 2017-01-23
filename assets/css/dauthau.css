@@ -456,7 +456,8 @@
     width: -moz-calc(100% - 250px);
     width: -webkit-calc(100% - 250px);
     width: calc(100% - 250px);
-    float: left; }
+    float: left;
+    font-family: "robotoregular"; }
     .create-new-tm .input-name-tm .lock-unlock {
       position: absolute;
       right: 45px;
