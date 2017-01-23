@@ -227,7 +227,7 @@
     font-family: "Iciel Gotham Medium";
     color: #666666; }
     .box-search-login .box-login .user-login .name-user {
-      line-height: 40px;
+      line-height: 50px;
       float: right;
       margin-left: 10px;
       cursor: pointer; }
@@ -939,5 +939,22 @@ input {
 
 select {
   background: url("../images/icon/select_box.png") right center no-repeat; }
+
+.localization {
+  position: absolute;
+  top: -10px;
+  right: 5px; }
+  .localization .language-vi {
+    display: inline-block;
+    border-right: 1px solid #666666;
+    padding: 0px 5px; }
+  .localization a {
+    color: #666666; }
+  .localization .active {
+    color: #eb212e; }
+  .localization .language-en {
+    display: inline-block;
+    padding: 0 5px;
+    margin-left: -5px; }
 
 /*# sourceMappingURL=dauthau.css.map */

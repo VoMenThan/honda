@@ -255,7 +255,7 @@
       font-family: "Iciel Gotham Medium";
       color: #666666;
       .name-user{
-        line-height: 40px;
+        line-height: 50px;
         float: right;
         margin-left: 10px;
         cursor: pointer;
@@ -1150,5 +1150,30 @@ input{
 select{
   background: url("../images/icon/select_box.png") right center no-repeat;
 }
+
+//localization
+.localization{
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  .language-vi{
+    display: inline-block;
+    border-right: 1px solid #666666;
+    padding: 0px 5px;
+  }
+  a{
+    color: #666666;
+  }
+  .active{
+    color: #eb212e;
+  }
+  .language-en{
+    display: inline-block;
+    padding: 0 5px;
+    margin-left: -5px;
+  }
+}
+
+//end localization
 //Form
 //Form

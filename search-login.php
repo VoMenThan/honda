@@ -11,6 +11,10 @@
         <div class="user-login">
 <!--            <img src="assets/images/icon/login-user.png" alt="">-->
             <span class="name-user click-login">Đăng nhập</span>
+            <ul class="localization">
+                <li class="language-vi"><a class="active" href="#">VN</a></li>
+                <li class="language-en"><a href="#">EN</a></li>
+            </ul>
         </div>
         <div class="pupup-login popup-fade-in-out">
             <div class="btn-lose"><img src="assets/images/icon/btn-close.png" alt=""></div>

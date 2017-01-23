@@ -72,6 +72,15 @@ function Page() {
             $('.popup-fade-in-out').fadeOut();
             $('.pupup-search-advance').fadeIn();
         });
+        /* localization*/
+        $('.language-en').click(function () {
+            $('.language-vi a').removeClass('active');
+            $('.language-en a').addClass('active');
+        })
+        $('.language-vi').click(function () {
+            $('.language-en a').removeClass('active');
+            $('.language-vi a').addClass('active');
+        })
 
     //    File upload
         $('.file-drop').change(function(){
