@@ -185,10 +185,17 @@
 
 //search-login
 .box-search-login{
+  select,
   input{
     @include appearance(none);
     border: 1px solid #cbcbcb;
-    padding-left: 10px;
+    height: 40px;
+    padding: 0 20px;
+    background: #fff;
+    width: 100%;
+  }
+  select{
+    background: url("../images/icon/select_box.png") right center no-repeat;
   }
   .box-search{
     @include calc('width', '100% - 200px');
@@ -380,7 +387,7 @@
     i{
       position: absolute;
       top: 6px;
-      right:10px;
+      right:25px;
     }
   }
   .text-search{
@@ -480,7 +487,6 @@
     }
     .cac-phien-ban{
       width: 300px;
-      height: 40px;
       position: absolute;
       line-height: 40px;
       top: 30px;
@@ -503,6 +509,14 @@
   width:100%;
   font-family: $font-icielgothammedium;
   font-size: 13px;
+  .row-xttm{
+    .input-name-tm{
+      padding-top: 15px;
+    }
+  }
+  .row-xttm:nth-child(odd) {
+    background: #f5f5f5;
+  }
     .h50{
       height: 50px;
     }
@@ -538,7 +552,7 @@
       }
       .date-pic{
         position: absolute;
-        right: 15px;
+        left: 90%;
         top: 7px;
         cursor: pointer;
       }
@@ -979,6 +993,7 @@
       position: relative;
       width: 100%;
       float: left;
+      text-align: right;
     }
   }
   .aside-right{
@@ -1004,6 +1019,9 @@
         }
       }
     }
+    .h50{
+      height:auto;
+    }
   }
   .btn-red{
     width: 125px;
@@ -1012,7 +1030,78 @@
     width: 90%;
     margin: auto;
   }
+  .create-new-tm {
+    .input-name-tm {
+      input{
+        text-align: right;
+      }
+      .date-pic{
+        left: 15px;
+      }
+    }
+  }
+  .right-content {
+    .title-name {
+      .cac-phien-ban{
+        width: 100%;
+        text-align: right;
+         position: static;
+        line-height: 30px;
+        .ul-phien-ban{
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+    .row-xttm{
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+  }
+  .create-new-tm{
+    .row-xttm {
+      padding-left: 20px;
+      padding-right: 20px;
+      .input-name-tm{
+        padding-top: 0;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  .aside-right {
+    .ban-tin, .box-file{
+      padding-left: 20px;
+    }
+  }
+  .backgroud-popup {
+    .request-popup{
+      width: 90%;
+      height: auto;
+    }
+  }
+  .backgroud-popup {
+    .request-popup {
+      .text-popup, .content-popup{
+        width: 50%;
+      }
+      textarea{
+        width:96%;
+      }
+    }
+  }
 
+}
+select,
+input{
+  @include appearance(none);
+  border: 1px solid #cbcbcb;
+  height: 40px;
+  padding: 0 20px;
+  background: #fff;
+  width: 100%;
+}
+select{
+  background: url("../images/icon/select_box.png") right center no-repeat;
 }
 //Form
 //Form
