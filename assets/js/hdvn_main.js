@@ -98,9 +98,9 @@ function Page() {
     //    END File upload
 
     /* popup thong bao */
-        $('.btn-edit').click(function () {
-            $('.popup-fade-in-out').fadeOut();
+        $('.btn-edit').click(function (event) {
             event.stopPropagation();
+            $('.popup-fade-in-out').fadeOut();
             $('.backgroud-popup').fadeIn();
 
         });
@@ -110,6 +110,9 @@ function Page() {
         $('.backgroud-popup').click(function () {
             $('.backgroud-popup').fadeOut();
         });
+        $('.request-popup').click(function (event) {
+            event.stopPropagation();
+        })
 
         $( ".date-picker" ).datepicker();
 
