@@ -9,6 +9,7 @@
 <div class="box-search-login clearfix">
     <div class="box-login">
         <div class="user-login">
+<!--            <img src="assets/images/icon/login-user.png" alt="">-->
             <span class="name-user">Đăng nhập</span>
         </div>
         <div class="pupup-login">

@@ -424,12 +424,13 @@
       position: absolute;
       line-height: 40px;
       top: 30px;
-      right: 148px; }
+      right: 0; }
       .right-content .title-name .cac-phien-ban .color-gray {
         color: gray;
         font-size: 14px; }
       .right-content .title-name .cac-phien-ban.pagination-wrp {
-        margin: 0; }
+        margin: 0;
+        text-align: right; }
       .right-content .title-name .cac-phien-ban .ul-phien-ban {
         display: inline-block; }
 
@@ -725,6 +726,26 @@
       float: left;
       padding-left: 10px; }
 
+.mo-khoa-goi-thau {
+  width: 80%;
+  margin: auto;
+  font-family: "robotoregular";
+  font-size: 14px; }
+  .mo-khoa-goi-thau h3 {
+    height: 25px;
+    font-family: "Iciel Gotham Medium"; }
+  .mo-khoa-goi-thau .box-content-mo-khoa {
+    height: 77px;
+    overflow: hidden; }
+  .mo-khoa-goi-thau .row-btn {
+    width: 50%;
+    float: left;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  .mo-khoa-goi-thau .xem-truoc .btn-red {
+    float: right; }
+
 @media only screen and (max-width: 991px) {
   .pupup-search-advance {
     padding: 10px; }
@@ -876,7 +897,10 @@
   .backgroud-popup .request-popup .text-popup, .backgroud-popup .request-popup .content-popup {
     width: 50%; }
   .backgroud-popup .request-popup textarea {
-    width: 96%; } }
+    width: 96%; }
+
+  .mo-khoa-goi-thau .btn-red {
+    width: 100px; } }
 select,
 input {
   -webkit-appearance: none;

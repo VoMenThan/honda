@@ -490,13 +490,14 @@
       position: absolute;
       line-height: 40px;
       top: 30px;
-      right: 148px;
+      right: 0;
       .color-gray{
         color: gray;
         font-size: 14px;
       }
       &.pagination-wrp{
         margin: 0;
+        text-align: right;
       }
       .ul-phien-ban{
         display: inline-block;
@@ -863,6 +864,35 @@
     }
   }
 }
+.mo-khoa-goi-thau{
+  width: 80%;
+  margin: auto;
+  font-family: $font-robotoregular;
+  font-size: 14px;
+  h3{
+    height: 25px;
+    font-family: $font-icielgothammedium;
+  }
+  .box-content-mo-khoa{
+    height: 77px;
+    overflow: hidden;
+  }
+    .row-btn{
+        width: 50%;
+        float: left;
+        display: block;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  .xem-truoc{
+    .btn-red{
+      float: right;
+    }
+  }
+}
+@include respond-to($break-1140){
+
+}
 @include  respond-to($break-991){
   .pupup-search-advance{
     padding: 10px;
@@ -1090,7 +1120,11 @@
       }
     }
   }
-
+  .mo-khoa-goi-thau{
+    .btn-red{
+      width: 100px;
+    }
+  }
 }
 select,
 input{
