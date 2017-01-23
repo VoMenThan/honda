@@ -508,7 +508,7 @@
       margin-right: 200px; }
 
 .btn-red {
-  min-width: 150px;
+  min-width: 100px;
   text-align: center;
   height: 40px;
   background: #eb212e;
@@ -735,9 +735,6 @@
   .mo-khoa-goi-thau h3 {
     height: 25px;
     font-family: "Iciel Gotham Medium"; }
-  .mo-khoa-goi-thau .box-content-mo-khoa {
-    height: 77px;
-    overflow: hidden; }
   .mo-khoa-goi-thau .row-btn {
     width: 50%;
     float: left;
@@ -901,7 +898,10 @@
     width: 96%; }
 
   .mo-khoa-goi-thau .btn-red {
-    width: 100px; } }
+    width: 100px; }
+
+  .mo-khoa-goi-thau {
+    width: 100%; } }
 select,
 input {
   -webkit-appearance: none;

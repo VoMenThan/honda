@@ -602,7 +602,7 @@
   }
 }
 .btn-red{
-  min-width: 150px;
+  min-width: 100px;
   text-align: center;
   height: 40px;
   background: #eb212e;
@@ -874,10 +874,6 @@
     height: 25px;
     font-family: $font-icielgothammedium;
   }
-  .box-content-mo-khoa{
-    height: 77px;
-    overflow: hidden;
-  }
     .row-btn{
         width: 50%;
         float: left;
@@ -1125,6 +1121,9 @@
     .btn-red{
       width: 100px;
     }
+  }
+  .mo-khoa-goi-thau{
+    width: 100%;
   }
 }
 select,
