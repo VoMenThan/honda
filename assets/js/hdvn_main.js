@@ -45,19 +45,38 @@ function Page() {
     this.jqueryEvent = function(){
 
         /* popup login */
-      $('.name-user').click(function(){
-            $('.pupup-login').css('display','block');
+      $('.click-login').click(function(event){
+          event.stopPropagation();
+            $('.pupup-login').fadeIn();
         });
+
       $('.btn-lose').click(function(){
-            $('.pupup-login').css('display','none');
+            $('.pupup-login').fadeOut();
         });
+        $('.pupup-login').click(function(event){
+            event.stopPropagation();
+        })
+        $('.pupup-search-advance').click(function(event){
+            event.stopPropagation();
+        })
+        $('.request-popup').click(function(event){
+            event.stopPropagation();
+        })
+      $('body').click(function () {
+          $('.pupup-login').fadeOut();
+          $('.pupup-search-advance').fadeOut();
+          $('.backgroud-popup').fadeOut();
+
+      })
+
 
     /* popup search advance */
         $('.advanced-search-text').click(function () {
-            $('.pupup-search-advance').css('display','block');
+            event.stopPropagation();
+            $('.pupup-search-advance').fadeIn();
         });
         $('.btn-search').click(function () {
-            $('.pupup-search-advance').css('display','none');
+            $('.pupup-search-advance').fadeOut();
         });
 
     //    File upload
@@ -86,10 +105,11 @@ function Page() {
 
     /* popup thong bao */
         $('.btn-edit').click(function () {
-            $('.backgroud-popup').css('display','block');
+            event.stopPropagation();
+            $('.backgroud-popup').fadeIn();
         });
         $('.close-popup-request').click(function () {
-            $('.backgroud-popup').css('display','none');
+            $('.backgroud-popup').fadeOut();
         });
 
         $( ".date-picker" ).datepicker();

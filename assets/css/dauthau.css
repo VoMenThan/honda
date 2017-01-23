@@ -292,8 +292,8 @@
         height: 40px;
         line-height: 40px;
         text-align: center; }
-        .box-search-login .box-login .pupup-login .row-pup .btn-dn a {
-          color: #FFFFFF; }
+      .box-search-login .box-login .pupup-login .row-pup a {
+        color: #FFFFFF; }
 
 .pupup-search-advance {
   display: none;

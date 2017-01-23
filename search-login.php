@@ -10,7 +10,7 @@
     <div class="box-login">
         <div class="user-login">
 <!--            <img src="assets/images/icon/login-user.png" alt="">-->
-            <span class="name-user">Đăng nhập</span>
+            <span class="name-user click-login">Đăng nhập</span>
         </div>
         <div class="pupup-login">
             <div class="btn-lose"><img src="assets/images/icon/btn-close.png" alt=""></div>
@@ -23,7 +23,7 @@
                 <input class="input-login" type="password" placeholder="Mật khẩu">
             </div>
             <div class="btn-login row-pup">
-                <div class="btn-dn"><a href="../honda/tat-ca-tbmt.php">Đăng nhập</a></div>
+                <a class="btn-dn" href="../honda/tat-ca-tbmt.php">Đăng nhập</a>
                 <div class="qmk"><a class="link-qmk" href="#">Quên mật khẩu</a></div>
             </div>
         </div>
