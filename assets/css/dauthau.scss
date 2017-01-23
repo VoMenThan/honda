@@ -225,7 +225,7 @@
       position: absolute;
       right: 20px;
       top: 0px;
-      line-height: 50px;
+      line-height: 60px;
       height: 50px;
       color: #000;
       opacity: 0.8;
@@ -261,7 +261,7 @@
       color: #000;
       opacity: 0.6;
     }
-    .pupup-login{
+    .pupup-login ,.pupup-quen-mat-khau{
       &:before{
         content: " ";
         display: block;
@@ -277,7 +277,7 @@
 
       }
       width: 430px;
-      height: 210px;
+      height: auto;
       display: none;
       background: #FFFFFF;
       position: absolute;
@@ -324,20 +324,15 @@
           line-height: 40px;
           color: #000000;
         }
-        .btn-dn{
-          display: block;
-          width: 40%;
-          float: right;
-          background: #eb212e;
-          height: 40px;
-          line-height: 40px;
-          text-align: center;
-        }
         a{
           color: #FFFFFF;
         }
 
       }
+    }
+    .pupup-quen-mat-khau{
+      display: none;
+      background: #FFFFFF;
     }
   }
 }
@@ -612,6 +607,10 @@
   line-height: 40px;
   cursor: pointer;
   padding:0 20px;
+  &:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+  }
 }
 
 .upload-file{
@@ -970,17 +969,12 @@
   }
   .box-search-login {
     .box-login {
-      .pupup-login {
-        width: 280px;
-        height: 300px;
+      .pupup-login, .pupup-quen-mat-khau {
+        width: 100%;
+        height: auto;
         .row-pup {
           height:auto;
           text-align: center;
-          .btn-dn{
-            width: 70%;
-            float: none;
-            margin: auto;
-          }
           .text-login{
             width: 100px;
             float: none;

@@ -12,7 +12,7 @@
 <!--            <img src="assets/images/icon/login-user.png" alt="">-->
             <span class="name-user click-login">Đăng nhập</span>
         </div>
-        <div class="pupup-login">
+        <div class="pupup-login popup-fade-in-out">
             <div class="btn-lose"><img src="assets/images/icon/btn-close.png" alt=""></div>
             <div class="username row-pup">
                 <div class="text-login">Tên tài khoản</div>
@@ -23,17 +23,29 @@
                 <input class="input-login" type="password" placeholder="Mật khẩu">
             </div>
             <div class="btn-login row-pup">
-                <a class="btn-dn" href="../honda/tat-ca-tbmt.php">Đăng nhập</a>
+                <a class="btn-red" href="../honda/tat-ca-tbmt.php">Đăng nhập</a>
                 <div class="qmk"><a class="link-qmk" href="#">Quên mật khẩu</a></div>
             </div>
         </div>
+
+        <div class="pupup-quen-mat-khau popup-fade-in-out">
+            <div class="btn-lose"><img src="assets/images/icon/btn-close.png" alt=""></div>
+            <div class="username row-pup">
+                <div class="text-login">Địa chỉ email</div>
+                <input class="input-login" type="email" placeholder="Nhập địa chỉ email">
+            </div>
+            <div class="btn-login row-pup">
+                <a class="btn-red" href="../honda/tat-ca-tbmt.php">Gửi mật khẩu</a>
+            </div>
+        </div>
+
     </div>
 
     <div class="box-search">
         <input class="input-search" type="text" placeholder="Nhập từ khoá">
         <span class="advanced-search-text">Tìm kiếm nâng cao</span>
         <span class="advanced-search"><i class="fa fa-search fa-2x" aria-hidden="true"></i></span>
-        <div class="pupup-search-advance clearfix">
+        <div class="pupup-search-advance popup-fade-in-out clearfix">
             <div class="keyword-search w100 clearfix">
                 <div class="key-text-search text-search lh40">Từ khoá</div>
                 <div class="content-search"><input class="input-key" placeholder="Nhập từ khoá" type="text" class="input-key-search"></div>

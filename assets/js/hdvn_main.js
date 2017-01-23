@@ -45,38 +45,32 @@ function Page() {
     this.jqueryEvent = function(){
 
         /* popup login */
+
+
       $('.click-login').click(function(event){
           event.stopPropagation();
-            $('.pupup-login').fadeIn();
+          $('.popup-fade-in-out').fadeOut();
+          $('.pupup-login').fadeIn();
         });
-
-      $('.btn-lose').click(function(){
-            $('.pupup-login').fadeOut();
+      $('.link-qmk').click(function(event){
+          event.stopPropagation();
+          $('.popup-fade-in-out').fadeOut();
+          $('.pupup-quen-mat-khau').fadeIn();
         });
-        $('.pupup-login').click(function(event){
+        $('.btn-lose').click(function(){
+          $('.popup-fade-in-out').fadeOut();
+        });
+        $('.popup-fade-in-out').click(function(event){
             event.stopPropagation();
         })
-        $('.pupup-search-advance').click(function(event){
-            event.stopPropagation();
-        })
-        $('.request-popup').click(function(event){
-            event.stopPropagation();
-        })
-      $('body').click(function () {
-          $('.pupup-login').fadeOut();
-          $('.pupup-search-advance').fadeOut();
-          $('.backgroud-popup').fadeOut();
-
+        $('body').click(function () {
+          $('.popup-fade-in-out').fadeOut();
       })
-
-
     /* popup search advance */
         $('.advanced-search-text').click(function () {
             event.stopPropagation();
+            $('.popup-fade-in-out').fadeOut();
             $('.pupup-search-advance').fadeIn();
-        });
-        $('.btn-search').click(function () {
-            $('.pupup-search-advance').fadeOut();
         });
 
     //    File upload
@@ -105,10 +99,15 @@ function Page() {
 
     /* popup thong bao */
         $('.btn-edit').click(function () {
+            $('.popup-fade-in-out').fadeOut();
             event.stopPropagation();
             $('.backgroud-popup').fadeIn();
+
         });
         $('.close-popup-request').click(function () {
+            $('.backgroud-popup').fadeOut();
+        });
+        $('.backgroud-popup').click(function () {
             $('.backgroud-popup').fadeOut();
         });
 
