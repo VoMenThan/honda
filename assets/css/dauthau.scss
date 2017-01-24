@@ -882,6 +882,22 @@
   .text-ttlq{
     border: 2px solid #c9c9c9;
     height: auto;
+    .upload-file{
+      border: none;
+      border-radius: 0;
+      border-top: 1px solid #c9c9c9;
+      height: 80px;
+      padding:0;
+      background: url("../images/icon/upload-file-2.png") no-repeat center;
+      .has-fl{
+        word-break: break-all;
+        padding: 0 10px;
+      }
+      .no-fl{
+        padding-top: 25px;
+      }
+
+    }
     textarea{
       border: none;
       padding: 10px;
@@ -901,6 +917,7 @@
   }
   .box-file{
     margin-bottom: 20px;
+    position: relative;
     .image-upload{
       width: 50px;
       float: left;
@@ -909,6 +926,17 @@
       @include calc('width', '100% - 50px');
       float: left;
       padding-left: 10px;
+      .btn-close-file{
+        position: absolute;
+        top: 20px;
+        left: 165px;
+        @include respond-to($break-767){
+          left: 250px;
+        }
+      }
+      img{
+      width: 12px;
+    }
     }
   }
 }

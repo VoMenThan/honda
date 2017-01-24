@@ -765,6 +765,18 @@
   .aside-right .text-ttlq {
     border: 2px solid #c9c9c9;
     height: auto; }
+    .aside-right .text-ttlq .upload-file {
+      border: none;
+      border-radius: 0;
+      border-top: 1px solid #c9c9c9;
+      height: 80px;
+      padding: 0;
+      background: url("../images/icon/upload-file-2.png") no-repeat center; }
+      .aside-right .text-ttlq .upload-file .has-fl {
+        word-break: break-all;
+        padding: 0 10px; }
+      .aside-right .text-ttlq .upload-file .no-fl {
+        padding-top: 25px; }
     .aside-right .text-ttlq textarea {
       border: none;
       padding: 10px;
@@ -778,7 +790,8 @@
   .aside-right .color-gray {
     color: gray; }
   .aside-right .box-file {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    position: relative; }
     .aside-right .box-file .image-upload {
       width: 50px;
       float: left; }
@@ -788,6 +801,15 @@
       width: calc(100% - 50px);
       float: left;
       padding-left: 10px; }
+      .aside-right .box-file .info-file .btn-close-file {
+        position: absolute;
+        top: 20px;
+        left: 165px; }
+        @media only screen and (max-width: 767px) {
+          .aside-right .box-file .info-file .btn-close-file {
+            left: 250px; } }
+      .aside-right .box-file .info-file img {
+        width: 12px; }
 
 .mo-khoa-goi-thau {
   width: 80%;
