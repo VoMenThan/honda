@@ -168,6 +168,16 @@
               padding-right: 20px;
               font-family: "robotobold";
               color: #000; } }
+    .box-all-tbmt .all-tbmt .btn-lock-unlock {
+      display: none;
+      font-size: 20px;
+      color: #989898;
+      padding-left: 10px; }
+      .box-all-tbmt .all-tbmt .btn-lock-unlock .fa-unlock-alt {
+        color: #ed1b2f; }
+    @media only screen and (max-width: 767px) {
+      .box-all-tbmt .all-tbmt .btn-lock-unlock {
+        display: inline-block; } }
     .box-all-tbmt .all-tbmt .row-content:nth-child(even) {
       background: #f5f5f5; }
       @media only screen and (max-width: 767px) {
@@ -1008,12 +1018,5 @@ select {
     display: inline-block;
     padding: 0 5px;
     margin-left: -5px; }
-
-.btn-lock-unlock {
-  font-size: 20px;
-  color: #989898;
-  padding-left: 10px; }
-  .btn-lock-unlock .fa-unlock-alt {
-    color: #ed1b2f; }
 
 /*# sourceMappingURL=dauthau.css.map */

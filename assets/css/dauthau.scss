@@ -31,6 +31,7 @@
     left: 0;
   }
 }
+
 .box-all-tbmt{
   font-family: $font-robotoregular;
   .xem-truoc-admin{
@@ -168,6 +169,20 @@
             display: table-cell;
           }
         }
+      }
+    }
+    .btn-lock-unlock{
+      display: none;
+      font-size: 20px;
+      color: #989898;
+      padding-left: 10px;
+      .fa-unlock-alt{
+        color: $main-red;
+      }
+    }
+    @include respond-to($break-767){
+      .btn-lock-unlock{
+        display: inline-block;
       }
     }
     .row-content:nth-child(even) {
@@ -1227,14 +1242,7 @@ select{
     margin-left: -5px;
   }
 }
-.btn-lock-unlock{
-  font-size: 20px;
-  color: #989898;
-  padding-left: 10px;
-  .fa-unlock-alt{
-    color: $main-red;
-  }
-}
+
 //end localization
 //Form
 //Form
