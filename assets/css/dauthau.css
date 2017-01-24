@@ -568,7 +568,7 @@
 .upload-file {
   border: 2px dashed #eb212e;
   border-radius: 10px;
-  height: 180px;
+  min-height: 80px;
   width: 100%;
   text-align: center;
   padding: 30px 0;
@@ -769,7 +769,6 @@
       border: none;
       border-radius: 0;
       border-top: 1px solid #c9c9c9;
-      height: 80px;
       padding: 0;
       background: url("../images/icon/upload-file-2.png") no-repeat center; }
       .aside-right .text-ttlq .upload-file .has-fl {
@@ -804,10 +803,7 @@
       .aside-right .box-file .info-file .btn-close-file {
         position: absolute;
         top: 20px;
-        left: 165px; }
-        @media only screen and (max-width: 767px) {
-          .aside-right .box-file .info-file .btn-close-file {
-            left: 250px; } }
+        right: 0; }
       .aside-right .box-file .info-file img {
         width: 12px; }
 
@@ -1012,5 +1008,12 @@ select {
     display: inline-block;
     padding: 0 5px;
     margin-left: -5px; }
+
+.btn-lock-unlock {
+  font-size: 20px;
+  color: #989898;
+  padding-left: 10px; }
+  .btn-lock-unlock .fa-unlock-alt {
+    color: #ed1b2f; }
 
 /*# sourceMappingURL=dauthau.css.map */
