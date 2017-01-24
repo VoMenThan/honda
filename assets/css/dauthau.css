@@ -154,6 +154,10 @@
           font-size: 12px; }
           .box-all-tbmt .all-tbmt .row-content td.col-2 {
             background: #ececec; }
+            .box-all-tbmt .all-tbmt .row-content td.col-2 > div {
+              display: block; }
+            .box-all-tbmt .all-tbmt .row-content td.col-2 div:last-child {
+              padding-top: 0; }
           .box-all-tbmt .all-tbmt .row-content td > div {
             text-align: right;
             padding: 10px;

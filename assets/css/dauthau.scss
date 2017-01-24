@@ -148,6 +148,12 @@
           font-size: 12px;
           &.col-2{
             background: #ececec;
+            > div{
+              display: block;
+            }
+            div:last-child{
+            padding-top: 0;
+          }
           }
           > div{
             text-align: right;
