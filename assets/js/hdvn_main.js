@@ -122,8 +122,23 @@ function Page() {
         $('.request-popup').click(function (event) {
             event.stopPropagation();
         })
+        if($( ".date-picker" ).length>0){
+            $( ".date-picker" ).datepicker();
+        }
 
-        $( ".date-picker" ).datepicker();
+        $('html, body').click(function(){
+            $('.sub-user-ctrl').fadeOut();
+        })
+
+        $('.user-list-ctrl').click(function(e){
+            e.stopPropagation();
+            $this = $(this);
+            if($this.find('.sub-user-ctrl').css('display')=='none'){
+                $this.find('.sub-user-ctrl').fadeIn();
+                return false;
+            }
+        })
+
 
         $('.date-pic').click(function(){
                 var $this = $(this);
@@ -162,6 +177,17 @@ function Page() {
         //     return datepicker.regional.vi;
         //
         // } ) );
+
+        $('.tabs-lg-content li').click(function(){
+            var $this = $(this);
+            var idex = $this.index();
+            if(!$this.hasClass('active')){
+                $('.tabs-lg-content li').removeClass('active');
+                $this.addClass('active');
+                $('.content-form .box-all-tbmt').hide();
+                $('.content-form .box-all-tbmt').eq(idex).show();
+            }
+        })
 
     };
 

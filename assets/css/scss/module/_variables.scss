@@ -31,6 +31,7 @@
 	$break-980 : 980px;
 	$break-850 : 850px;
 	$break-780 : 780px;
+	$break-768 : 768px;
 	$break-767 : 767px;
 	$break-700 : 700px;
 	$break-640 : 640px;
@@ -104,6 +105,10 @@
 	-ms-transition-delay: $time;
 	-o-transition-delay: $time;
 	transition-delay: $time;
+}
+
+@mixin respond-from($device-width) {
+  @media only screen and (min-width: $device-width) { @content; }
 }
 
 @mixin respond-to($device-width) {
